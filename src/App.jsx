@@ -1,8 +1,15 @@
 import React from "react";
 import "./App.css";
+import Mapview from "./components/leaf/Mapview";
+// import SideNav from "./components/main/SideNav";
 
 function App() {
-  return <div className="bg-blue-500 text-white p-4">Hello, Tailwind CSS!</div>;
+  return (
+    <>
+      {/* <SideNav /> */}
+      <Mapview />
+    </>
+  );
 }
 
 export default App;
