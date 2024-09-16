@@ -1,14 +1,12 @@
 import React from "react";
 import "./App.css";
-import Mapview from "./components/leaf/Mapview";
-// import SideNav from "./components/main/SideNav";
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./components/Home/Home";
 function App() {
   return (
-    <>
-      {/* <SideNav /> */}
-      <Mapview />
-    </>
+    <Router>
+      <Home />
+    </Router>
   );
 }
 

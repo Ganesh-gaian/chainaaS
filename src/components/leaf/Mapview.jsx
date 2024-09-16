@@ -7,9 +7,9 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import "leaflet/dist/leaflet.css";
 import "./styles.css";
 
-// Register animated theme for amCharts
 am4core.useTheme(am4themes_animated);
 
+// Example State Data for Las Vegas Locations with Usage and Details
 const lasVegasData = [
   {
     name: "Location 1 - Las Vegas",
@@ -20,6 +20,13 @@ const lasVegasData = [
         {
           data: [64, 8, 11, 17, 12],
           backgroundColor: [
+            "#800080",
+            "#00FF00",
+            "#FF4500",
+            "#FF0000",
+            "#0000FF",
+          ],
+          hoverBackgroundColor: [
             "#800080",
             "#00FF00",
             "#FF4500",
@@ -49,7 +56,141 @@ const lasVegasData = [
       [36.1099, -115.1898], // South-west corner
     ],
   },
-  // Other locations are omitted for brevity
+  {
+    name: "Location 2 - Las Vegas",
+    position: [36.125, -115.3151], // Southwest Las Vegas
+    appUsage: {
+      labels: ["Izak", "Amplifyfund", "Hear, Here", "Museo", "Spectraguard"],
+      datasets: [
+        {
+          data: [70, 10, 5, 10, 5],
+          backgroundColor: [
+            "#008080",
+            "#FFD700",
+            "#C71585",
+            "#8B0000",
+            "#4682B4",
+          ],
+          hoverBackgroundColor: [
+            "#008080",
+            "#FFD700",
+            "#C71585",
+            "#8B0000",
+            "#4682B4",
+          ],
+        },
+      ],
+    },
+    details: {
+      status: "Inactive",
+      tenant: "NBC",
+      startDate: "January 15, 2023",
+      antennaType: "Omnidirectional",
+      power: "40kW",
+      coverageArea: "20 miles",
+      revenue: {
+        day: "$400",
+        monthly: "$10,000",
+        yearly: "$120,000",
+      },
+    },
+    polygonCoords: [
+      [36.165, -115.3751], // North-west corner
+      [36.165, -115.2751], // North-east corner
+      [36.085, -115.2751], // South-east corner
+      [36.085, -115.3751], // South-west corner
+    ],
+  },
+  {
+    name: "Location 3 - Las Vegas",
+    position: [36.2044, -115.134], // North Las Vegas (Adjusted)
+    appUsage: {
+      labels: ["Izak", "Amplifyfund", "Hear, Here", "Museo", "Spectraguard"],
+      datasets: [
+        {
+          data: [50, 15, 10, 15, 10],
+          backgroundColor: [
+            "#4B0082",
+            "#FF8C00",
+            "#FF6347",
+            "#ADFF2F",
+            "#1E90FF",
+          ],
+          hoverBackgroundColor: [
+            "#4B0082",
+            "#FF8C00",
+            "#FF6347",
+            "#ADFF2F",
+            "#1E90FF",
+          ],
+        },
+      ],
+    },
+    details: {
+      status: "Active",
+      tenant: "ABC",
+      startDate: "March 12, 2023",
+      antennaType: "Directional",
+      power: "60kW",
+      coverageArea: "30 miles",
+      revenue: {
+        day: "$550",
+        monthly: "$12,000",
+        yearly: "$130,000",
+      },
+    },
+    polygonCoords: [
+      [36.2644, -115.184], // North-west corner
+      [36.2644, -115.084], // North-east corner
+      [36.1444, -115.084], // South-east corner
+      [36.1444, -115.184], // South-west corner
+    ],
+  },
+  {
+    name: "Location 4 - Las Vegas",
+    position: [36.0456, -115.2376], // Southeast Las Vegas
+    appUsage: {
+      labels: ["Izak", "Amplifyfund", "Hear, Here", "Museo", "Spectraguard"],
+      datasets: [
+        {
+          data: [80, 5, 10, 3, 2],
+          backgroundColor: [
+            "#00CED1",
+            "#FF1493",
+            "#FFD700",
+            "#228B22",
+            "#9400D3",
+          ],
+          hoverBackgroundColor: [
+            "#00CED1",
+            "#FF1493",
+            "#FFD700",
+            "#228B22",
+            "#9400D3",
+          ],
+        },
+      ],
+    },
+    details: {
+      status: "Active",
+      tenant: "FOX",
+      startDate: "July 25, 2024",
+      antennaType: "Omnidirectional",
+      power: "70kW",
+      coverageArea: "35 miles",
+      revenue: {
+        day: "$600",
+        monthly: "$13,000",
+        yearly: "$140,000",
+      },
+    },
+    polygonCoords: [
+      [36.0956, -115.2876], // North-west corner
+      [36.0956, -115.1876], // North-east corner
+      [35.9656, -115.1876], // South-east corner
+      [35.9656, -115.2876], // South-west corner
+    ],
+  },
 ];
 
 const MapWithPieChartsLasVegas = () => {
@@ -60,7 +201,7 @@ const MapWithPieChartsLasVegas = () => {
     if (mapRef.current) {
       // Add an event listener to track zoom changes
       mapRef.current.on("zoomend", () => {
-        setZoomLevel(mapRef.current.getZoom()); // Update the zoom level state
+        setZoomLevel(mapRef.current.getZoom());
         console.log("Zoom level", zoomLevel);
       });
     }
@@ -69,14 +210,13 @@ const MapWithPieChartsLasVegas = () => {
   return (
     <div className="relative w-full h-full">
       <MapContainer
-        center={[36.1699, -115.1398]} // Centering the map to Las Vegas
-        zoom={12} // Initial zoom level set to 12
+        center={[36.1699, -115.1398]}
+        zoom={12}
         scrollWheelZoom={true}
         className="w-[100vw] h-[100vh]"
         whenCreated={(mapInstance) => {
           mapRef.current = mapInstance;
 
-          // Use fitBounds to fit all markers on the initial load
           const bounds = L.latLngBounds(lasVegasData.map((d) => d.position));
           mapInstance.fitBounds(bounds);
         }}
@@ -93,7 +233,7 @@ const MapWithPieChartsLasVegas = () => {
             state={location}
             polygonCoords={location.polygonCoords}
             mapRef={mapRef}
-            zoomLevel={zoomLevel} // Pass the current zoom level to the MarkerWithPieChart component
+            zoomLevel={zoomLevel}
           />
         ))}
       </MapContainer>
@@ -166,6 +306,9 @@ const MarkerWithPieChart = ({
       mapRef.current.setView(position, 13, { animate: true });
     }
   }, [showMetaData, position, mapRef]);
+
+  // const root = am5.Root.new("chartdiv");
+  // root._logo.dispose();
 
   return (
     <>
