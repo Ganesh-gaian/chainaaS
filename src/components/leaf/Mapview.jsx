@@ -8,6 +8,7 @@ import "./styles.css";
 am4core.useTheme(am4themes_animated);
 
 // Example State Data for Las Vegas Locations with Usage and Details
+>>>>>>>>> Temporary merge branch 2
 const lasVegasData = [
   {
     name: "Location 1 - Las Vegas",
@@ -31,6 +32,7 @@ const lasVegasData = [
             "#FF0000",
             "#0000FF",
           ],
+>>>>>>>>> Temporary merge branch 2
         },
       ],
     },
@@ -240,4 +242,150 @@ const MapWithPieChartsLasVegas = () => {
   );
 };
 
+<<<<<<<<< Temporary merge branch 1
+=========
+const MarkerWithPieChart = ({
+  position,
+  state,
+  polygonCoords,
+  mapRef,
+  zoomLevel,
+}) => {
+  const chartRef = useRef(null); // Reference to the chart DOM element
+  const chartInstance = useRef(null); // Ref to persist the chart instance
+  const [showMetaData, setShowMetaData] = useState(false); // State to toggle metadata display
+
+  // Function to toggle metadata on pie chart click
+  const toggleMetaData = () => {
+    setShowMetaData((prev) => !prev); // Toggle metadata visibility
+  };
+
+  useLayoutEffect(() => {
+    // Initialize the chart only if the container is available and not already initialized
+    if (chartRef.current && !chartInstance.current) {
+      // Create a new chart instance after the container is available
+      chartInstance.current = am4core.create(
+        chartRef.current,
+        am4charts.PieChart3D
+      );
+
+      // Setup chart data and series
+      chartInstance.current.data = state.appUsage.labels.map(
+        (label, index) => ({
+          category: label,
+          value: state.appUsage.datasets[0].data[index],
+        })
+      );
+
+      let series = chartInstance.current.series.push(
+        new am4charts.PieSeries3D()
+      );
+      series.dataFields.value = "value";
+      series.dataFields.category = "category";
+
+      // Add event listener to toggle metadata on pie chart click
+      series.slices.template.events.on("hit", () => {
+        toggleMetaData();
+      });
+
+      chartInstance.current.events.on("ready", () => {
+        chartInstance.current.invalidateRawData(); // Revalidate data to force rendering
+        chartInstance.current.resize(); // Ensure chart resizes correctly
+      });
+    }
+
+    // Cleanup chart on unmount
+    return () => {
+      if (chartInstance.current) {
+        chartInstance.current.dispose();
+        chartInstance.current = null;
+      }
+    };
+  }, [state.appUsage]);
+
+  // Zoom into the marker when metadata is displayed
+  useEffect(() => {
+    if (showMetaData && mapRef.current) {
+      mapRef.current.setView(position, 13, { animate: true });
+    }
+  }, [showMetaData, position, mapRef]);
+
+  // const root = am5.Root.new("chartdiv");
+  // root._logo.dispose();
+
+  return (
+    <>
+      {/* Conditionally render the polygon based on zoom level */}
+      {zoomLevel >= 14 && (
+        <Polygon
+          positions={polygonCoords} // Coordinates of the polygon for this location
+          color="blue" // Color of the polygon border
+          fillColor="rgba(135, 206, 250, 0.5)" // Semi-transparent fill color for the area
+          fillOpacity={0.3} // Adjust opacity to make it slightly transparent
+          weight={2} // Border thickness
+        />
+      )}
+
+      {/* Display Pie Chart and metadata */}
+      <Popup
+        position={position}
+        className="max-w-lg"
+        closeButton={false}
+        autoClose={false} // Prevent the popup from closing automatically
+        closeOnClick={false} // Prevent closing when clicking elsewhere on the map
+      >
+        <div className="relative flex items-start p-4">
+          {/* 3D Pie Chart - always displayed */}
+          <div className="w-40 h-40">
+            <div
+              ref={chartRef} // Reference to the div that will hold the amChart
+              style={{ width: "160px", height: "160px" }}
+            ></div>
+          </div>
+
+          {/* Metadata - toggled when Pie Chart is clicked */}
+          {showMetaData && (
+            <div className="ml-4">
+              <div className="absolute top-0 right-[-260px] bg-white shadow-lg p-4 w-64 rounded-lg">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-lg font-semibold">
+                    {state.name} Metadata
+                  </h3>
+                </div>
+                <p>
+                  <strong>Status:</strong> {state.details.status}
+                </p>
+                <p>
+                  <strong>Tenant partner:</strong> {state.details.tenant}
+                </p>
+                <p>
+                  <strong>Start Date:</strong> {state.details.startDate}
+                </p>
+                <p>
+                  <strong>Antenna Type:</strong> {state.details.antennaType}
+                </p>
+                <p>
+                  <strong>Power:</strong> {state.details.power}
+                </p>
+                <p>
+                  <strong>Coverage Area:</strong> {state.details.coverageArea}
+                </p>
+                <p>
+                  <strong>Revenue:</strong>
+                </p>
+                <ul className="list-disc list-inside">
+                  <li>Day: {state.details.revenue.day}</li>
+                  <li>Monthly: {state.details.revenue.monthly}</li>
+                  <li>Yearly: {state.details.revenue.yearly}</li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </div>
+      </Popup>
+    </>
+  );
+};
+
+>>>>>>>>> Temporary merge branch 2
 export default MapWithPieChartsLasVegas;
