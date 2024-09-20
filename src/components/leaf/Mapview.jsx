@@ -5,7 +5,7 @@ import MarkerWithPieChart from "./MarkerWithPieChart";
 import "leaflet/dist/leaflet.css";
 import "./styles.css";
 
-am4core.useTheme(am4themes_animated);
+// am4core.useTheme(am4themes_animated);
 
 // Example State Data for Las Vegas Locations with Usage and Details
 const lasVegasData = [
@@ -214,7 +214,7 @@ const MapWithPieChartsLasVegas = () => {
         center={[36.1699, -115.1398]}
         zoom={14}
         scrollWheelZoom={true}
-        className="w-[100vw] h-[100vh]"
+        className="w-[94vw] h-[92vh]"
         whenCreated={(mapInstance) => {
           mapRef.current = mapInstance;
           const bounds = L.latLngBounds(lasVegasData.map((d) => d.position));
