@@ -5,8 +5,9 @@ import MarkerWithPieChart from "./MarkerWithPieChart";
 import "leaflet/dist/leaflet.css";
 import "./styles.css";
 
-am4core.useTheme(am4themes_animated);
+// am4core.useTheme(am4themes_animated);
 
+// Example State Data for Las Vegas Locations with Usage and Details
 const lasVegasData = [
   {
     name: "Location 1 - Las Vegas",
@@ -30,7 +31,6 @@ const lasVegasData = [
             "#FF0000",
             "#0000FF",
           ],
-          backgroundColor: ["#800080", "#00FF00", "#FF4500", "#FF0000", "#0000FF"],
         },
       ],
     },
@@ -48,9 +48,9 @@ const lasVegasData = [
       },
     },
     polygonCoords: [
-      [36.2299, -115.1898], 
-      [36.2299, -115.0898], 
-      [36.1099, -115.0898], 
+      [36.2299, -115.1898],
+      [36.2299, -115.0898],
+      [36.1099, -115.0898],
       [36.1099, -115.1898],
     ],
   },
@@ -206,7 +206,7 @@ const MapWithPieChartsLasVegas = () => {
         mapRef.current.off("zoomend", handleZoomEnd);
       };
     }
-  }, [mapRef,zoomLevel]);
+  }, [mapRef, zoomLevel]);
 
   return (
     <div className="relative w-full h-full">
@@ -214,7 +214,7 @@ const MapWithPieChartsLasVegas = () => {
         center={[36.1699, -115.1398]}
         zoom={14}
         scrollWheelZoom={true}
-        className="w-[100vw] h-[100vh]"
+        className="w-[94vw] h-[92vh]"
         whenCreated={(mapInstance) => {
           mapRef.current = mapInstance;
           const bounds = L.latLngBounds(lasVegasData.map((d) => d.position));
@@ -239,6 +239,5 @@ const MapWithPieChartsLasVegas = () => {
     </div>
   );
 };
-
 
 export default MapWithPieChartsLasVegas;

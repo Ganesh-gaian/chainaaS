@@ -73,7 +73,7 @@ const MarkerWithPieChart = ({ position, state, polygonCoords, mapRef, zoomLevel 
 
   return (
     <>
-      {zoomLevel >= 13 && (
+      {/* {zoomLevel >= 13 && (
         <Polygon
           positions={polygonCoords}
           color="blue"
@@ -81,7 +81,7 @@ const MarkerWithPieChart = ({ position, state, polygonCoords, mapRef, zoomLevel 
           fillOpacity={0.3}
           weight={2}
         />
-      )}
+      )} */}
       <Popup
         position={position}
         className="max-w-lg"
