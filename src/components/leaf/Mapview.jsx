@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import { MapContainer, TileLayer, Polygon } from "react-leaflet";
 import L from "leaflet";
@@ -5,6 +7,9 @@ import MarkerWithPieChart from "./MarkerWithPieChart";
 import "leaflet/dist/leaflet.css";
 import "./styles.css";
 
+// Import amCharts modules
+// import {am4core} from "@amcharts/amcharts4/core";
+// import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 // am4core.useTheme(am4themes_animated);
 
 // Example State Data for Las Vegas Locations with Usage and Details
@@ -212,9 +217,9 @@ const MapWithPieChartsLasVegas = () => {
     <div className="relative w-full h-full">
       <MapContainer
         center={[36.1699, -115.1398]}
-        zoom={14}
+        zoom={11}
         scrollWheelZoom={true}
-        className="w-[94vw] h-[92vh]"
+        className="w-[100%] h-[100%]"
         whenCreated={(mapInstance) => {
           mapRef.current = mapInstance;
           const bounds = L.latLngBounds(lasVegasData.map((d) => d.position));

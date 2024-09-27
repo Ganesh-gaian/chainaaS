@@ -1,5 +1,6 @@
-import React from "react";
+import Image from "next/image";
 
+// Images import
 import Icon from "../../../../public/svgs/topNav/LogoChart.svg";
 import leftArrow from "../../../../public/svgs/topNav/leftArrow.svg";
 import lineSeparator from "../../../../public/svgs/topNav/separatorLine.svg";
@@ -26,12 +27,12 @@ export default function TopNav() {
   ];
 
   return (
-    <div className="w-full h-[6vh] pl-[1vw] flex items-center gap-[0.4vw] border-b border-[#EAEAEA]">
+    <div className="w-full h-[6vh] pl-[1vw] flex items-center gap-[0.4vw] border-b border-[#EAEAEA] bg-white">
       <div>
-        <img className="w-[4vw]" src={Icon} alt="Logo" />
+        <Image className="w-[4vw]" src={Icon} alt="Logo" />
       </div>
       <div>
-        <img className="w-[1.8vw]" src={leftArrow} alt="LeftArrow" />
+        <Image className="w-[1.8vw]" src={leftArrow} alt="LeftArrow" />
       </div>
       <div className="flex items-center justify-center gap-[1vw] ">
         {/* Loop of the levels in HCY - MP */}
@@ -42,7 +43,7 @@ export default function TopNav() {
               className="flex gap-2 *:flex *:justify-center items-center"
             >
               <div>
-                <img
+                <Image
                   className="w-[0.4vw]"
                   src={lineSeparator}
                   alt="lineSeparator"
