@@ -1,5 +1,10 @@
 import React from "react";
+import Chainsman from "./Tower/page";
 
 export default function Chains() {
-  return <div>This is from chains</div>;
+  return (
+    <>
+        <Chainsman />
+    </>
+)
 }
