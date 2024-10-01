@@ -1,7 +1,11 @@
+"use client"
+import { useState } from "react";
 import Image from "next/image"
 import izakLogo from "../../../public/images/izakLogo.png"
 
-
+// Ant design components:
+import { Space, Select } from "antd"
+import { DownOutlined } from '@ant-design/icons';
 
 export default function PerformanceCard() {
 
@@ -10,48 +14,76 @@ export default function PerformanceCard() {
         logo: "",
         description: "Home Automation / IoT Solution",
         deploymentDate: "January 10, 2023",
-        Users: "120,000",
+        users: "120,000",
         engagement: "",
         location: "New York",
         upTime: "99.8"
     }
 
+    // Ant design 
+    const months = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December',
+    ];
+
+    // Get the current month index (0 - January, 11 - December)
+    const currentMonthIndex = new Date().getMonth();
+
+    // State to manage the selected month
+    const [selectedMonth, setSelectedMonth] = useState(currentMonthIndex);
+
+    // Handle when a user selects a different month
+    const handleChange = (value: number) => {
+        setSelectedMonth(value);
+    };
+
     return (
-        <div className="w-[30vw] p-[1.2vw] flex flex-col gap-[1.4vw] bg-white">
+        <div className="w-[26vw] p-[1.2vw] flex flex-col gap-[1.4vw] bg-white rounded-md">
             <div className="w-full flex justify-between items-center">
-                <p className="font-bold">Top Performing App</p>
-                <div>
-                    Dropdown
-                </div>
+                <p className="font-medium text-[16px] ">Top Performing App</p>
+                <Space>
+                    <Select
+                        value={selectedMonth} // Set the default selected month
+                        onChange={handleChange} // Handle month change
+                        style={{ width: 120 }} // Set the width of the dropdown
+                        suffixIcon={<DownOutlined />} // Add down arrow icon
+                    >
+                        {months.map((month, index) => (
+                            <Select.Option key={index} value={index}>
+                                {month}
+                            </Select.Option>
+                        ))}
+                    </Select>
+                </Space>
             </div>
             <div className="flex gap-[1.2vw] my-[0.4vw]">
                 <Image src={izakLogo} alt="iZakLogo" />
                 <div >
-                    <p className="font-bold">{appDetails.name}</p>
-                    <p className="opacity-40">{appDetails.description}</p>
+                    <p className="font-medium text-[16px]">{appDetails.name}</p>
+                    <p className="opacity-40 text-[12px]">{appDetails.description}</p>
                 </div>
             </div>
             <div className="grid grid-cols-2 ">
                 <div className="">
-                    <div className="opacity-40">Deploment Date</div>
-                    <div>{appDetails.deploymentDate}</div>
+                    <div className="opacity-40 text-[12px]">Deploment Date</div>
+                    <div className="text-[14px]">{appDetails.deploymentDate}</div>
                 </div>
                 <div className="">
-                    <div className="opacity-40">Daily Active Users</div>
-                    <div>{`${appDetails.Users}+ users per day`}</div>
+                    <div className="opacity-40 text-[12px]">Daily Active Users</div>
+                    <div className="text-[14px]">{`${appDetails.users}+ users per day`}</div>
                 </div>
             </div>
             <div className="grid grid-cols-2">
                 <div className="">
-                    <div className="opacity-40">Engagement Rate</div>
-                    <div>{appDetails.deploymentDate}</div>
+                    <div className="opacity-40 text-[12px]">Engagement Rate</div>
+                    <div className="text-[14px]">{appDetails.deploymentDate}</div>
                 </div>
                 <div className="">
-                    <div className="opacity-40">Geographic Reach</div>
-                    <div>{appDetails.location}</div>
+                    <div className="opacity-40 text-[12px]">Geographic Reach</div>
+                    <div className="text-[14px]">{appDetails.location}</div>
                 </div>
             </div>
-            <div className="flex gap-[0.4vw]">
+            <div className="flex gap-[0.4vw] *:text-[12px]">
                 <div>Uptime</div>
                 <div className="flex items-center gap-[0.1vw]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">

@@ -2,8 +2,19 @@
 import React, { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 
-const DoughnutChart = ({
-    data = [
+interface ChartData {
+    value: number;
+    name: string;
+    itemStyle: {
+        color: string;
+    };
+}
+
+const DoughnutChart: React.FC = () => {
+    const chartRef = useRef<HTMLDivElement>(null);
+
+    // Define the data within the component from API
+    const data: ChartData[] = [
         { value: 15, name: "iZak", itemStyle: { color: "#9A9AFF" } },
         { value: 20, name: "Amplyfund", itemStyle: { color: "#94D0FF" } },
         { value: 15, name: "Hear, Here", itemStyle: { color: "#F1AE9D" } },
@@ -11,41 +22,37 @@ const DoughnutChart = ({
         { value: 25, name: "Museo", itemStyle: { color: "#FBC96C" } },
         { value: 10, name: "Spectra-Gaurd", itemStyle: { color: "#A6AF88" } },
         { value: 5, name: "Revee", itemStyle: { color: "#CBC3EE" } },
-    ],
-    showTitle = "",
-    isTitle = false,
-}) => {
-    const chartRef = useRef(null);
+    ];
 
     useEffect(() => {
-        const chartDom = chartRef.current;
+        const chartDom = chartRef.current!;
         const myChart = echarts.init(chartDom);
-        const option = {
+        const option: echarts.EChartsOption = {
             legend: {
                 show: false,
             },
             title: {
-                show: isTitle,
-                text: showTitle,
-                left: "1%",
+                show: true,
+                text: "",
+                left: "center",
                 textStyle: {
                     fontFamily: "Manrope",
+                    fontSize: 14,
                 },
             },
             series: [
                 {
-                    name: "Access From",
+                    name: "App Distribution",
                     type: "pie",
                     radius: ["50%", "70%"],
                     avoidLabelOverlap: false,
                     itemStyle: {
-                        borderRadius: 4,
+                        borderRadius: 6,
                         borderColor: "#fff",
-                        borderWidth: 1,
+                        borderWidth: 2,
                     },
                     label: {
                         show: false,
-                        position: "center",
                     },
                     labelLine: {
                         show: false,
@@ -56,13 +63,13 @@ const DoughnutChart = ({
         };
         myChart.setOption(option);
 
-        // Cleanup when the component is unmounted
+        // Cleanup on unmount
         return () => {
             myChart.dispose();
         };
-    }, [data, showTitle, isTitle]);
+    }, []);
 
-    return <div className="w-full h-full" ref={chartRef} />;
+    return <div className="w-[200px] h-[200px]" ref={chartRef} />;
 };
 
 export default DoughnutChart;

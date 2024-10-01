@@ -1,7 +1,12 @@
-import React from 'react'
+import ProjectCards from '@/components/projects/projectCards'
 
 export default function Project() {
   return (
-    <div>Project</div>
+    <div>
+      <div>
+        <ProjectCards />
+      </div>
+      
+    </div>
   )
 }
