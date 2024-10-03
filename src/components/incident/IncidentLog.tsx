@@ -1,11 +1,8 @@
-// components/IncidentLog.tsx
-
-import React, { useState } from "react";
+"use client"
+import React, { useState, useEffect } from "react";
 import { Table, Pagination, Dropdown, Menu, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import "tailwindcss/tailwind.css";
 
-// Define interface for incident data
 interface IncidentData {
     key: string;
     incidentId: string;
@@ -21,7 +18,7 @@ interface IncidentData {
 }
 
 const IncidentLog: React.FC = () => {
-    // Incident data
+    // Initial Incident Data
     const initialData: IncidentData[] = [
         {
             key: "1",
@@ -90,9 +87,51 @@ const IncidentLog: React.FC = () => {
         },
     ];
 
-    // Pagination state
+    // State for current data, sort/filter option, and pagination
+    const [filteredData, setFilteredData] = useState<IncidentData[]>(initialData);
     const [currentPage, setCurrentPage] = useState(1);
-    const [pageSize, setPageSize] = useState(5);
+    const [pageSize, setPageSize] = useState(10);
+    const [sortOption, setSortOption] = useState("Recent");
+
+    // Dropdown menu for sorting/filtering options
+    const menu = (
+        <Menu
+            onClick={(e) => setSortOption(e.key)}
+            selectedKeys={[sortOption]}
+        >
+            <Menu.Item key="Recent">Recent</Menu.Item>
+            <Menu.Item key="Oldest">Oldest</Menu.Item>
+            <Menu.Item key="Critical">Critical</Menu.Item>
+            <Menu.Item key="Minor">Minor</Menu.Item>
+        </Menu>
+    );
+
+    // Handle pagination change
+    const onPageChange = (page: number, pageSize: number) => {
+        setCurrentPage(page);
+        setPageSize(pageSize);
+    };
+
+    // Effect to filter and sort data based on the dropdown selection
+    useEffect(() => {
+        let updatedData = [...initialData]; // Start with the initial data
+
+        if (sortOption === "Critical") {
+            updatedData = updatedData.filter(item => item.severity === "Critical");
+        } else if (sortOption === "Minor") {
+            updatedData = updatedData.filter(item => item.severity === "Minor");
+        } else if (sortOption === "Recent") {
+            updatedData = updatedData.sort(
+                (a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime()
+            );
+        } else if (sortOption === "Oldest") {
+            updatedData = updatedData.sort(
+                (a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime()
+            );
+        }
+
+        setFilteredData(updatedData);
+    }, [sortOption]); // Trigger this effect when the sortOption changes
 
     // Define columns for the table
     const columns = [
@@ -113,7 +152,9 @@ const IncidentLog: React.FC = () => {
             render: (severity: string) => (
                 <span
                     className={
-                        severity === "Critical" ? "text-red-500 font-bold" : "text-yellow-500 font-bold"
+                        severity === "Critical"
+                            ? "text-red-500 font-bold"
+                            : "text-yellow-500 font-bold"
                     }
                 >
                     {severity === "Critical" ? "● Critical" : "● Minor"}
@@ -161,42 +202,29 @@ const IncidentLog: React.FC = () => {
         },
     ];
 
-    // Dropdown menu for sorting/filtering options
-    const menu = (
-        <Menu>
-            <Menu.Item key="1">Recent</Menu.Item>
-            <Menu.Item key="2">Oldest</Menu.Item>
-            <Menu.Item key="3">Critical</Menu.Item>
-            <Menu.Item key="4">Minor</Menu.Item>
-        </Menu>
-    );
-
-    // Handle pagination change
-    const onPageChange = (page: number, pageSize: number) => {
-        setCurrentPage(page);
-        setPageSize(pageSize);
-    };
-
     return (
-        <div className="p-6 bg-white rounded-lg shadow-md">
-            <div className="flex justify-between items-center mb-4">
+        <div className="p-[1vw] bg-white rounded-sm">
+            <div className="flex justify-between items-center mb-[1vw]">
                 <h2 className="text-lg font-semibold">Incident Log</h2>
                 <Dropdown overlay={menu}>
                     <Button>
-                        Recent <DownOutlined />
+                        {sortOption} <DownOutlined />
                     </Button>
                 </Dropdown>
             </div>
             <Table
                 columns={columns}
-                dataSource={initialData}
+                dataSource={filteredData}
                 pagination={false} // We will use custom pagination
+                rowClassName={(record, index) =>
+                    index % 2 === 0 ? "bg-gray-50" : "" // Alternate row colors
+                }
             />
             <div className="mt-4 flex justify-end">
                 <Pagination
                     current={currentPage}
                     pageSize={pageSize}
-                    total={50} // Assuming there are more data entries
+                    total={filteredData.length} // Update pagination based on filtered data
                     onChange={onPageChange}
                     showSizeChanger
                     pageSizeOptions={["5", "10", "20"]}

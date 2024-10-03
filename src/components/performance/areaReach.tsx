@@ -121,9 +121,9 @@ const AreaReachChart = () => {
     }, [areaReachOptions]);
 
     return (
-        <div>
+        <div className="h-[60vh] w-full bg-white p-[1vw] rounded-sm">
             {/* Chart container */}
-            <div ref={chartRef} style={{ height: "400px", width: "100%" }} />
+            <div ref={chartRef} className="w-full h-full" />
         </div>
     );
 };

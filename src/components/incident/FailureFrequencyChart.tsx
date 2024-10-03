@@ -1,48 +1,15 @@
-// components/FailureFrequencyChart.tsx
-
-import React, { useEffect, useState } from "react";
+"use client"
+import React, { useEffect } from "react";
 import * as echarts from "echarts";
-import { Dropdown, Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
-
-// Define the interface for the chart data
-interface FailureFrequencyData {
-    category: string;
-    months: string[];
-    failures: number[];
-}
+import { color } from "chart.js/helpers";
+import { text } from "stream/consumers";
 
 const FailureFrequencyChart: React.FC = () => {
-    // Define the data inside the component
-    const data: { [key: string]: FailureFrequencyData } = {
-        Application: {
-            category: "Application",
-            months: ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-            failures: [4, 8, 6, 9, 3, 7],
-        },
-        Tower: {
-            category: "Tower",
-            months: ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-            failures: [5, 6, 7, 11, 0, 8],
-        },
-        Spectrum: {
-            category: "Spectrum",
-            months: ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-            failures: [2, 9, 6, 10, 1, 4],
-        },
-        Exciter: {
-            category: "Exciter",
-            months: ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
-            failures: [6, 5, 9, 12, 3, 5],
-        },
-    };
-
-    // State to manage the current category of data being displayed
-    const [selectedCategory, setSelectedCategory] = useState("Application");
-
-    // Handle category change when the user selects a new category from the dropdown
-    const handleMenuClick = (e: any) => {
-        setSelectedCategory(e.key);
+    // Static data for the chart (Application category as an example)
+    const data = {
+        category: "Application",
+        months: ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+        failures: [4, 8, 6, 9, 3, 7],
     };
 
     useEffect(() => {
@@ -52,58 +19,86 @@ const FailureFrequencyChart: React.FC = () => {
         const option = {
             title: {
                 text: "Failure Frequency Timeline",
-                left: "center",
+                left: "left",
                 textStyle: {
                     fontSize: 14,
                 },
             },
             tooltip: {
-                trigger: "axis",
+                trigger: "item",
             },
             xAxis: {
                 type: "category",
-                data: data[selectedCategory].months,
+                data: data.months,
+                axisLine: {
+                    lineStyle: {
+                        color: "#C7C7CC",
+                    },
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+
+                },
             },
             yAxis: {
                 type: "value",
                 name: "Number of Failures",
+                nameLocation: "middle",
+                nameGap: 40,  // Gap for the y-axis name
+                nameTextStyle: {
+                    rotate: 45,  // Rotate y-axis name by 45 degrees
+                    fontSize: 12,  // Match font size with the image
+                },
+                axisLabel: {
+                    formatter: '{value}',
+                    fontSize: 12,  // Match font size with the image
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
+                },
             },
             series: [
                 {
-                    name: data[selectedCategory].category,
-                    data: data[selectedCategory].failures,
+                    name: data.category,
+                    data: data.failures,
                     type: "line",
-                    smooth: true,
+                    symbol: "circle", // Points on each data value
+                    symbolSize: 8, // Match point size in the image
                     lineStyle: {
                         color: "#1976d2", // Blue line
                     },
                     itemStyle: {
                         color: "#1976d2", // Blue points
                     },
-                    label: {
-                        show: true,
-                        position: "top",
-                        formatter: "{c}",
-                    },
                 },
             ],
+            grid: {
+                top: "20%", // Adjust grid to match spacing seen in the image
+                bottom: "20%", // Adjust grid to match spacing seen in the image
+                left: "10%", // Adjust grid to match spacing seen in the image
+                right: "10%", // Adjust grid to match spacing seen in the image
+            },
         };
 
         // Set the chart options
         myChart.setOption(option);
 
-        // Clean up the chart when the component is unmounted
+        // Cleanup the chart when the component unmounts
         return () => {
             myChart.dispose();
         };
-    }, [selectedCategory, data]);
+    }, []);
 
     return (
-        <div className="p-6 bg-white rounded-lg shadow-md">
-            <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold">Failure Frequency Timeline</h2>
-            </div>
-            <div id="failureFrequencyChart" className="w-full h-72"></div>
+        <div className="h-[40vh] aspect-auto p-[1vw] bg-white rounded-sm">
+            <div id="failureFrequencyChart" className="w-full h-full"></div>
         </div>
     );
 };

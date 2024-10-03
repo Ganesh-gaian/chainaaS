@@ -22,7 +22,7 @@ const DoughnutChartWithLegends: React.FC = () => {
     ];
 
     return (
-        <div className="w-[31vw] bg-white p-4 rounded-md">
+        <div className="bg-white p-[1vw] rounded-sm">
             <p className="font-semibold mb-[0.8vw]">
                 App distribution cross chain
             </p>
@@ -31,10 +31,10 @@ const DoughnutChartWithLegends: React.FC = () => {
                 <DoughnutChart />
 
                 {/* Legends next to the chart */}
-                <div className="flex flex-col gap-[1vw]">
+                <div className="flex flex-col gap-[1vw] ">
                     {data.map((d, index) => (
                         <div
-                            className="flex items-center gap-[0.4vw] px-[0.4vw] py-[0.2vw] bg-[#F5F6F7] rounded-md"
+                            className="w-fit flex items-center gap-[0.4vw] px-[0.4vw] py-[0.2vw] bg-[#F5F6F7] rounded-md"
                             key={index}
                         >
                             <div
