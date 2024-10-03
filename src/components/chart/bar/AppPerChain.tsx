@@ -139,10 +139,10 @@ const BarChartComponent: React.FC = () => {
     }, [cities, rawData, formattedSeries]);
 
     return (
-        <div className="w-full p-[1vw] bg-white">
+        <div className="h-[60vh] w-full p-[1vw] bg-white rounded-sm">
             <div
                 ref={chartRef}
-                className="h-[500px] w-full rounded-sm"
+                className="h-full w-full"
             />
         </div>
     );

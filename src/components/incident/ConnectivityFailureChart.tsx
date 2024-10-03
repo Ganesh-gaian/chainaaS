@@ -1,10 +1,7 @@
-// components/ConnectivityFailureChart.tsx
-
+"use client"
 import React, { useEffect } from "react";
 import * as echarts from "echarts";
-import "tailwindcss/tailwind.css";
 
-// Define interface for chart data
 interface ConnectivityFailureData {
     locations: string[];
     failures: number[];
@@ -26,9 +23,10 @@ const ConnectivityFailureChart: React.FC = () => {
         const option = {
             title: {
                 text: "Connectivity failure",
-                left: "center",
+                left: "left", // Align title to the left
                 textStyle: {
                     fontSize: 14,
+                    fontWeight: 'bold', // Bold title to match image
                 },
             },
             xAxis: {
@@ -36,11 +34,46 @@ const ConnectivityFailureChart: React.FC = () => {
                 data: chartData.locations,
                 axisLabel: {
                     rotate: 0,
+                    fontSize: 12,  // Match font size with image
+                },
+                axisLine: {
+                    show: false,  // Remove the x-axis line
+                },
+                axisTick: {
+                    show: false,  // Hide ticks on x-axis
                 },
             },
             yAxis: {
                 type: "value",
                 name: "Number of Failures",
+                nameLocation: 'middle',
+                nameGap: 40,  // Adjust gap for y-axis title
+                axisLine: {
+                    show: false,  // Remove the y-axis line
+                },
+                axisTick: {
+                    show: false,  // Hide ticks on y-axis
+                },
+                axisLabel: {
+                    fontSize: 12, // Match font size with image
+                    formatter: (value: number) => {
+                        return value < 10 ? `0${value}` : value.toString(); // Format to match image
+                    },
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
+                },
+            },
+            grid: {
+                top: '15%',
+                left: '5%',
+                right: '5%',
+                bottom: '15%',
+                containLabel: true, // Ensure the labels fit within the chart area
             },
             series: [
                 {
@@ -51,7 +84,10 @@ const ConnectivityFailureChart: React.FC = () => {
                         },
                     })),
                     type: "bar",
-                    barWidth: "40%",
+                    barWidth: "40%",  // Adjust bar width to match image
+                    label: {
+                        show: false,  // No value labels on top of the bars
+                    },
                 },
             ],
         };
@@ -66,8 +102,9 @@ const ConnectivityFailureChart: React.FC = () => {
     }, [chartData]);
 
     return (
-        <div className="p-6 bg-white rounded-lg shadow-md">
-            <div id="connectivityFailureChart" className="w-full h-72"></div>
+        <div className="p-[1vw] bg-white rounded-sm col-start-2 col-end-4">
+            {/* Explicitly define width and height */}
+            <div id="connectivityFailureChart" style={{ width: '100%', height: '300px' }}></div>
         </div>
     );
 };

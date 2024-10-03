@@ -38,7 +38,7 @@ export default function PerformanceCard() {
     };
 
     return (
-        <div className="w-[26vw] p-[1.2vw] flex flex-col gap-[1.4vw] bg-white rounded-md">
+        <div className="p-[1.2vw] flex flex-col gap-[1.4vw] bg-white rounded-sm">
             <div className="w-full flex justify-between items-center">
                 <p className="font-medium text-[16px] ">Top Performing App</p>
                 <Space>

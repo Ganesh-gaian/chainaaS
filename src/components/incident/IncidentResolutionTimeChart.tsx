@@ -1,10 +1,6 @@
-// components/IncidentResolutionTimeChart.tsx
-
+"use client"
 import React, { useEffect } from "react";
 import * as echarts from "echarts";
-import "tailwindcss/tailwind.css";
-
-// Define interface for chart data
 interface ResolutionTimeData {
     months: string[];
     resolutionTimes: number[];
@@ -25,7 +21,7 @@ const IncidentResolutionTimeChart: React.FC = () => {
 
         const option = {
             title: {
-                text: "Incident Resolution Time per month",
+                text: "",
                 left: "center",
                 textStyle: {
                     fontSize: 14,
@@ -44,6 +40,23 @@ const IncidentResolutionTimeChart: React.FC = () => {
             yAxis: {
                 type: "value",
                 name: "Hours",
+                nameLocation: "middle",
+                nameGap: 40,  // Gap for the y-axis name
+                nameTextStyle: {
+                    rotate: 45,  // Rotate y-axis name by 45 degrees
+                    fontSize: 12,  // Match font size with the image
+                },
+                axisLabel: {
+                    formatter: '{value}',
+                    fontSize: 12,  // Match font size with the image
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
+                },
             },
             series: [
                 {
@@ -76,10 +89,10 @@ const IncidentResolutionTimeChart: React.FC = () => {
     }, [chartData]);
 
     return (
-        <div className="p-6 bg-white rounded-lg shadow-md">
-            <h2 className="text-lg font-semibold mb-2">Incident Resolution Time per month</h2>
-            <div className="flex items-center space-x-2 mb-4">
-                <p className="text-3xl font-semibold">4 hour</p>
+        <div className="p-[1vw] bg-white rounded-sm">
+            <h2 className="text-lg font-semibold mb-[0.4vw]">Incident Resolution Time per month</h2>
+            <div className="mb-[1vw]">
+                <p className="text-3xl font-medium">4 hour</p>
                 <p className="text-gray-500">Average Resolution Time</p>
             </div>
             <div id="resolutionTimeChart" className="w-full h-72"></div>
