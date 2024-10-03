@@ -68,7 +68,7 @@ const LiveAppsUptimeChart: React.FC = () => {
             grid: {
                 left: '10%',
                 right: '10%',
-                bottom: '15%',
+                bottom: '25%',
                 top: '15%',
             },
         };
@@ -79,8 +79,12 @@ const LiveAppsUptimeChart: React.FC = () => {
             myChart.dispose();
         };
     }, [data]);
-
-    return <div ref={chartRef} className="w-full h-64" />;
+    return (
+        <div className="p-[1vw] bg-white rounded-sm">
+            <h2 className="text-lg font-semibold mb-[0.4vw]">Live Apps Uptime</h2>
+            <div ref={chartRef} className="w-full h-72"></div>
+        </div>
+    )
 };
 
 export default LiveAppsUptimeChart;

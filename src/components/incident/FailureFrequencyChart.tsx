@@ -80,10 +80,10 @@ const FailureFrequencyChart: React.FC = () => {
                 },
             ],
             grid: {
-                top: "20%", // Adjust grid to match spacing seen in the image
-                bottom: "20%", // Adjust grid to match spacing seen in the image
-                left: "10%", // Adjust grid to match spacing seen in the image
-                right: "10%", // Adjust grid to match spacing seen in the image
+                top: "20%", 
+                bottom: "20%", 
+                left: "10%", 
+                right: "10%", 
             },
         };
 

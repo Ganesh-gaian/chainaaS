@@ -28,38 +28,84 @@ const UserEngagementChart: React.FC = () => {
         const myChart = echarts.init(chartDom);
 
         const option: echarts.EChartsOption = {
+            title: {
+                text: "User Engagement for Live Apps",
+                left: "left",
+                textStyle: {
+                    fontSize: 16,  // Adjust font size to match the image
+                    fontWeight: 'bold',
+                },
+            },
             xAxis: {
                 type: 'value',
                 name: 'Bandwidth Usage (GB)',
                 nameLocation: 'center',
-                nameGap: 25,
+                nameGap: 30, // Adjust gap to match spacing in the image
                 min: 0,
                 max: 70,
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#D3D3D3',
+                    },
+                },
             },
             yAxis: {
                 type: 'value',
                 name: 'User Engagement Rate (%)',
                 nameLocation: 'center',
-                nameGap: 50,
+                nameGap: 60, // Adjust gap to match the image
                 min: 50,
                 max: 450,
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
+                },
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#D3D3D3',
+                    },
+                },
             },
             series: [
                 {
                     name: 'User Engagement',
                     type: 'scatter',
-                    symbolSize: 20,
+                    symbolSize: 16, // Adjusted to better match the image
                     data: data.map((d) => [d.bandwidthUsage, d.engagementRate]),
                     itemStyle: {
                         color: (params: any) => data[params.dataIndex].color,
+                        opacity: 0.8,  // Add slight transparency to match style in the image
                     },
                 },
             ],
             grid: {
                 left: '10%',
                 right: '10%',
-                bottom: '15%',
-                top: '15%',
+                bottom: '35%',  // Significantly increase the bottom margin for more legend space
+                top: '15%', // Adjust top margin
+            },
+            legend: {
+                data: data.map((d) => d.name),
+                bottom: '5%',  // Place legend lower
+                left: 'center',
+                itemWidth: 14,
+                itemHeight: 14,
+                textStyle: {
+                    fontSize: 12,
+                    color: '#444',
+                },
             },
             tooltip: {
                 trigger: 'item',
@@ -77,7 +123,11 @@ const UserEngagementChart: React.FC = () => {
         };
     }, [data]);
 
-    return <div ref={chartRef} className="w-full h-64" />;
+    return (
+        <div className="p-[1vw] bg-white rounded-sm col-start-2 col-end-4">
+            <div ref={chartRef} style={{ width: '100%', height: '350px' }}></div> {/* Increased the height here */}
+        </div>
+    );
 };
 
 export default UserEngagementChart;

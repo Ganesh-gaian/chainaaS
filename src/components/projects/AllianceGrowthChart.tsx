@@ -30,37 +30,76 @@ const AllianceGrowthChart: React.FC = () => {
         const myChart = echarts.init(chartDom);
 
         const option: echarts.EChartsOption = {
+            title: {
+                text: "Alliance Growth Over Time",
+                left: "left",
+                textStyle: {
+                    fontSize: 16,
+                    fontWeight: 'bold',
+                },
+            },
+            tooltip: {
+                trigger: "item",
+            },
             xAxis: {
                 type: 'category',
                 data: data.map((d) => d.month),
                 name: 'Months',
-                nameLocation: 'center',
-                nameGap: 25,
+                nameLocation: "center",
+                nameGap: 40,
+                axisLine: {
+                    lineStyle: {
+                        color: "#C7C7CC",
+                    },
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLabel: {
+                    fontSize: 12,
+
+                },
             },
             yAxis: {
-                type: 'value',
-                name: 'Number of alliances formed',
-                nameLocation: 'center',
-                nameGap: 50,
+                type: "value",
+                name: "Number of Failures",
+                nameLocation: "middle",
+                nameGap: 40,  // Gap for the y-axis name
+                nameTextStyle: {
+                    rotate: 45,  // Rotate y-axis name by 45 degrees
+                    fontSize: 12,  // Match font size with the image
+                },
+                axisLabel: {
+                    formatter: '{value}',
+                    fontSize: 12,  // Match font size with the image
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
+                },
             },
             series: [
                 {
                     data: data.map((d) => d.alliancesFormed),
                     type: 'line',
-                    smooth: true,
+                    symbol: "circle", // Points on each data value
+                    symbolSize: 8, // Match point size in the image
                     lineStyle: {
-                        color: '#3b82f6', // Tailwind's blue-500
+                        color: "#1976d2", // Blue line
                     },
                     itemStyle: {
-                        color: '#3b82f6',
+                        color: "#1976d2", // Blue points
                     },
                 },
             ],
             grid: {
-                left: '10%',
-                right: '10%',
-                bottom: '15%',
-                top: '15%',
+                top: "20%",
+                bottom: "20%",
+                left: "10%",
+                right: "10%",
             },
         };
 
@@ -71,7 +110,11 @@ const AllianceGrowthChart: React.FC = () => {
         };
     }, [data]);
 
-    return <div ref={chartRef} className="w-full h-64" />;
+    return (
+        <div className="h-[50vh] aspect-auto p-[1vw] bg-white rounded-sm">
+            <div ref={chartRef} className="w-full h-full"></div>
+        </div>
+    )
 };
 
 export default AllianceGrowthChart;
