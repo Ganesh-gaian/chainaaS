@@ -1,14 +1,16 @@
 "use client";
 import React from 'react';
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+import partner from "../../../public/images/partner.png"
+import Image from 'next/image';
 
-// Define the interface for active projects data
+// interface for active projects data
 interface ActiveProjects {
     count: number;
-    fromLastQuarter: number; // percentage increase
+    fromLastQuarter: number;
 }
 
-// Define the interface for alliance partner data
+// interface for alliance partner data
 interface AlliancePartner {
     name: string;
     partnershipDate: string;
@@ -21,7 +23,7 @@ const ProjectCards: React.FC = () => {
     // Data inside the component with type safety
     const activeProjects: ActiveProjects = {
         count: 4,
-        fromLastQuarter: 10, // percentage increase
+        fromLastQuarter: 10,
     };
 
     const alliancePartner: AlliancePartner = {
@@ -33,64 +35,64 @@ const ProjectCards: React.FC = () => {
     };
 
     return (
-        <div className="p-6 bg-gray-50 min-h-screen">
-            <div className="grid grid-cols-2 gap-6">
+        <div className="w-full">
+            <div className="grid grid-cols-4 gap-[1vw]">
                 {/* My Active Projects Section */}
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <div className="flex justify-between items-center mb-4">
-                        <h3 className="text-lg font-semibold">My Active Projects</h3>
-                        <a href="#" className="text-blue-500 font-medium">
+                <div className="grid col-start-1 col-end-2 bg-white p-[1vw] rounded-sm">
+                    <div className="flex justify-between items-center mb-[0.4vw]">
+                        <h3 className="text-[16px] font-medium ">My Active Projects</h3>
+                        <a href="#" className="text-blue-500 text-[14px]">
                             View More
                         </a>
                     </div>
-                    <div className="text-5xl font-bold mb-2">{activeProjects.count}</div>
-                    <div className="text-sm text-gray-500">
+                    <div className="text-[30px] font-medium mb-[0.2vw]">{activeProjects.count}</div>
+                    <div className="text-[12px]">
                         From last quarter{' '}
-                        <span className="text-green-500 font-medium">
+                        <span className="text-green-500 text-[12px]">
                             ▲ {activeProjects.fromLastQuarter}%
                         </span>
                     </div>
                 </div>
 
                 {/* Alliance Partner Section */}
-                <div className="bg-white p-6 rounded-lg shadow-md">
-                    <div className="flex justify-between items-center mb-4">
-                        <h3 className="text-lg font-semibold">Alliance Partner</h3>
-                        <div className="flex space-x-2">
-                            <button className="p-1 text-gray-500 hover:text-gray-800">
+                <div className="grid col-start-2 col-end-6 bg-white p-[1vw] rounded-sm">
+                    <div className="flex justify-between items-center mb-[0.2vw]">
+                        <h3 className="text-[16px] font-medium">Alliance Partner</h3>
+                        <div className="flex gap-[1vw] *:w-[2vw] *:aspect-auto *:p-[0.2vw] *:text-gray-500 *:hover:text-gray-800 *:border">
+                            <button className="">
                                 <LeftOutlined />
                             </button>
-                            <button className="p-1 text-gray-500 hover:text-gray-800">
+                            <button className="">
                                 <RightOutlined />
                             </button>
                         </div>
                     </div>
-                    <div className="flex items-center mb-4">
-                        <img
-                            src="/images/ark-logo.png" // Placeholder logo, update as needed
+                    <div className="flex items-center mb-[0.6vw]">
+                        <Image
+                            src={partner}
                             alt="ARK Multicasting"
-                            className="w-12 h-12 mr-4"
+                            className="w-[4vw] mr-[1vw]"
                         />
                         <div>
-                            <h4 className="text-lg font-semibold">{alliancePartner.name}</h4>
+                            <h4 className="text-[16px] font-medium">{alliancePartner.name}</h4>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="flex items-center gap-[8vw] [&_h5]:text-xs [&_h5]:opacity-45 [&_p]:text-sm [&_p]:opacity-85">
                         <div>
-                            <h5 className="text-sm font-semibold text-gray-600">Partnership Date</h5>
-                            <p className="text-sm text-gray-800">{alliancePartner.partnershipDate}</p>
+                            <h5 className="">Partnership Date</h5>
+                            <p className="">{alliancePartner.partnershipDate}</p>
                         </div>
                         <div>
-                            <h5 className="text-sm font-semibold text-gray-600">Revenue Contribution</h5>
-                            <p className="text-sm text-gray-800">{alliancePartner.revenueContribution}</p>
+                            <h5 className="">Revenue Contribution</h5>
+                            <p className="">{alliancePartner.revenueContribution}</p>
                         </div>
                         <div>
-                            <h5 className="text-sm font-semibold text-gray-600">Partnership Duration</h5>
-                            <p className="text-sm text-gray-800">{alliancePartner.duration}</p>
+                            <h5 className="">Partnership Duration</h5>
+                            <p className="">{alliancePartner.duration}</p>
                         </div>
                         <div>
-                            <h5 className="text-sm font-semibold text-gray-600">Performance Metrics</h5>
-                            <p className="text-sm text-gray-800">{alliancePartner.performanceMetrics}</p>
+                            <h5 className="">Performance Metrics</h5>
+                            <p className="">{alliancePartner.performanceMetrics}</p>
                         </div>
                     </div>
                 </div>

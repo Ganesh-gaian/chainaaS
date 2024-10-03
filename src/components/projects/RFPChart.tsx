@@ -50,6 +50,7 @@ const RFPChart: React.FC = () => {
                     },
                 },
             ],
+            
         };
 
         myChart.setOption(option);
@@ -59,7 +60,15 @@ const RFPChart: React.FC = () => {
         };
     }, [data]);
 
-    return <div ref={chartRef} className="w-full h-64" />;
+    return (
+        <div className="p-[1vw] bg-white rounded-sm">
+            <h2 className="text-base font-medium mb-[0.4vw]">Request for Proposel</h2>
+            <div className="mb-[1vw]">
+                <p className="text-sm opacity-45">Total RFPs Issued this quarter: <span className='opacity-100'>12</span></p>
+            </div>
+            <div ref={chartRef} style={{ width: '100%', height: '300px' }}></div>
+        </div>
+    );
 };
 
 export default RFPChart;
