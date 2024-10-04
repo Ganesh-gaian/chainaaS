@@ -163,9 +163,13 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
           </Button>
         </div>
       </div>
+<<<<<<< Updated upstream
 
       {/* Content */}
       <div className="w-full h-full bg-[#F5F6F7] overflow-hidden">{children}</div>
+=======
+      <div className="w-full h-full overflow-hidden bg-[#F5F6F7]"> {children}</div>
+>>>>>>> Stashed changes
     </div>
   );
 }

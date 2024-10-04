@@ -34,7 +34,7 @@ let nav_items = [
   },
   {
     page: "Settings",
-    location: "/settings",
+    location: "/settings/account/profile",
     nav_icon: Settings,
   },
 ];
@@ -47,11 +47,25 @@ const LeftNav = () => {
         <div className="w-full flex flex-col justify-center items-center gap-[1vw] first:mt-[2vw]">
           {nav_items.map((item, index) => {
             return (
-              <Link href={item.location} key={index} className={"w-full flex gap-[0.6vw] items-center"}>
+              <Link
+                href={item.location}
+                key={index}
+                className={"w-full flex gap-[0.6vw] items-center"}
+              >
                 {/* Selected nav item will have this for rest none */}
-                <div className={`h-full rounded-r-[8vw] bg-purple-400 ${index === 0 ? "hidden" : "w-[0.2vw]"}`}> </div>
+                <div
+                  className={`h-full rounded-r-[8vw] bg-purple-400 ${
+                    index === 0 ? "hidden" : "w-[0.2vw]"
+                  }`}
+                >
+                  {" "}
+                </div>
                 {/* Selected will have the backgroud for others no */}
-                <div className={` ${index === 0 ? "" : "bg-[#393B49]"}  p-[0.5vw] rounded-md`}>
+                <div
+                  className={` ${
+                    index === 0 ? "" : "bg-[#393B49]"
+                  }  p-[0.5vw] rounded-md`}
+                >
                   <Image
                     className={index === 0 ? "w-[3vw]" : "w-[1.4vw]"}
                     src={item.nav_icon}
@@ -91,7 +105,7 @@ const LeftNav = () => {
           </div>
         </div>
       </div>
-    </nav >
+    </nav>
   );
 };
 
