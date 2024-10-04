@@ -41,7 +41,7 @@ let nav_items = [
   },
   {
     page: "Settings",
-    location: "/settings",
+    location: "/settings/account/profile",
     nav_icon: Settings,
   },
 ];
