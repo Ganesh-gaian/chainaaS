@@ -27,7 +27,7 @@ export default function RootLayout({
             <LeftNav />
             <section className="w-[93vw] h-full flex flex-col">
               <TopNav />
-              <div className="w-full h-[96vh] overflow-hidden">
+              <div className="w-full h-[94vh] overflow-hidden">
                 {children}
               </div>
             </section>

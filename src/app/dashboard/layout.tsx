@@ -6,13 +6,17 @@ import company from "../../../public/images/company.png";
 import { usePathname } from "next/navigation";
 import { Dropdown, MenuProps, Input, DatePicker, Button, Space } from "antd";
 import { useState } from "react";
-import { SearchOutlined, DownloadOutlined, DownOutlined } from "@ant-design/icons";
+import {
+  SearchOutlined,
+  DownloadOutlined,
+  DownOutlined,
+} from "@ant-design/icons";
 import dayjs from "dayjs";
-import customParseFormat from 'dayjs/plugin/customParseFormat';
+import customParseFormat from "dayjs/plugin/customParseFormat";
 dayjs.extend(customParseFormat);
 
 // Dropdown menu items
-const menuItems: MenuProps['items'] = [
+const menuItems: MenuProps["items"] = [
   {
     key: "1",
     label: "Active",
@@ -55,7 +59,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
   const [selectedKey, setSelectedKey] = useState("1"); // Default selected key for dropdown
   const [selectedYear, setSelectedYear] = useState(dayjs()); // Set current date object as default
 
-  const handleMenuClick: MenuProps['onClick'] = (e) => {
+  const handleMenuClick: MenuProps["onClick"] = (e) => {
     setSelectedKey(e.key); // Set the selected key on dropdown option click
   };
 
@@ -74,7 +78,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className='w-full h-full bg-white '>
+    <div className="w-full h-full bg-white ">
       <div className="w-full flex justify-between items-center pt-[1vw] px-[1vw]">
         <p className="font-bold">Broadcaster Dashboard</p>
         <div className="flex justify-center items-center gap-[0.4vw]">
@@ -94,7 +98,9 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                 <Link
                   href={item.location}
                   className={
-                    pathname === item.location ? "text-bold text-[#1890FF] text-[16px]" : "text-[16px]"
+                    pathname === item.location
+                      ? "text-bold text-[#1890FF] text-[16px]"
+                      : "text-[16px]"
                   }
                 >
                   {item.name}
@@ -126,7 +132,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
               <SearchOutlined
                 className="cursor-pointer"
                 onClick={() => setSearchVisible(true)}
-                style={{ fontSize: '16px' }}
+                style={{ fontSize: "16px" }}
               />
             )}
           </div>
@@ -135,11 +141,11 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
           <Dropdown
             overlayClassName="custom-dropdown"
             menu={{ items: menuItems, onClick: handleMenuClick }}
-            trigger={['click']}
+            trigger={["click"]}
           >
             <Button>
               <Space>
-                {menuItems.find(item => item?.key === selectedKey)?.label}
+                {menuItems?.find((item) => item?.key === selectedKey)?.label}
                 <DownOutlined /> {/* Adding the down arrow icon here */}
               </Space>
             </Button>
@@ -157,15 +163,16 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
           {/* Download Button */}
           <Button
             icon={<DownloadOutlined />}
-            style={{ display: 'flex', alignItems: 'center' }}
+            style={{ display: "flex", alignItems: "center" }}
           >
             Generate Report
           </Button>
         </div>
       </div>
-
-      {/* Content */}
-      <div className="w-full h-full bg-[#F5F6F7] overflow-hidden">{children}</div>
+      <div className="w-full h-full overflow-hidden bg-[#F5F6F7]">
+        {" "}
+        {children}
+      </div>
     </div>
   );
 }
