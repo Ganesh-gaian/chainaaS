@@ -27,11 +27,7 @@ export default function RootLayout({
             <LeftNav />
             <section className="w-[93vw] h-full flex flex-col">
               <TopNav />
-<<<<<<< Updated upstream
-              <div className="w-full h-[96vh] overflow-hidden">
-=======
               <div className="w-full h-[94vh] overflow-hidden">
->>>>>>> Stashed changes
                 {children}
               </div>
             </section>
