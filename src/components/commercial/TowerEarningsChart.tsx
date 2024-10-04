@@ -1,44 +1,27 @@
+"use client"
 import React, { useEffect } from "react";
 import * as echarts from "echarts";
-import { Dropdown, Menu } from "antd";
-import { DownOutlined } from "@ant-design/icons";
 
-// Define interface for chart data
 interface TowerEarningsData {
-    cities: string[];
-    earnings: number[];
-    colors: string[];
+    city: string;
+    earning: number;
+    color: string;
 }
 
 const TowerEarningsChart: React.FC = () => {
-    // Tower earnings data
-    const chartData: TowerEarningsData = {
-        cities: [
-            "Orlando",
-            "Las Vegas",
-            "New York City",
-            "Los Angeles",
-            "Chicago",
-            "Miami",
-            "San Francisco",
-            "Washington",
-            "San Diego",
-            "New Orleans",
-        ],
-        earnings: [5000, 15000, 12000, 4000, 18000, 10000, 8000, 9000, 6000, 7000],
-        colors: [
-            "#FFD700", // Orlando - Gold
-            "#87CEFA", // Las Vegas - Light Blue
-            "#556B2F", // New York City - Olive
-            "#9370DB", // Los Angeles - Purple
-            "#4169E1", // Chicago - Royal Blue
-            "#32CD32", // Miami - Lime Green
-            "#A9A9A9", // San Francisco - Gray
-            "#8A2BE2", // Washington - Blue Violet
-            "#00CED1", // San Diego - Dark Turquoise
-            "#FF69B4", // New Orleans - Hot Pink
-        ],
-    };
+    // Restructured tower earnings data
+    const chartData: TowerEarningsData[] = [
+        { city: "Orlando", earning: 5000, color: "#FFD700" }, // Gold
+        { city: "Las Vegas", earning: 15000, color: "#87CEFA" }, // Light Blue
+        { city: "New York City", earning: 12000, color: "#556B2F" }, // Olive
+        { city: "Los Angeles", earning: 4000, color: "#9370DB" }, // Purple
+        { city: "Chicago", earning: 18000, color: "#4169E1" }, // Royal Blue
+        { city: "Miami", earning: 10000, color: "#32CD32" }, // Lime Green
+        { city: "San Francisco", earning: 8000, color: "#A9A9A9" }, // Gray
+        { city: "Washington", earning: 9000, color: "#8A2BE2" }, // Blue Violet
+        { city: "San Diego", earning: 6000, color: "#00CED1" }, // Dark Turquoise
+        { city: "New Orleans", earning: 7000, color: "#FF69B4" }, // Hot Pink
+    ];
 
     useEffect(() => {
         const chartDom = document.getElementById("towerEarningsChart") as HTMLElement;
@@ -47,10 +30,10 @@ const TowerEarningsChart: React.FC = () => {
         const option = {
             title: {
                 text: "Tower-Specific Earnings",
-                left: "center",
+                left: "left",
                 textStyle: {
                     fontWeight: "bold",
-                    fontSize: 14,
+                    fontSize: 16,
                 },
             },
             tooltip: {
@@ -61,9 +44,35 @@ const TowerEarningsChart: React.FC = () => {
             },
             xAxis: {
                 type: "category",
-                data: chartData.cities,
+                data: chartData.map((data) => data.city),
                 axisLabel: {
-                    rotate: 45, // Rotates the city names for better readability
+                    show: true,
+                    interval: 0,
+                    formatter: function (value: string) {
+                        // Add a small circle before the city name with the corresponding bar color
+                        const index = chartData.findIndex((item) => item.city === value);
+                        const color = chartData[index].color;
+                        return `{circle|●} {cityLabel|${value}}`; // Circle and city name
+                    },
+                    rich: {
+                        circle: {
+                            fontSize: 16, // Size of the circle
+                            color: function (value: any) {
+                                const city = value?.replace("{circle|●}", "").trim();
+                                const foundCity = chartData.find((item) => item.city === city);
+                                return foundCity ? foundCity.color : "#000";
+                            },
+                        },
+                        cityLabel: {
+                            color: '#000', // City name color
+                            padding: [3, 0, 0, 4], // Padding to adjust alignment
+                        },
+                    },
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#000', // X-axis line color
+                    },
                 },
             },
             yAxis: {
@@ -71,21 +80,23 @@ const TowerEarningsChart: React.FC = () => {
                 axisLabel: {
                     formatter: "${value}k",
                 },
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
+                },
             },
             series: [
                 {
                     name: "Earnings",
                     type: "bar",
-                    data: chartData.earnings,
+                    data: chartData.map((data) => data.earning),
                     itemStyle: {
                         color: function (params: any) {
-                            return chartData.colors[params.dataIndex];
+                            return chartData[params.dataIndex].color;
                         },
-                    },
-                    label: {
-                        show: true,
-                        position: "top",
-                        formatter: "${@data}k",
                     },
                 },
             ],
@@ -100,25 +111,9 @@ const TowerEarningsChart: React.FC = () => {
         };
     }, [chartData]);
 
-    // Dropdown menu for additional options
-    const menu = (
-        <Menu>
-            <Menu.Item key="1">Option 1</Menu.Item>
-            <Menu.Item key="2">Option 2</Menu.Item>
-        </Menu>
-    );
-
     return (
-        <div className="p-6 bg-white rounded-lg shadow-md">
-            <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold">Tower-Specific Earnings</h2>
-                <Dropdown overlay={menu}>
-                    <a className="text-gray-700 hover:text-gray-900 font-semibold" onClick={(e) => e.preventDefault()}>
-                        Options <DownOutlined />
-                    </a>
-                </Dropdown>
-            </div>
-            <div id="towerEarningsChart" className="w-full h-80" />
+        <div className="h-[60vh] p-[1vw] bg-white rounded-sm">
+            <div id="towerEarningsChart" className="w-full h-full " />
         </div>
     );
 };

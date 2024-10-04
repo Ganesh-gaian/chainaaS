@@ -1,9 +1,6 @@
-// components/GrowthTrendChart.tsx
-
+"use client";
 import React, { useEffect } from "react";
 import * as echarts from "echarts";
-import { Dropdown, Menu } from "antd";
-import { DownOutlined } from "@ant-design/icons";
 import "tailwindcss/tailwind.css";
 
 // Define interface for chart data
@@ -30,10 +27,10 @@ const GrowthTrendChart: React.FC = () => {
         const option = {
             title: {
                 text: "Growth trend",
-                left: "center",
+                left: "left",
                 textStyle: {
                     fontWeight: "bold",
-                    fontSize: 14,
+                    fontSize: 16,
                 },
             },
             xAxis: {
@@ -44,6 +41,13 @@ const GrowthTrendChart: React.FC = () => {
                 type: "value",
                 axisLabel: {
                     formatter: "${value}M",
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: "#F2F2F7",
+                        type: "dotted",
+                        width: 1,
+                    },
                 },
             },
             series: [
@@ -87,25 +91,33 @@ const GrowthTrendChart: React.FC = () => {
         };
     }, [chartData]);
 
-    // Dropdown menu for the chart type or any other action
-    const menu = (
-        <Menu>
-            <Menu.Item key="1">Option 1</Menu.Item>
-            <Menu.Item key="2">Option 2</Menu.Item>
-        </Menu>
-    );
+    // Custom legends below the chart
+    const legends = [
+        { name: "izak", color: "#ff5722" }, 
+        { name: "Hear, Here", color: "#888" },    
+        { name: "Amplyfund", color: "#9c27b0" }, 
+    ];
 
     return (
-        <div className="p-6 bg-white rounded-lg shadow-md">
-            <div className="flex justify-between items-center">
-                <h2 className="text-lg font-semibold">Growth Trend</h2>
-                <Dropdown overlay={menu}>
-                    <a className="text-gray-700 hover:text-gray-900 font-semibold" onClick={(e) => e.preventDefault()}>
-                        Options <DownOutlined />
-                    </a>
-                </Dropdown>
+        <div className="p-[1vw] bg-white rounded-sm">
+            {/* Chart */}
+            <div id="growthChart" className="w-full h-80" />
+
+            {/* Custom Legends */}
+            <div className="flex justify-center gap-[1vw]">
+                {legends.map((legend, index) => (
+                    <div
+                        key={index}
+                        className="flex items-center gap-[0.4vw] px-[0.8vw] py-[0.4vw] bg-[#F5F6F7] rounded-md"
+                    >
+                        <div
+                            className="w-[1.2vw] h-[1.2vw] rounded-[20%]"
+                            style={{ backgroundColor: legend.color }}
+                        ></div>
+                        <span className="text-[#242F3E] text-[12px] font-bold">{legend.name}</span>
+                    </div>
+                ))}
             </div>
-            <div id="growthChart" className="w-full h-72" />
         </div>
     );
 };

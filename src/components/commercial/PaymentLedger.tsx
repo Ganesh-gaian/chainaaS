@@ -1,11 +1,8 @@
-// components/PaymentLedger.tsx
-
-import React, { useState } from "react";
+"use client"
+import React, { useState, useMemo } from "react";
 import { Table, Pagination, Dropdown, Menu, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
-import "tailwindcss/tailwind.css";
 
-// Define interface for payment data
 interface PaymentData {
     key: string;
     paymentId: string;
@@ -18,7 +15,6 @@ interface PaymentData {
 }
 
 const PaymentLedger: React.FC = () => {
-    // Define payment data
     const initialData: PaymentData[] = [
         {
             key: "1",
@@ -72,9 +68,9 @@ const PaymentLedger: React.FC = () => {
         },
     ];
 
-    // Pagination state
     const [currentPage, setCurrentPage] = useState(1);
     const [pageSize, setPageSize] = useState(5);
+    const [selectedFilter, setSelectedFilter] = useState("Recent");
 
     // Define columns for the table
     const columns = [
@@ -122,13 +118,29 @@ const PaymentLedger: React.FC = () => {
         },
     ];
 
+    // Filter data based on the selected dropdown filter
+    const filteredData = useMemo(() => {
+        switch (selectedFilter) {
+            case "Recent":
+                return [...initialData].sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+            case "Oldest":
+                return [...initialData].sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
+            case "Pending":
+                return initialData.filter((item) => item.status === "Pending");
+            case "Paid":
+                return initialData.filter((item) => item.status === "Paid");
+            default:
+                return initialData;
+        }
+    }, [selectedFilter, initialData]);
+
     // Dropdown menu for sorting/filtering options
     const menu = (
-        <Menu>
-            <Menu.Item key="1">Recent</Menu.Item>
-            <Menu.Item key="2">Oldest</Menu.Item>
-            <Menu.Item key="3">Pending</Menu.Item>
-            <Menu.Item key="4">Paid</Menu.Item>
+        <Menu onClick={({ key }) => setSelectedFilter(key)}>
+            <Menu.Item key="Recent">Recent</Menu.Item>
+            <Menu.Item key="Oldest">Oldest</Menu.Item>
+            <Menu.Item key="Pending">Pending</Menu.Item>
+            <Menu.Item key="Paid">Paid</Menu.Item>
         </Menu>
     );
 
@@ -139,25 +151,25 @@ const PaymentLedger: React.FC = () => {
     };
 
     return (
-        <div className="p-6 bg-white rounded-lg shadow-md">
-            <div className="flex justify-between items-center mb-4">
-                <h2 className="text-lg font-semibold">Payment Ledger</h2>
+        <div className="p-[1vw] bg-white rounded-sm">
+            <div className="flex justify-between items-center mb-[0.8vw]">
+                <h2 className="text-base font-medium">Payment Ledger</h2>
                 <Dropdown overlay={menu}>
                     <Button>
-                        Recent <DownOutlined />
+                        {selectedFilter} <DownOutlined />
                     </Button>
                 </Dropdown>
             </div>
             <Table
                 columns={columns}
-                dataSource={initialData}
-                pagination={false} // We will use custom pagination
+                dataSource={filteredData}
+                pagination={false}
             />
-            <div className="mt-4 flex justify-end">
+            <div className="mt-[0.8vw] flex justify-end">
                 <Pagination
                     current={currentPage}
                     pageSize={pageSize}
-                    total={50} // Assuming there are more data
+                    total={filteredData.length} // Update total based on filtered data
                     onChange={onPageChange}
                     showSizeChanger
                     pageSizeOptions={["5", "10", "20"]}
