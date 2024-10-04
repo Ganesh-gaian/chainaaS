@@ -1,0 +1,21 @@
+.edit-modal-content .ant-collapse,
+.edit-modal-content .ant-collapse-borderless {
+  background: none !important;
+}
+.edit-modal-content .ant-collapse-header-text {
+  font-size: 0.9rem !important;
+  color: #595959 !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+}
+.edit-modal-content .ant-modal-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+.edit-modal-content .ant-collapse-header {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.edit-modal-content .ant-collapse-content-box {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
