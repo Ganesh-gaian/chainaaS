@@ -32,7 +32,7 @@ export default function Performance() {
         <PopulationReachChart />
         <AppReachChart />
       </div>
-      <div className="w-full mb-[8vw]">
+      <div className="w-full mb-[6vw]">
         <AreaReachChart />
       </div>
 
