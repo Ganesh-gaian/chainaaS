@@ -27,12 +27,12 @@ export default function TopNav() {
   ];
 
   return (
-    <div className="w-full h-[6vh] pl-[1vw] flex items-center gap-[0.4vw] border-b border-[#EAEAEA] bg-white">
+    <div className="w-full h-[4vh] pl-[1vw] flex items-center gap-[0.4vw] border-b border-[#EAEAEA] bg-white">
       <div>
-        <Image className="w-[4vw]" src={Icon} alt="Logo" />
+        <Image className="w-[3vw]" src={Icon} alt="Logo" />
       </div>
       <div>
-        <Image className="w-[1.8vw]" src={leftArrow} alt="LeftArrow" />
+        <Image className="w-[1.6vw]" src={leftArrow} alt="LeftArrow" />
       </div>
       <div className="flex items-center justify-center gap-[1vw] ">
         {/* Loop of the levels in HCY - MP */}
@@ -40,7 +40,7 @@ export default function TopNav() {
           return (
             <div
               key={index}
-              className="flex gap-2 *:flex *:justify-center items-center"
+              className="flex gap-[0.4vw] *:flex *:justify-center items-center"
             >
               <div>
                 <Image
@@ -49,9 +49,9 @@ export default function TopNav() {
                   alt="lineSeparator"
                 />
               </div>
-              <div>{item.name}</div>
+              <div className="text-[12px]">{item.name}</div>
               <div
-                className="w-[1.4vw]"
+                className="w-[1.4vw] text-[12px]"
                 style={{
                   backgroundImage: `url(${background})`,
                   backgroundPosition: "center",

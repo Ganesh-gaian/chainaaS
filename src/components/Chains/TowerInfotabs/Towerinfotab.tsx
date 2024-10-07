@@ -1,6 +1,6 @@
 "use client";
 
-import { Collapse, Tabs } from "antd";
+import { Tabs } from "antd";
 import Image from "next/image";
 import person from "../../../../public/svgs/chains/person.svg";
 import editlogo from "../../../../public/svgs/chains/editlogo.svg";
@@ -9,10 +9,6 @@ import signal from "../../../../public/svgs/chains/signal.svg";
 import location from "../../../../public/svgs/chains/location.svg";
 import refreshicon from "../../../../public/svgs/chains/refreshicon.svg";
 import { useRef, useState } from "react";
-
-interface TowerinfotabProps {
-  handleEditCard: (value: boolean) => void;
-}
 
 interface TowerinfotabProps {
   handleEditCard: (value: boolean) => void;
@@ -45,7 +41,7 @@ const Towerinfotab: React.FC<TowerinfotabProps> = ({ handleEditCard }) => {
   };
 
   return (
-    <div className="w-[100%] rounded-[2px] mr-[1rem]" ref={tabRef}>
+    <div className="w-[100%] rounded-[0.2vw] mr-[1rem]" ref={tabRef}>
       <Tabs
         tabPosition="left"
         defaultActiveKey="1"
@@ -186,6 +182,12 @@ const Towerdetails: React.FC<detailsProps> = ({ handleEditCard }) => {
 };
 
 const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
+  const [showedit, setShowedit] = useState(false);
+
+  const handleEdit = () => {
+    setShowedit(!showedit);
+  };
+
   const museoData = {
     name: "Museo",
     status: "Active",
@@ -214,6 +216,26 @@ const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
   return (
     <>
       <div className="flex justify-between px-[1vw] py-[0.5vw] border-b-[0.1389vw] border-b-[#0000000F] relative">
+        {showedit && (
+          <div className="bg-[#FFF] absolute right-[1vw] top-[3vw] shadow-[0_3px_6px_-4px_rgba(0,0,0,0.12),_0_6px_16px_0_rgba(0,0,0,0.08),_0_9px_28px_8px_rgba(0,0,0,0.05)] cursor-pointer">
+            <div
+              onClick={() => {
+                handleEdit();
+                handleEditCard(true);
+              }}
+              className="fs-14 text-[#000000D9] font-[500] px-[0.8vw] py-[0.3vw] bg-[#E6F7FF]"
+            >
+              Edit
+            </div>
+            <div
+              onClick={() => handleEdit()}
+              className="fs-14 text-[#000000D9] font-[500] px-[0.8vw] py-[0.3vw]"
+            >
+              Remove
+            </div>
+          </div>
+        )}
+
         <div className="flex items-start gap-[1.2vw]">
           <div>
             <p className="fs-14 text-[#000000D9] font-[500]">
@@ -229,7 +251,7 @@ const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
         </div>
         <div
           onClick={() => {
-            handleEditCard(true);
+            handleEdit();
           }}
           className="flex justify-between items-center rotate-90 cursor-pointer"
         >
