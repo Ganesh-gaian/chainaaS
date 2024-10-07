@@ -1,0 +1,16 @@
+#custom-dot {
+    background-color: #007AD1;
+    border: 0.2vw solid #FFF;
+    padding: 0.15vw;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0.2vw;
+    height: 0.2vw;
+    position: absolute;
+    top: 1.2vw;
+    left: 0.6vw;
+    z-index: 1;
+  }
+  

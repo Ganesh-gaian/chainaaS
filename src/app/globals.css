@@ -3,10 +3,161 @@
 @tailwind utilities;
 
 :root {
+  .fs-1 {
+    font-size: 0.0694vw;
+  }
+  .fs-2 {
+    font-size: 0.1389vw;
+  }
+  .fs-3 {
+    font-size: 0.2083vw;
+  }
+  .fs-4 {
+    font-size: 0.2778vw;
+  }
+  .fs-5 {
+    font-size: 0.3472vw;
+  }
+  .fs-6 {
+    font-size: 0.4167vw;
+  }
+  .fs-7 {
+    font-size: 0.4861vw;
+  }
+  .fs-8 {
+    font-size: 0.5556vw;
+  }
+  .fs-9 {
+    font-size: 0.625vw;
+  }
+  .fs-10 {
+    font-size: 0.6944vw;
+  }
+  .fs-11 {
+    font-size: 0.7639vw;
+  }
+  .fs-12 {
+    font-size: 0.8333vw;
+  }
+  .fs-13 {
+    font-size: 0.9028vw;
+  }
+  .fs-14 {
+    font-size: 0.9722vw;
+  }
+  .fs-15 {
+    font-size: 1.0417vw;
+  }
+  .fs-16 {
+    font-size: 1.1111vw;
+  }
+  .fs-17 {
+    font-size: 1.1806vw;
+  }
+  .fs-18 {
+    font-size: 1.25vw;
+  }
+  .fs-19 {
+    font-size: 1.3194vw;
+  }
+  .fs-20 {
+    font-size: 1.3889vw;
+  }
+  .fs-21 {
+    font-size: 1.4583vw;
+  }
+  .fs-22 {
+    font-size: 1.5278vw;
+  }
+  .fs-23 {
+    font-size: 1.5972vw;
+  }
+  .fs-24 {
+    font-size: 1.6667vw;
+  }
+  .fs-25 {
+    font-size: 1.7361vw;
+  }
+  .fs-26 {
+    font-size: 1.8056vw;
+  }
+  .fs-27 {
+    font-size: 1.875vw;
+  }
+  .fs-28 {
+    font-size: 1.9444vw;
+  }
+  .fs-29 {
+    font-size: 2.0139vw;
+  }
+  .fs-30 {
+    font-size: 2.0833vw;
+  }
+  .fs-31 {
+    font-size: 2.1528vw;
+  }
+  .fs-32 {
+    font-size: 2.2222vw;
+  }
+  .fs-33 {
+    font-size: 2.2917vw;
+  }
+  .fs-34 {
+    font-size: 2.3611vw;
+  }
+  .fs-35 {
+    font-size: 2.4306vw;
+  }
+  .fs-36 {
+    font-size: 2.5vw;
+  }
+  .fs-37 {
+    font-size: 2.5694vw;
+  }
+  .fs-38 {
+    font-size: 2.6389vw;
+  }
+  .fs-39 {
+    font-size: 2.7083vw;
+  }
+  .fs-40 {
+    font-size: 2.7778vw;
+  }
+  .fs-41 {
+    font-size: 2.8472vw;
+  }
+  .fs-42 {
+    font-size: 2.9167vw;
+  }
+  .fs-43 {
+    font-size: 2.9861vw;
+  }
+  .fs-44 {
+    font-size: 3.0556vw;
+  }
+  .fs-45 {
+    font-size: 3.125vw;
+  }
+  .fs-46 {
+    font-size: 3.1944vw;
+  }
+  .fs-47 {
+    font-size: 3.2639vw;
+  }
+  .fs-48 {
+    font-size: 3.3333vw;
+  }
+  .fs-49 {
+    font-size: 3.4028vw;
+  }
+  .fs-50 {
+    font-size: 3.4722vw;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    background-color: #f5f6f7;
     background-color: #f5f6f7;
   }
 }
@@ -16,6 +167,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f6f7;
+  /* color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif; */
 }
 
 @layer utilities {
@@ -24,6 +178,12 @@ body {
   } */
 }
 
+/* FONT CLAMPS */
+
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.ant-select-selector {
+  border-radius: 0px !important;
 }

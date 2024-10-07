@@ -1,5 +1,5 @@
+import Chainsman from "@/components/Chains/Tower/Chains";
 import React from "react";
-import Chainsman from "./Tower/page";
 
 export default function Chains() {
   return (

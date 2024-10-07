@@ -1,0 +1,6 @@
+.ant-modal-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+.config-modal .ant-collapse-borderless{
+    background-color: #fff !important;
+}

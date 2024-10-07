@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import t1 from "../../../../public/svgs/rightNav/Add.svg";
@@ -10,8 +12,16 @@ import B3 from "../../../../public/svgs/rightNav/Signage.svg";
 import B4 from "../../../../public/svgs/rightNav/Log.svg";
 import B5 from "../../../../public/svgs/rightNav/Collabrator.svg";
 import B6 from "../../../../public/svgs/rightNav/Notify.svg";
+import { useCallback, useState } from "react";
+import TimelineModal from "@/components/Chains/Modal/Timeline";
 
 export default function RightNav() {
+  const [showtimeline, setTimeLine] = useState(false);
+
+  const handleTimeline = useCallback((value: boolean) => {
+    setTimeLine(value);
+  }, []);
+
   return (
     <div className="w-[3vw] h-full flex flex-col justify-between border-l border-[#EBEDEE] bg-white">
       {/* Top CTA */}
@@ -25,10 +35,18 @@ export default function RightNav() {
         <Image src={B1} alt="" />
         <Image src={B2} alt="" />
         <Image src={B3} alt="" />
-        <Image src={B4} alt="" />
+        <Image
+          onClick={() => {
+            console.log("logo");
+            handleTimeline(true);
+          }}
+          src={B4}
+          alt=""
+        />
         <Image src={B5} alt="" />
         <Image src={B6} alt="" />
       </div>
+      <TimelineModal showtimeline={showtimeline} handleTimeline={handleTimeline} />
     </div>
   );
 }
