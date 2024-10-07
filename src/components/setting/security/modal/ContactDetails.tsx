@@ -19,7 +19,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ onClose }) => {
         <CloseOutlined
           onClick={onClose}
           className="cursor-pointer"
-          style={{ fontSize: "1.2vw", color: "#323E4F" }}
+          style={{ fontSize: "1.2vw", color: "#B4B9C1" }}
         />
       </div>
 
@@ -45,7 +45,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ onClose }) => {
             </Button>
           </div>
         </div>
-        <div className="w-full flex flex-col gap-[0.56vw]">
+        <div className="w-[14.16vw] flex flex-col gap-[0.56vw]">
           <p className="text-[#323E4F]">Enter your verification Code</p>
           <Input placeholder="Enter your verification code" />
         </div>

@@ -1,0 +1,15 @@
+.QRCodeCustomModal .ant-modal-content {
+  padding: 0 !important;
+  border-radius: 0.14vw !important;
+}
+.QRCodeCustomModal .ant-modal-header {
+  height: 3.89vw !important;
+  display: flex;
+  align-items: center;
+  padding-left: 1.67vw !important;
+  margin-bottom: 0 !important;
+}
+
+.QRCodeCustomModal.ant-modal .ant-modal-close {
+  inset-inline-end: 1.12vw !important;
+}
