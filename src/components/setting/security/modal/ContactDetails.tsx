@@ -5,7 +5,7 @@ import { CloseOutlined } from "@ant-design/icons";
 const { Option } = Select;
 
 interface ContactDetailsProps {
-  onClose: () => void; 
+  onClose: () => void;
 }
 
 const ContactDetails: React.FC<ContactDetailsProps> = ({ onClose }) => {
@@ -38,7 +38,7 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ onClose }) => {
               style={{
                 backgroundColor: "#FFFFFF",
                 color: "#40A9FF",
-                borderRadius:"0.14vw"
+                borderRadius: "0.14vw",
               }}
             >
               Send Code
@@ -56,7 +56,12 @@ const ContactDetails: React.FC<ContactDetailsProps> = ({ onClose }) => {
         <Button key="cancel" onClick={onClose} className="text-base">
           Cancel
         </Button>
-        <Button key="setup" type="primary" onClick={onClose} className="text-base">
+        <Button
+          key="setup"
+          type="primary"
+          onClick={onClose}
+          className="text-base"
+        >
           Set Up
         </Button>
       </div>

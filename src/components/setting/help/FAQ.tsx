@@ -20,7 +20,7 @@ const FAQ: React.FC = () => {
         {/* First Question */}
         <Panel
           header={
-            <span className="text-[1.12vw] text-[#323E4F] font-semibold">
+            <span className="fs-16 text-[#323E4F] font-semibold">
               What is ChainaaS
             </span>
           }
@@ -39,7 +39,7 @@ const FAQ: React.FC = () => {
         {/* Second Question */}
         <Panel
           header={
-            <span className="text-[1.12vw] text-[#323E4F] font-semibold">
+            <span className="fs-16 text-[#323E4F] font-semibold">
               How do I deploy an app to a new tower?
             </span>
           }
@@ -56,7 +56,7 @@ const FAQ: React.FC = () => {
         {/* Third Question */}
         <Panel
           header={
-            <span className="text-[1.12vw] text-[#323E4F] font-semibold">
+            <span className="fs-16 text-[#323E4F] font-semibold">
               How do I upgrade my subscription plan?
             </span>
           }

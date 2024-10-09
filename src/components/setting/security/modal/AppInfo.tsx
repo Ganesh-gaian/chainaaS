@@ -19,8 +19,8 @@ const AppInfo: React.FC<AppInfoProps> = ({
         <img src={logoSrc} alt={altText} className="w-[2.22vw] h-[2.22vw]" />
       </div>
       <div className="flex flex-col">
-        <div className="text-[#323E4F] text-[0.833vw]">{appName}</div>
-        <div className="text-[#8F97A2] text-[0.833vw]">{appProvider}</div>
+        <div className="text-[#323E4F] fs-12">{appName}</div>
+        <div className="text-[#8F97A2] fs-12">{appProvider}</div>
       </div>
     </div>
   );

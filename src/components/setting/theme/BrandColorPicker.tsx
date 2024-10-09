@@ -13,7 +13,6 @@ const predefinedColors = [
   "#17A2B8",
   "#6C757D",
   "#5A6268",
-  "#007BFF",
   "#FF5733",
 ];
 
@@ -38,7 +37,7 @@ const BrandColorPicker: React.FC = () => {
       </div>
       <div className="w-full flex flex-col p-[1.67vw] gap-[0.56vw]">
         <div className="w-full h-[5.7vw] flex flex-col justify-between">
-          <p className="text-[#697483] text-[0.972vw]">Select or Customize your Brand Color</p>
+          <p className="text-[#697483] fs-14">Select or Customize your Brand Color</p>
           <div className="flex flex-wrap">
             {predefinedColors.map((color) => (
               <div
@@ -56,7 +55,7 @@ const BrandColorPicker: React.FC = () => {
         </div>
 
         <div className="w-full h-[5.41vw] flex flex-col justify-between pb-[1.12vw] ">
-          <p className="text-[#697483] text-[0.972vw]">Custom Color</p>
+          <p className="text-[#697483] fs-14">Custom Color</p>
           <div className="flex items-center">
             <input
               type="text"

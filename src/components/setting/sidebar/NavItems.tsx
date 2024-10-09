@@ -4,7 +4,7 @@ import {
     GlobalOutlined,
     ClockCircleOutlined,
     UserOutlined,
-    QuestionCircleOutlined
+    CustomerServiceOutlined
   } from "@ant-design/icons";
   
   // Account section routes
@@ -25,7 +25,7 @@ import {
   //Icon for both dropdown 
   export const AccordionIcons = {
     UserOutlined,
-    QuestionCircleOutlined,
+    CustomerServiceOutlined    
 };
   
   // Static navigation items for Security, Theme, etc.

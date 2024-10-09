@@ -1,0 +1,13 @@
+.onBoardingCustomModal .ant-modal-content {
+  padding: 0 !important;
+  border-radius: 0.14vw !important;
+}
+
+.onBoardingCustomModal .ant-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.78vw !important ;
+  font-size: 1.12vw !important;
+  border-radius: 0.14vw !important;
+}

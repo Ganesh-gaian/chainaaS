@@ -14,12 +14,18 @@ import B5 from "../../../../public/svgs/rightNav/Collabrator.svg";
 import B6 from "../../../../public/svgs/rightNav/Notify.svg";
 import { useCallback, useState } from "react";
 import TimelineModal from "@/components/Chains/Modal/Timeline";
+import OnBoardingModal from "@/components/onBoarding/OnBoardingModal";
 
 export default function RightNav() {
   const [showtimeline, setTimeLine] = useState(false);
+  const [showOnBoardingModal, setShowOnBoardingModal] = useState(false);
 
   const handleTimeline = useCallback((value: boolean) => {
     setTimeLine(value);
+  }, []);
+
+  const handleOnBoardingModal = useCallback((value: boolean) => {
+    setShowOnBoardingModal(value);
   }, []);
 
   return (
@@ -32,7 +38,11 @@ export default function RightNav() {
       </div>
       {/* Bottom CTA */}
       <div className="w-full flex flex-col justify-center items-center gap-[1.6vw] last:mb-[2vw] *:w-[2vw] *:cursor-pointer">
-        <Image src={B1} alt="" />
+        <Image src={B1} alt="" 
+          onClick={() => {
+            setShowOnBoardingModal(true);
+          }}
+        />
         <Image src={B2} alt="" />
         <Image src={B3} alt="" />
         <Image
@@ -46,7 +56,12 @@ export default function RightNav() {
         <Image src={B5} alt="" />
         <Image src={B6} alt="" />
       </div>
+
+      {/* The timeline modal */}
       <TimelineModal showtimeline={showtimeline} handleTimeline={handleTimeline} />
+
+      {/* The custom modal */}
+      <OnBoardingModal showModal={showOnBoardingModal} handleClose={() => setShowOnBoardingModal(false)} />
     </div>
   );
 }

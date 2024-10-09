@@ -1,10 +1,10 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Collapse } from "antd";
 import { LogoutOutlined } from "@ant-design/icons";
 import Link from "next/link";
+import "./Sidebar.css";
 import {
   accountMap,
   helpMap,
@@ -62,7 +62,7 @@ const Sidebar: React.FC = () => {
       <Collapse
         bordered={false}
         expandIconPosition="end"
-        className="w-full"
+        className="w-full custom-collapse" // Custom background
         activeKey={activePanel === "1" ? ["1"] : []}
         onChange={() => handlePanelChange("1")}
       >
@@ -70,45 +70,69 @@ const Sidebar: React.FC = () => {
           key="1"
           header={
             <div className="flex items-center">
-              <AccordionIcons.UserOutlined />
-              <span className="ml-[0.7vw]">Account</span>
+              {/* Change icon color based on active panel */}
+              <AccordionIcons.UserOutlined
+                style={{
+                  color: activePanel === "1" ? "#1890FF" : "rgba(0,0,0,0.85)",
+                }}
+              />
+              <span
+                className={`ml-[0.7vw] ${
+                  activePanel === "1"
+                    ? "text-[#1890FF]"
+                    : "text-[rgba(0,0,0,0.85)]"
+                }`}
+              >
+                Account
+              </span>
             </div>
           }
+          className="custom-panel"
         >
           <div>{renderLinks(accountMap, "/settings/account")}</div>
         </Panel>
       </Collapse>
 
       {/* Static Navigation Items */}
-      {staticNavItems.map(({ name, location, icon }) => (
-        <div
-          key={location}
-          className={`flex h-[2.78vw] px-[1vw] items-center gap-3 hover:bg-blue-100 ${
-            pathname === location
-              ? "bg-blue-100 border-r-4 border-blue-500"
-              : ""
-          }`}
-        >
-          {icon}
-          <Link
-            href={location}
-            className={`block ${
-              pathname === location
-                ? "font-bold text-blue-500"
-                : "text-gray-700"
+      {staticNavItems.map(({ name, location, icon }) => {
+        const isActive = pathname === location;
+        return (
+          <div
+            key={location}
+            className={`flex h-[2.78vw] px-[1vw] items-center gap-3 hover:bg-blue-100 ${
+              isActive ? "bg-blue-100 border-r-4 border-blue-500" : ""
             }`}
-            onClick={() => setActiveLink(location)}
           >
-            {name}
-          </Link>
-        </div>
-      ))}
+            {/* Set the color of the icon dynamically */}
+            <span
+              className={`text-[0.972vw] ${
+                isActive ? "text-[#1890FF]" : "text-[rgba(0,0,0,0.85)]"
+              }`}
+            >
+              {React.cloneElement(icon, {
+                style: { color: isActive ? "#1890FF" : "rgba(0,0,0,0.85)" },
+              })}
+            </span>
+            <Link
+              href={location}
+              className={`block ${
+                isActive
+                  ? "text-[#1890FF] text-[0.972vw]"
+                  : "text-[rgba(0,0,0,0.85)] text-[0.972vw]"
+              }`}
+              onClick={() => setActiveLink(location)}
+            >
+              {name}
+            </Link>
+          </div>
+        );
+      })}
 
       {/* Help & Support Accordion */}
       <Collapse
         bordered={false}
         expandIconPosition="end"
-        className="w-full"
+        className="w-full custom-collapse"
         activeKey={activePanel === "2" ? ["2"] : []}
         onChange={() => handlePanelChange("2")}
       >
@@ -116,10 +140,24 @@ const Sidebar: React.FC = () => {
           key="2"
           header={
             <div className="flex items-center">
-              <AccordionIcons.QuestionCircleOutlined />
-              <span className="ml-[0.7vw]">Help & Support</span>
+              {/* Change icon color based on active panel */}
+              <AccordionIcons.CustomerServiceOutlined
+                style={{
+                  color: activePanel === "2" ? "#1890FF" : "rgba(0,0,0,0.85)",
+                }}
+              />
+              <span
+                className={`ml-[0.7vw] ${
+                  activePanel === "2"
+                    ? "text-[#1890FF]"
+                    : "text-[rgba(0,0,0,0.85)]"
+                }`}
+              >
+                Help & Support
+              </span>
             </div>
           }
+          className="custom-panel"
         >
           <div>{renderLinks(helpMap, "/settings/help")}</div>
         </Panel>
@@ -133,13 +171,20 @@ const Sidebar: React.FC = () => {
             : ""
         }`}
       >
-        <LogoutOutlined />
+        <LogoutOutlined
+          style={{
+            color:
+              activeLink === "/settings/logout"
+                ? "#1890FF"
+                : "rgba(0,0,0,0.85)",
+          }}
+        />
         <Link
           href="/settings/logout"
           className={`block ${
             activeLink === "/settings/logout"
-              ? "font-bold text-blue-500"
-              : "text-gray-700"
+              ? " text-[#1890FF] text-[0.972vw]"
+              : "text-[rgba(0,0,0,0.85)] text-[0.972vw]"
           }`}
           onClick={() => setActiveLink("/settings/logout")}
         >

@@ -3,7 +3,7 @@ import { Button } from "antd";
 
 const AccountSettings: React.FC = () => {
   return (
-    <div className="w-[58.296vw] flex flex-col gap-[1.12vw] text-[0.9722vw] ">
+    <div className="w-[58.296vw] flex flex-col gap-[1.12vw] fs-14 ">
       {/* Logout Section */}
       <div className="w-full h-[6.25vw] flex flex-col justify-between items-center gap-[0.28vw] bg-white rounded-[0.14vw] px-[1.67vw] shadow-[inset_0px_-0.1vw_0px_0px_#F0F0F0]">
         <div className="w-full h-[3.33vw] flex justify-between items-center pt-[1.12vw]">
