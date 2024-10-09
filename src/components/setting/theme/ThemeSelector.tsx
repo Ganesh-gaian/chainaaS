@@ -18,7 +18,7 @@ const ThemeSelector: React.FC = () => {
 
       {/* Content */}
       <div className="w-full flex flex-col p-[1.67vw] gap-[0.56vw]">
-        <p className="text-[#697483] text-[0.972vw] pb-[1.12vw]">
+        <p className="text-[#697483] fs-14 pb-[1.12vw]">
           Select or Customize your UI Theme
         </p>
 
@@ -36,14 +36,10 @@ const ThemeSelector: React.FC = () => {
                 className="mr-2"
               />
               <div
-                className={`w-[7.91vw] h-[2.78vw] rounded-lg border-2 ${
-                  selectedTheme === "system"
-                    ? "border-purple-600 bg-gray-300"
-                    : "border-gray-400"
-                }`}
+                className={`w-[7.91vw] h-[2.78vw] rounded-[0.14vw] border-[0.1vw] border-[#8E8E93] bg-[linear-gradient(90deg,_#FFF_45.5%,_#B9BDC5_45.51%)] shadow-[0px_2px_0px_0px_rgba(0,0,0,0.04)] `}
               ></div>
             </div>
-            <span className="text-[rgba(0,0,0,0.45)] text-[0.972vw]">
+            <span className="text-[rgba(0,0,0,0.45)] fs-14">
               System Preference
             </span>
           </div>
@@ -61,14 +57,10 @@ const ThemeSelector: React.FC = () => {
                 className="mr-2"
               />
               <div
-                className={`w-[7.91vw] h-[2.78vw] rounded-lg border-2 ${
-                  selectedTheme === "light"
-                    ? "border-purple-600 bg-gray-300"
-                    : "border-gray-400"
-                }`}
+                className={`w-[7.91vw] h-[2.78vw] rounded-[0.14vw] border-[0.1vw] border-[#8E8E93] bg-[#fff] shadow-[0px_2px_0px_0px_rgba(0,0,0,0.04)] `}
               ></div>
             </div>
-            <span className="text-[rgba(0,0,0,0.45)] text-[0.972vw]">
+            <span className="text-[rgba(0,0,0,0.45)] fs-14">
               Light Mode
             </span>
           </div>
@@ -86,14 +78,10 @@ const ThemeSelector: React.FC = () => {
                 className="mr-2"
               />
               <div
-                className={`w-[7.91vw] h-[2.78vw] rounded-lg border-2 ${
-                  selectedTheme === "dark"
-                    ? "border-purple-600 bg-gray-300"
-                    : "border-gray-400"
-                }`}
+                className={`w-[7.91vw] h-[2.78vw] rounded-[0.14vw] border-[0.1vw] border-[#8E8E93] bg-[#B9BDC5] shadow-[0px_2px_0px_0px_rgba(0,0,0,0.04)] `}
               ></div>
             </div>
-            <span className="text-[rgba(0,0,0,0.45)] text-[0.972vw]">
+            <span className="text-[rgba(0,0,0,0.45)] fs-14">
               Dark Mode
             </span>
           </div>

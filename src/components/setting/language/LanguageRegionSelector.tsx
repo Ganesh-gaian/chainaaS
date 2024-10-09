@@ -24,7 +24,7 @@ const LanguageRegionSelector: React.FC = () => {
   };
 
   return (
-    <div className="w-[58.296vw] h-[18.47vw] flex flex-col border rounded-[0.14vw] bg-[#fff] text-[0.972vw]">
+    <div className="w-[58.296vw] h-[18.47vw] flex flex-col border rounded-[0.14vw] bg-[#fff] fs-14">
       {/* Header */}
       <div className="w-full h-[3.75vw] flex items-center px-[1.67vw] shadow-[inset_0px_-0.1vw_0px_0px_#F0F0F0]">
         <span className="text-[#323E4F]">Select Language and Region</span>

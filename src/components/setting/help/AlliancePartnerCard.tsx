@@ -70,7 +70,7 @@ const AlliancePartner: React.FC = () => {
     <div className="w-[65.75vw] h-[13.33vw] flex flex-col border-[0.1vw] border-[#F0F0F0] rounded-[0.14vw] bg-white">
       {/* First Row: Title and Arrows */}
       <div className="flex w-full h-[3.89vw] justify-between items-center pl-[1.67vw] py-[0.83vw] pr-[0.83vw] ">
-        <span className="text-[rgba(0,0,0,0.85)] text-[1.12vw] font-semibold">
+        <span className="text-[rgba(0,0,0,0.85)] fs-16 font-semibold">
           Alliance Partner
         </span>
         <div className="flex gap-[0.56vw] items-center">

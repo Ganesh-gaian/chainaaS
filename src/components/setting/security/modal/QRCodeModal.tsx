@@ -49,8 +49,12 @@ const QRCodeModal: React.FC<QRCodeModalProps> = ({ isVisible, onClose }) => {
           </Button>
         </div>
         <div className="w-full h-[5.82vw] flex flex-col border-t-[0.1vw] px-[1.12vw] py-[0.694vw] gap-[0.28vw] ">
-            <span className="h-[2.08vw] flex items-center text-[#323E4F] text-[0.9722vw] " >Trouble scanning? Enter this key in your app instead:</span>
-            <span className="h-[2.08vw] flex items-center text-[rgba(0,0,0,0.85)] text-[0.9722vw] " >kms4892091298749891</span>
+          <span className="h-[2.08vw] flex items-center text-[#323E4F] fs-14 ">
+            Trouble scanning? Enter this key in your app instead:
+          </span>
+          <span className="h-[2.08vw] flex items-center text-[rgba(0,0,0,0.85)] fs-14 ">
+            kms4892091298749891
+          </span>
         </div>
       </div>
     </Modal>

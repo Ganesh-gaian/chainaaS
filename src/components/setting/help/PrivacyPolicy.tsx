@@ -6,11 +6,11 @@ const PrivacyPolicy: React.FC = () => {
   return (
     <div className="w-[58.296vw] flex flex-col gap-[0.278vw] bg-white rounded-[0.14vw] px-[1.67vw] shadow-[inset_0px_-0.1vw_0px_0px_#F0F0F0]">
       <div className="w-full h-[2.78vw] pt-[1.12vw] ">
-        <span className="text-[1.12vw] text-[#323E4F] font-semibold">
+        <span className="fs-16 text-[#323E4F] font-semibold">
           ChainaaS
         </span>
       </div>
-      <div className="w-full pb-[1.12vw] text-[0.972vw] text-[#697483]">
+      <div className="w-full pb-[1.12vw] fs-14 text-[#697483]">
         <p className="">
           At ChainaaS, we are committed to protecting your privacy and ensuring
           the security of your personal information. This Privacy Policy

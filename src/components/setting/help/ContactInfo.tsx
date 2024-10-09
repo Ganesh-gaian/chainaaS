@@ -5,7 +5,7 @@ import React from "react";
 const ContactInfo: React.FC = () => {
   return (
     <div className="w-[58.296vw] h-[6.8vw] bg-white py-[0.56vw] rounded-[0.14vw]">
-      <div className="w-full h-full px-[1.67vw] py-[0.56vw] text-[#697483] text-[0.972vw] ">
+      <div className="w-full h-full px-[1.67vw] py-[0.56vw] text-[#697483] fs-14 ">
         <p className="">
           If you have any questions or concerns about this Privacy Policy,
           please contact us at:
