@@ -1,0 +1,12 @@
+.ant-collapse-header {
+  padding-left: 0 !important;
+}
+
+.ant-collapse-header-text {
+  display: flex !important;
+  justify-content: flex-start !important;
+}
+
+.ant-collapse-content-box {
+  padding: 0 !important;
+}

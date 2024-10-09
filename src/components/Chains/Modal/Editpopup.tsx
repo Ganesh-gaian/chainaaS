@@ -157,7 +157,7 @@ function Dropdown({ type, handleEditCard, handleFormVisible }: DropdownProps) {
           handleEditCard(false);
           handleFormVisible(true);
         }}
-        className="w-fit	 flex bg-[#1890FF] px-[0.5vw] py-[0.6vw] cursor-pointer"
+        className="w-fit flex bg-[#1890FF] px-[0.5vw] py-[0.6vw] cursor-pointer mb-[0.6vw] ml-[0.6vw]"
       >
         <Image
           className="w-[1vw] aspect-square"

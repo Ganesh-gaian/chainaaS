@@ -1,6 +1,5 @@
 "use client";
 
-import { Tabs } from "antd";
 import Image from "next/image";
 import person from "../../../../public/svgs/chains/person.svg";
 import editlogo from "../../../../public/svgs/chains/editlogo.svg";
@@ -9,6 +8,10 @@ import signal from "../../../../public/svgs/chains/signal.svg";
 import location from "../../../../public/svgs/chains/location.svg";
 import refreshicon from "../../../../public/svgs/chains/refreshicon.svg";
 import { useRef, useState } from "react";
+import { Collapse, Tabs } from "antd";
+import "./towerinfo.css";
+
+const { Panel } = Collapse;
 
 interface TowerinfotabProps {
   handleEditCard: (value: boolean) => void;
@@ -16,21 +19,27 @@ interface TowerinfotabProps {
 
 const Towerinfotab: React.FC<TowerinfotabProps> = ({ handleEditCard }) => {
   const tabRef = useRef<HTMLDivElement>(null);
+  const [selected, setSelected] = useState<string>("Broadcast Info");
 
   const tabItems = [
     {
       key: "1",
-      label: <Labelheading heading="Broadcast Info" />,
+      label: <Labelheading heading="Broadcast Info" selected={selected} />,
       children: <Broadcastinfo handleEditCard={handleEditCard} />,
     },
     {
       key: "2",
-      label: <Labelheading heading="Tower detail" />,
+      label: <Labelheading heading="Tower detail" selected={selected} />,
       children: <Towerdetails handleEditCard={handleEditCard} />,
     },
   ];
 
-  const onChange = () => {
+  const onChange = (key: string) => {
+    const selectedTab = tabItems.find((item) => item.key === key);
+
+    if (selectedTab) {
+      setSelected(selectedTab.label.props["heading"]);
+    }
     if (tabRef.current) {
       tabRef.current.scrollIntoView({
         behavior: "smooth",
@@ -41,7 +50,7 @@ const Towerinfotab: React.FC<TowerinfotabProps> = ({ handleEditCard }) => {
   };
 
   return (
-    <div className="w-[100%] rounded-[0.2vw] mr-[1rem]" ref={tabRef}>
+    <div className="w-[100%] rounded-[0.2vw]" id="towerinfo-main" ref={tabRef}>
       <Tabs
         tabPosition="left"
         defaultActiveKey="1"
@@ -311,7 +320,7 @@ const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
                   <span className="ml-[0.5vw] fs-12 text-[#00000073] font-[400]">
                     {key}:
                   </span>
-                  <span className="fs-12 text-[#000000D9] font-[400]">
+                  <span className="ml-[0.2vw] fs-12 text-[#000000D9] font-[400]">
                     {value}
                   </span>
                 </div>
@@ -326,12 +335,45 @@ const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
 
 interface HeadingProps {
   heading: string;
+  selected: string;
 }
 
-function Labelheading({ heading }: HeadingProps) {
+function Labelheading({ heading, selected }: HeadingProps) {
+  let mias = ["Museo", "Izak", "Spectraguard", "Hear Here", "AmplyFund"];
+  let towers = ["Tower 1", "Tower 2"];
+
+  const onChange = (key: string | string[]) => {
+    console.log(key[0]);
+  };
+
   return (
-    <div className="flex items-center">
-      <span>{heading}</span>
-    </div>
+    <Collapse
+      defaultActiveKey={[]}
+      ghost={true}
+      onChange={onChange}
+      activeKey={selected === "Broadcast Info" ? ["1"] : ["2"]}
+    >
+      <Panel
+        showArrow={false}
+        header={
+          <span
+            className={`text-left fs-14  font-[400] hover:text-[#1890FF] ${
+              selected == heading ? "text-[#1890FF]" : "text-[#000000D9]"
+            }`}
+          >
+            {heading}
+          </span>
+        }
+        key={heading === "Broadcast Info" ? "1" : "2"}
+      >
+        {(selected === "Broadcast Info" ? mias : towers).map((item) => {
+          return (
+            <p className="text-left fs-12 font-[400] text-[#00000073] p-[0.5vw] hover:bg-[#FAFAFA] hover:text-[#000000D9] rounded-[0.2vw]">
+              {item}
+            </p>
+          );
+        })}
+      </Panel>
+    </Collapse>
   );
 }
