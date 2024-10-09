@@ -41,6 +41,8 @@ interface FormValues {
   Isolationunit: string;
   BackupPower: string;
   WindLoadCapacity: string;
+  Radome:String;
+  GroundingandLightningProtection:String
 }
 
 const Towerconfig = forwardRef((props, ref) => {
@@ -81,6 +83,8 @@ const Towerconfig = forwardRef((props, ref) => {
     Isolationunit: "dB",
     BackupPower: "Diesel Generator + UPS",
     WindLoadCapacity: "120 mph (193 km/h)",
+    Radome:"Fiberglass Radome",
+    GroundingandLightningProtection:"Ground Radial System + Lightning Rod"
   });
   useImperativeHandle(ref, () => ({
     getFormValues: () => {
@@ -112,7 +116,7 @@ const Towerconfig = forwardRef((props, ref) => {
   };
 
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%] bg-[#FFF]">
       <Form form={form} layout="vertical" initialValues={formValues}>
         <Collapse
           items={items}

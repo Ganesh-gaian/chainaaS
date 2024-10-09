@@ -33,14 +33,19 @@ function Transmitionmetric() {
           <Input style={{ width: "100%", borderRadius: "0px" }} />
         </Form.Item>
 
-        {/* notinfigma */}
-        <Form.Item label="notinfigma" name="notinfigma">
+        <Form.Item label="Radome" name="Radome">
           <Input style={{ width: "100%", borderRadius: "0px" }} />
         </Form.Item>
 
-        {/* notinfigma */}
-        <Form.Item label="notinfigma" name="notinfigma">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+        <Form.Item
+          label="Grounding and Lightning Protection"
+          name="GroundingandLightningProtection"
+        >
+          <Select>
+            <Option value="Ground Radial System + Lightning Rod">
+              Ground Radial System + Lightning Rod
+            </Option>
+          </Select>
         </Form.Item>
 
         {/* Cooling System */}

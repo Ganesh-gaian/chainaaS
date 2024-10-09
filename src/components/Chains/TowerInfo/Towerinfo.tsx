@@ -1,5 +1,6 @@
 import Image from "next/image";
 import mapimage from "../../../../public/images/map-image.png";
+import MapWithPieChartsLasVegas from "../../leaf/Mapview";
 import Towerinfotab from "../TowerInfotabs/Towerinfotab";
 import { useCallback, useState } from "react";
 import Editpopup from "../Modal/Editpopup";
@@ -18,12 +19,10 @@ export default function Towerinfo() {
   }, []);
 
   return (
-    <div className="w-[100%] h-[85vh] flex flex-col gap-[1vw] overflow-y-scroll no-scrollbar relative">
+    <div className="w-[100%] h-[84.5vh] flex flex-col gap-[1vw] overflow-y-auto no-scrollbar overflow-x-hidden relative">
       <div className="flex justify-between">
         <div>
-          <div className="fs-14 text-[#000000D9] font-[500]">
-            Tower : T001I
-          </div>
+          <div className="fs-14 text-[#000000D9] font-[500]">Tower : T001I</div>
           <div className="flex justify-center items-center gap-[0.6vw] border-[0.15vw] rounded-[2px] border-[#D9D9D9] pl-[0.8vw] pr-[1vw]">
             <div className="w-[0.5vw] h-[0.5vw]  rounded-[50%] bg-[#52C41A]">
               {""}
@@ -50,7 +49,7 @@ export default function Towerinfo() {
         </div>
       </div>
       <div className="w-[100%] h-[60vh]">
-        <Image className="w-[100%] h-[100%]" src={mapimage} alt="mapimage" />
+        <MapWithPieChartsLasVegas />
       </div>
       <div className="w-[100%] bg-[#fff]">
         <Towerinfotab handleEditCard={handleEditCard} />

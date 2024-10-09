@@ -1,0 +1,130 @@
+{
+  "tower": [
+    {
+      "towerName": "NYC-23",
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "connectivity": "5G",
+      "performance": "Excellent",
+      "capacity": "High",
+      "status": "Active"
+    },
+    {
+      "towerName": "Tower : T001I",
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "connectivity": "4G",
+      "performance": "Good",
+      "capacity": "Moderate",
+      "status": "Active"
+    },
+    {
+      "towerName": "LAX-A1",
+      "latitude": 33.9416,
+      "longitude": -118.4085,
+      "connectivity": "5G",
+      "performance": "Excellent",
+      "capacity": "High",
+      "status": "Active"
+    },
+    {
+      "towerName": "SFO-MAIN",
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "connectivity": "5G",
+      "performance": "Excellent",
+      "capacity": "High",
+      "status": "Active"
+    },
+    {
+      "towerName": "CHI-MAIN",
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "connectivity": "4G",
+      "performance": "Good",
+      "capacity": "Moderate",
+      "status": "Under Maintenance"
+    },
+    {
+      "towerName": "ATL-5G",
+      "latitude": 33.749,
+      "longitude": -84.388,
+      "connectivity": "5G",
+      "performance": "Excellent",
+      "capacity": "High",
+      "status": "Active"
+    },
+    {
+      "towerName": "SEA-ROOF",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "connectivity": "4G",
+      "performance": "Moderate",
+      "capacity": "Low",
+      "status": "Active"
+    },
+    {
+      "towerName": "MIA-BEACH",
+      "latitude": 25.7617,
+      "longitude": -80.1918,
+      "connectivity": "5G",
+      "performance": "Good",
+      "capacity": "Moderate",
+      "status": "Active"
+    },
+    {
+      "towerName": "DEN-HIGH",
+      "latitude": 39.7392,
+      "longitude": -104.9903,
+      "connectivity": "5G",
+      "performance": "Excellent",
+      "capacity": "High",
+      "status": "Active"
+    },
+    {
+      "towerName": "HOU-22A",
+      "latitude": 29.7604,
+      "longitude": -95.3698,
+      "connectivity": "4G",
+      "performance": "Good",
+      "capacity": "Moderate",
+      "status": "Under Maintenance"
+    },
+    {
+      "towerName": "PHX-8",
+      "latitude": 33.4484,
+      "longitude": -112.074,
+      "connectivity": "5G",
+      "performance": "Excellent",
+      "capacity": "High",
+      "status": "Active"
+    },
+    {
+      "towerName": "BOS-LOG",
+      "latitude": 42.3601,
+      "longitude": -71.0589,
+      "connectivity": "4G",
+      "performance": "Moderate",
+      "capacity": "Low",
+      "status": "Active"
+    },
+    {
+      "towerName": "MSP-DELTA",
+      "latitude": 44.9778,
+      "longitude": -93.265,
+      "connectivity": "5G",
+      "performance": "Good",
+      "capacity": "Moderate",
+      "status": "Active"
+    },
+    {
+      "towerName": "MEM-INTL",
+      "latitude": 35.1495,
+      "longitude": -90.049,
+      "connectivity": "5G",
+      "performance": "Excellent",
+      "capacity": "High",
+      "status": "Active"
+    }
+  ]
+}

@@ -54,7 +54,7 @@ const MarkerWithPieChart = ({
 
     chartInstance.current.events.on("ready", () => {
       chartInstance.current.invalidateRawData(); // Ensures chart is drawn correctly
-      chartInstance.current.resize();
+      // chartInstance.current.resize();
     });
   };
 
