@@ -77,38 +77,39 @@ const ProfilePage: React.FC = () => {
       />
 
       {/* Profile Header */}
-      <Card
-        title="Profile Header"
-        extra={
-          isEditingHeader ? (
-            <Button icon={<SaveOutlined />} onClick={saveHeader} />
-          ) : (
-            <Button icon={<EditOutlined />} onClick={toggleEditHeader} />
-          )
-        }
-        className="bg-white shadow-sm rounded-sm p-[1vw] flex flex-col gap-[0.4vw]"
-      >
-        <div className="flex items-center gap-[1vw]">
-          <Image src={avatarIcon} alt="avatarIcon" />
-          {isEditingHeader ? (
-            <Input
-              value={profileData.personalInfo.firstName}
-              onChange={(e) =>
-                setProfileData({
-                  ...profileData,
-                  personalInfo: { ...profileData.personalInfo, firstName: e.target.value },
-                })
-              }
-            />
-          ) : (
-            <Title level={4} className="mb-[1vw]">
-              {profileData.personalInfo.firstName} {profileData.personalInfo.lastName}
-            </Title>
-          )}
+      <div className="flex flex-col gap-[0.4vw] bg-white shadow-sm rounded-sm p-[1vw]">
+        <div className="flex justify-between items-center gap-[1vw]">
+          <div className="flex items-center">
+            <Image src={avatarIcon} alt="avatarIcon" />
+            {isEditingHeader ? (
+              <Input
+                value={profileData.personalInfo.firstName}
+                onChange={(e) =>
+                  setProfileData({
+                    ...profileData,
+                    personalInfo: { ...profileData.personalInfo, firstName: e.target.value },
+                  })
+                }
+              />
+            ) : (
+              <Title level={4} className="mb-[1vw]">
+                {profileData.personalInfo.firstName} {profileData.personalInfo.lastName}
+              </Title>
+            )}
+          </div>
+          <div>
+            {
+              isEditingHeader ? (
+                <Button icon={<SaveOutlined />} onClick={saveHeader} />
+              ) : (
+                <Button icon={<EditOutlined />} onClick={toggleEditHeader} />
+              )
+            }
+          </div>
         </div>
-        <Text type="secondary">Broadcast Manager</Text>
-        <Text type="secondary">Los Angeles, California, USA</Text>
-      </Card>
+        <Text className="pl-[0.4vw]" type="secondary">Broadcast Manager</Text>
+        <Text className="pl-[0.4vw]" type="secondary">Los Angeles, California, USA</Text>
+      </div>
 
       {/* Personal Information */}
       <Card
@@ -331,7 +332,7 @@ const ProfilePage: React.FC = () => {
           </div>
         </div>
       </Card>
-    </div>
+    </div >
   );
 };
 
