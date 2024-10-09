@@ -55,7 +55,7 @@ const LeftNav = () => {
       <div className="w-full flex flex-col items-center justify-center">
         <div className="w-full flex flex-col justify-center items-center gap-[1vw] first:mt-[1.4vw]">
           {nav_items.map((item, index) => {
-            const isActive = pathname === item.location;
+            const isActive = pathname.includes(item.location);
             return (
               <Link href={item.location} key={index} className="w-full flex gap-[0.6vw] items-center">
                 {/* Indicator for active nav item */}
