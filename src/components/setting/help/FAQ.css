@@ -1,0 +1,21 @@
+.faq-custom-collapse .ant-collapse-content-box {
+  padding-left: 1.67vw !important;
+  padding-right: 1.67vw !important;
+}
+
+.faq-custom-collapse .ant-collapse-item {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.faq-custom-collapse .ant-collapse-header {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.faq-custom-collapse .ant-collapse-item > .ant-collapse-header {
+  padding-left: 1.67vw !important;
+  padding-right: 1.67vw !important;
+  padding-top: 1.12vw !important;
+  padding-bottom: 0vw !important;
+}

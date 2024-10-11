@@ -1,0 +1,12 @@
+.custom-collapse .ant-collapse-content-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff !important;
+  padding-bottom: 0vw !important;
+
+}
+
+.custom-panel {
+  background-color: #fff !important;
+}

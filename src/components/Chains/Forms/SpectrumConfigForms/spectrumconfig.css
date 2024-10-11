@@ -1,0 +1,22 @@
+.toggle-btns-spec .ant-form-item {
+  margin: 0 !important;
+}
+.toggle-btns-spec .ant-form-item-row {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-flow: nowrap !important;
+}
+.toggle-btns-spec .ant-form-item-label {
+  width: 70% !important;
+  font-size: 0.9722vw !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-bottom: 0 !important;
+}
+.toggle-btns-spec .ant-form-item-control {
+  width: 30% !important;
+}
+.toggle-btns-spec .ant-form-item-control-input-content {
+  display: flex;
+  justify-content: flex-end;
+}
