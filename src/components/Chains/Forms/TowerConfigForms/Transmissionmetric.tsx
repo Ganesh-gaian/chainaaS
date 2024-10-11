@@ -30,11 +30,11 @@ function Transmitionmetric() {
           label="Transmission Line Length"
           name="TransmissionLineLength"
         >
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input style={{ width: "100%", borderRadius: "0px",fontSize: "0.9722vw", }} />
         </Form.Item>
 
         <Form.Item label="Radome" name="Radome">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input style={{ width: "100%", borderRadius: "0px",fontSize: "0.9722vw", }} />
         </Form.Item>
 
         <Form.Item
@@ -50,7 +50,7 @@ function Transmitionmetric() {
 
         {/* Cooling System */}
         <Form.Item label="Cooling System" name="CoolingSystem">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input style={{ width: "100%", borderRadius: "0px",fontSize: "0.9722vw", }} />
         </Form.Item>
 
         <Form.Item
@@ -60,7 +60,7 @@ function Transmitionmetric() {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="AntennaSystemImpedance" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input style={{ width: "75%", borderRadius: "0px",fontSize: "0.9722vw", }} />
             </Form.Item>
             <Form.Item name="ASIunit" noStyle>
               <Select style={{ width: "25%" }}>
@@ -95,7 +95,7 @@ function Transmitionmetric() {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="TransmittertoAntennaIsolation" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input style={{ width: "75%", borderRadius: "0px",fontSize: "0.9722vw", }} />
             </Form.Item>
             <Form.Item name="Isolationunit" noStyle>
               <Select style={{ width: "25%" }}>

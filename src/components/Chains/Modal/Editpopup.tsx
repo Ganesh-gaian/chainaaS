@@ -9,6 +9,7 @@ import refreshicon from "../../../../public/svgs/chains/refreshicon.svg";
 import info from "../../../../public/svgs/chains/info.svg";
 
 import Image from "next/image";
+import Closeicon from "./Closeicon";
 
 type DropdownType = "settings" | "alliance" | "AR";
 
@@ -38,6 +39,7 @@ const Editpopup: React.FC<EditpopupProps> = ({
           handleFormVisible={handleFormVisible}
         />
       ),
+      style: { padding: "0.5vw" },
     },
     {
       key: "2",
@@ -49,6 +51,7 @@ const Editpopup: React.FC<EditpopupProps> = ({
           handleFormVisible={handleFormVisible}
         />
       ),
+      style: { padding: "0.5vw" },
     },
     {
       key: "3",
@@ -60,15 +63,17 @@ const Editpopup: React.FC<EditpopupProps> = ({
           handleFormVisible={handleFormVisible}
         />
       ),
+      style: { padding: "0.5vw" },
     },
   ];
 
   return (
     <Modal
-      title="Edit Tower"
+      title={<p className="fs-16">Edit Tower</p>}
       width={"25vw"}
       open={showeditcard}
       style={{ left: "33vw" }}
+      closeIcon={<Closeicon/>}
       footer={null}
       onCancel={() => handleEditCard(false)}
     >
@@ -179,7 +184,7 @@ interface HeadingProps {
 function Labelheading({ heading }: HeadingProps) {
   return (
     <div className="flex items-center">
-      <span className="mr-[0.4vw]">{heading}</span>
+      <span className="fs-14 font-[400] mr-[0.4vw]">{heading}</span>
       <Image className="w-[0.8vw] aspect-square" src={info} alt="info-icon" />
     </div>
   );

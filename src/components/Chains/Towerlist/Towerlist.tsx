@@ -5,7 +5,7 @@ import searchlogo from "../../../../public/svgs/chains/search.svg";
 import addlogo from "../../../../public/svgs/chains/add.svg";
 import backlogo from "../../../../public/svgs/chains/back-logo.svg";
 import Customsvg from "./Customsvg";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface TowerItem {
   towerName: string;
@@ -51,155 +51,46 @@ const ChainItem: React.FC<ChainItemProps> = ({
   </div>
 );
 
-const SearchBar: React.FC = () => (
-  <div className="flex justify-between items-center border-[0.1vw] border-[#D9D9D9] rounded-[0.2vw] mx-[1vw]">
-    <div className="w-[85%]">
-      <input
-        className="px-[12px] py-[5px] outline-none"
-        placeholder="Search by chain or tower"
-        type="text"
-      />
+const SearchBar: React.FC = () => {
+  return (
+    <div className="flex justify-between items-center border-[0.1vw] border-[#D9D9D9] rounded-[0.2vw] mx-[1vw]">
+      <div className="w-[85%]">
+        <input
+          className="w-full fs-14 px-[1vw] py-[0.3vw] outline-none"
+          placeholder="Search by chain or tower"
+          type="text"
+        />
+      </div>
+      <div className="w-[15%] h-[100%] flex justify-center items-center border-l-[0.1389vw] border-b-[#0000000F]">
+        <Image className="w-[50%]" src={searchlogo} alt="Search" />
+      </div>
     </div>
-    <div className="w-[15%] h-[100%] flex justify-center items-center border-l-[0.1389vw] border-b-[#0000000F]">
-      <Image className="w-[50%]" src={searchlogo} alt="Search" />
-    </div>
-  </div>
-);
+  );
+};
 
 const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
-  const sample = [
-    {
-      towerName: "NYC-23",
-      latitude: 40.7128,
-      longitude: -74.006,
-      connectivity: "5G",
-      performance: "Excellent",
-      capacity: "High",
-      status: "Active",
-    },
-    {
-      towerName: "Tower : T001I",
-      latitude: 34.0522,
-      longitude: -118.2437,
-      connectivity: "4G",
-      performance: "Good",
-      capacity: "Moderate",
-      status: "Active",
-    },
-    {
-      towerName: "LAX-A1",
-      latitude: 33.9416,
-      longitude: -118.4085,
-      connectivity: "5G",
-      performance: "Excellent",
-      capacity: "High",
-      status: "Active",
-    },
-    {
-      towerName: "SFO-MAIN",
-      latitude: 37.7749,
-      longitude: -122.4194,
-      connectivity: "5G",
-      performance: "Excellent",
-      capacity: "High",
-      status: "Active",
-    },
-    {
-      towerName: "CHI-MAIN",
-      latitude: 41.8781,
-      longitude: -87.6298,
-      connectivity: "4G",
-      performance: "Good",
-      capacity: "Moderate",
-      status: "Under Maintenance",
-    },
-    {
-      towerName: "ATL-5G",
-      latitude: 33.749,
-      longitude: -84.388,
-      connectivity: "5G",
-      performance: "Excellent",
-      capacity: "High",
-      status: "Active",
-    },
-    {
-      towerName: "SEA-ROOF",
-      latitude: 47.6062,
-      longitude: -122.3321,
-      connectivity: "4G",
-      performance: "Moderate",
-      capacity: "Low",
-      status: "Active",
-    },
-    {
-      towerName: "MIA-BEACH",
-      latitude: 25.7617,
-      longitude: -80.1918,
-      connectivity: "5G",
-      performance: "Good",
-      capacity: "Moderate",
-      status: "Active",
-    },
-    {
-      towerName: "DEN-HIGH",
-      latitude: 39.7392,
-      longitude: -104.9903,
-      connectivity: "5G",
-      performance: "Excellent",
-      capacity: "High",
-      status: "Active",
-    },
-    {
-      towerName: "HOU-22A",
-      latitude: 29.7604,
-      longitude: -95.3698,
-      connectivity: "4G",
-      performance: "Good",
-      capacity: "Moderate",
-      status: "Under Maintenance",
-    },
-    {
-      towerName: "PHX-8",
-      latitude: 33.4484,
-      longitude: -112.074,
-      connectivity: "5G",
-      performance: "Excellent",
-      capacity: "High",
-      status: "Active",
-    },
-    {
-      towerName: "BOS-LOG",
-      latitude: 42.3601,
-      longitude: -71.0589,
-      connectivity: "4G",
-      performance: "Moderate",
-      capacity: "Low",
-      status: "Active",
-    },
-    {
-      towerName: "MSP-DELTA",
-      latitude: 44.9778,
-      longitude: -93.265,
-      connectivity: "5G",
-      performance: "Good",
-      capacity: "Moderate",
-      status: "Active",
-    },
-    {
-      towerName: "MEM-INTL",
-      latitude: 35.1495,
-      longitude: -90.049,
-      connectivity: "5G",
-      performance: "Excellent",
-      capacity: "High",
-      status: "Active",
-    },
-  ];
-
+  const [towers, setTowers] = useState<TowerItem[]>([]);
   const [selectedtower, setSelectedtower] = useState<String>("");
 
   const handleSelectedTower = useCallback((value: String) => {
     setSelectedtower(value);
+  }, []);
+
+  useEffect(() => {
+    const fetchTowerData = async () => {
+      try {
+        //const response = await fetch("/DB/db.json");
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_JSON_SERVER}/towers`
+        );
+        const data = await response.json();
+        setTowers(data);
+      } catch (error) {
+        console.error("Failed to fetch tower data", error);
+      }
+    };
+
+    fetchTowerData();
   }, []);
 
   return (
@@ -215,7 +106,7 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
       </header>
       <SearchBar />
       <main className="w-[100%] h-[68vh] p-[1vw] flex flex-col gap-[1vw] overflow-y-auto no-scrollbar">
-        {sample.map((item, index) => (
+        {towers?.map((item, index) => (
           <ChainItem
             key={index}
             item={item}

@@ -17,7 +17,13 @@ const SignalMetricForm: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="CenterFrequency" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="centerfunit" noStyle>
               <Select style={{ width: "25%" }}>
@@ -36,10 +42,10 @@ const SignalMetricForm: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="ChannelBandwidth" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input style={{ width: "75%", borderRadius: "0px",fontSize: "0.9722vw" }} />
             </Form.Item>
             <Form.Item name="bwunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%",fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>
@@ -55,10 +61,10 @@ const SignalMetricForm: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="OccupiedBandwidth" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input style={{ width: "75%", borderRadius: "0px",fontSize: "0.9722vw" }} />
             </Form.Item>
             <Form.Item name="occunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%",fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>
@@ -76,7 +82,7 @@ const SignalMetricForm: React.FC = () => {
 
         {/* Frequency Offset */}
         <Form.Item label="Frequency Offset" name="FrequencyOffset">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input style={{ width: "100%", borderRadius: "0px",fontSize: "0.9722vw" }} />
         </Form.Item>
 
         {/* Spectrum Mask */}
@@ -113,10 +119,10 @@ const SignalMetricForm: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="AdjacentChannelProtection" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input style={{ width: "75%", borderRadius: "0px",fontSize: "0.9722vw" }} />
             </Form.Item>
             <Form.Item name="channelunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%",fontSize: "0.9722vw" }}>
                 <Option value="dB">dB</Option>
               </Select>
             </Form.Item>
@@ -211,7 +217,7 @@ const SignalMetricForm: React.FC = () => {
 
         {/* Spectral Efficiency */}
         <Form.Item label="Spectral Efficiency" name="SpectralEfficiency">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input style={{ width: "100%", borderRadius: "0px",fontSize: "0.9722vw" }} />
         </Form.Item>
       </div>
       <div className="grid grid-cols-2 gap-6 mt-[1vw] toggle-btns-spec">

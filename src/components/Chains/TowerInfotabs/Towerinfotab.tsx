@@ -11,8 +11,6 @@ import { useRef, useState } from "react";
 import { Collapse, Tabs } from "antd";
 import "./towerinfo.css";
 
-const { Panel } = Collapse;
-
 interface TowerinfotabProps {
   handleEditCard: (value: boolean) => void;
 }
@@ -341,39 +339,43 @@ interface HeadingProps {
 function Labelheading({ heading, selected }: HeadingProps) {
   let mias = ["Museo", "Izak", "Spectraguard", "Hear Here", "AmplyFund"];
   let towers = ["Tower 1", "Tower 2"];
-
   const onChange = (key: string | string[]) => {
     console.log(key[0]);
   };
-
+  const items = [
+    {
+      key: heading === "Broadcast Info" ? "1" : "2",
+      label: (
+        <span
+          className={`text-left fs-14  font-[400] hover:text-[#1890FF] ${
+            selected == heading ? "text-[#1890FF]" : "text-[#000000D9]"
+          }`}
+        >
+          {heading}
+        </span>
+      ),
+      children: (selected === "Broadcast Info" ? mias : towers).map(
+        (item, index) => {
+          return (
+            <p
+              key={index}
+              className="text-left fs-12 font-[400] text-[#00000073] p-[0.5vw] hover:bg-[#FAFAFA] hover:text-[#000000D9] rounded-[0.2vw]"
+            >
+              {item}
+            </p>
+          );
+        }
+      ),
+      showArrow: false,
+    },
+  ];
   return (
     <Collapse
+      items={items}
       defaultActiveKey={[]}
       ghost={true}
       onChange={onChange}
       activeKey={selected === "Broadcast Info" ? ["1"] : ["2"]}
-    >
-      <Panel
-        showArrow={false}
-        header={
-          <span
-            className={`text-left fs-14  font-[400] hover:text-[#1890FF] ${
-              selected == heading ? "text-[#1890FF]" : "text-[#000000D9]"
-            }`}
-          >
-            {heading}
-          </span>
-        }
-        key={heading === "Broadcast Info" ? "1" : "2"}
-      >
-        {(selected === "Broadcast Info" ? mias : towers).map((item) => {
-          return (
-            <p className="text-left fs-12 font-[400] text-[#00000073] p-[0.5vw] hover:bg-[#FAFAFA] hover:text-[#000000D9] rounded-[0.2vw]">
-              {item}
-            </p>
-          );
-        })}
-      </Panel>
-    </Collapse>
+    />
   );
 }

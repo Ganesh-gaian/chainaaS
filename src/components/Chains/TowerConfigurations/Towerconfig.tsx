@@ -41,8 +41,12 @@ interface FormValues {
   Isolationunit: string;
   BackupPower: string;
   WindLoadCapacity: string;
-  Radome:String;
-  GroundingandLightningProtection:String
+  Radome: String;
+  GroundingandLightningProtection: String;
+}
+
+interface Label {
+  heading: string;
 }
 
 const Towerconfig = forwardRef((props, ref) => {
@@ -83,8 +87,8 @@ const Towerconfig = forwardRef((props, ref) => {
     Isolationunit: "dB",
     BackupPower: "Diesel Generator + UPS",
     WindLoadCapacity: "120 mph (193 km/h)",
-    Radome:"Fiberglass Radome",
-    GroundingandLightningProtection:"Ground Radial System + Lightning Rod"
+    Radome: "Fiberglass Radome",
+    GroundingandLightningProtection: "Ground Radial System + Lightning Rod",
   });
   useImperativeHandle(ref, () => ({
     getFormValues: () => {
@@ -96,17 +100,17 @@ const Towerconfig = forwardRef((props, ref) => {
   const items = [
     {
       key: "1",
-      label: "System metric",
+      label: <Labelheading heading="System metric" />,
       children: <Systemmetric />,
     },
     {
       key: "2",
-      label: "Signal metric",
+      label: <Labelheading heading="Signal metric" />,
       children: <Signalmetric />,
     },
     {
       key: "3",
-      label: "Transmission metric",
+      label: <Labelheading heading="Transmission metric" />,
       children: <Transmitionmetric />,
     },
   ];
@@ -123,7 +127,7 @@ const Towerconfig = forwardRef((props, ref) => {
           defaultActiveKey={["1", "2", "3"]}
           onChange={onChange}
           expandIconPosition={"end"}
-          bordered={false}
+          ghost={true}
         />
       </Form>
     </div>
@@ -131,3 +135,11 @@ const Towerconfig = forwardRef((props, ref) => {
 });
 
 export default Towerconfig;
+
+function Labelheading({ heading }: Label) {
+  return (
+    <div className="flex items-center">
+      <span className="fs-14 font-[400] text-[#000000D9] mb-[0.8vw]">{heading}</span>
+    </div>
+  );
+}

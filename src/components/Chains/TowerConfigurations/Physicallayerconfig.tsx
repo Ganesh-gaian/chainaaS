@@ -6,7 +6,7 @@ const Physicallayerconfig = forwardRef((props, ref) => {
   const items = [
     {
       key: "1",
-      label: "Physical Layer Pipe metric",
+      label:<Labelheading heading={"Physical Layer Pipe metric"} />,
       children: <Physicallayer />,
     },
   ];
@@ -67,3 +67,16 @@ const Physicallayerconfig = forwardRef((props, ref) => {
 });
 
 export default Physicallayerconfig;
+
+
+interface HeadingProps {
+  heading: String;
+}
+
+function Labelheading({ heading }: HeadingProps) {
+  return (
+    <div className="flex items-center">
+      <span className="fs-14 font-[400] mr-[0.4vw]">{heading}</span>
+    </div>
+  );
+}

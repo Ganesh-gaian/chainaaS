@@ -7,6 +7,7 @@ interface svgProps {
 function Customsvg({ selected }: svgProps) {
   return (
     <svg
+      className="w-[7%] h-[100%]"
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
