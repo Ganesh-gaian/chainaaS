@@ -33,16 +33,18 @@ const BrandColorPicker: React.FC = () => {
   return (
     <div className="w-[58.296vw] h-[18.74vw] flex flex-col border rounded-[0.14vw] bg-[#fff]">
       <div className="w-full h-[3.75vw] flex items-center px-[1.67vw] shadow-[inset_0px_-0.1vw_0px_0px_#F0F0F0] ">
-        <span className="text-[#323E4F]">Brand Color</span>
+        <span className="text-[#323E4F] fs-14">Brand Color</span>
       </div>
       <div className="w-full flex flex-col p-[1.67vw] gap-[0.56vw]">
-        <div className="w-full h-[5.7vw] flex flex-col justify-between">
-          <p className="text-[#697483] fs-14">Select or Customize your Brand Color</p>
-          <div className="flex flex-wrap">
+        <div className="w-full h-[5.7vw] flex flex-col gap-[0.833vw] justify-between  pb-[1.12vw]">
+          <p className="text-[#697483] fs-14">
+            Select or Customize your Brand Color
+          </p>
+          <div className="flex gap-[0.56vw]">
             {predefinedColors.map((color) => (
               <div
                 key={color}
-                className={`w-10 h-10 rounded-full cursor-pointer m-1 border-2 ${
+                className={`w-[2.22vw] h-[2.22vw] rounded-full cursor-pointer border-1 ${
                   selectedColor === color
                     ? "border-blue-500"
                     : "border-transparent"
@@ -61,11 +63,11 @@ const BrandColorPicker: React.FC = () => {
               type="text"
               value={customColor}
               onChange={handleCustomColorChange}
-              className="border rounded p-1 mr-2 w-80"
+              className="border-[0.1vw] border-[#D9D9D9] rounded-[0.14vw] mr-[0.56vw] w-[23.32vw] h-[2.22vw] fs-14 pl-[0.833vw]"
               placeholder="#1890FF"
             />
             <div
-              className="w-9 h-9 rounded-full"
+              className="w-[2.22vw] h-[2.22vw] rounded-full"
               style={{ backgroundColor: customColor }}
             />
           </div>

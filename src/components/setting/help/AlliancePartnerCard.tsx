@@ -78,13 +78,13 @@ const AlliancePartner: React.FC = () => {
             onClick={handlePrev}
             className="w-[2.22vw] h-[2.22vw] border-[0.1vw] border-[rgba(0,0,0,0.06)]"
           >
-            <LeftOutlined />
+            <LeftOutlined className="fs-16" />
           </button>
           <button
             onClick={handleNext}
             className="w-[2.22vw] h-[2.22vw] border-[0.1vw] border-[rgba(0,0,0,0.06)]"
           >
-            <RightOutlined />
+            <RightOutlined className="fs-16" />
           </button>
         </div>
       </div>
@@ -96,39 +96,49 @@ const AlliancePartner: React.FC = () => {
           alt={`${currentPartner.name} Logo`}
           className="h-[3vw] w-auto mr-4"
         />
-        <span className="text-xl font-semibold">{currentPartner.name}</span>
+        <span className="fs-16 font-medium text-[rgba(0,0,0,0.85)]">
+          {currentPartner.name}
+        </span>
       </div>
 
       {/* Third Row: Partner Details */}
       <div className="flex flex-1 px-[1.67vw] pt-[0.56vw] pr-[1.67vw] justify-between">
         {/* Partnership Date */}
         <div className="flex flex-col w-[14.72vw] gap-[0.14vw]">
-          <span className="text-gray-500 text-sm">Partnership Date</span>
-          <span className="text-base font-medium">
+          <span className="text-[rgba(0,0,0,0.45)] fs-12">
+            Partnership Date
+          </span>
+          <span className="text-[rgba(0,0,0,0.85)] fs-14">
             {currentPartner.partnershipDate}
           </span>
         </div>
 
         {/* Revenue Contribution */}
         <div className="flex flex-col w-[14.72vw] gap-[0.14vw]">
-          <span className="text-gray-500 text-sm">Revenue Contribution</span>
-          <span className="text-base font-medium">
+          <span className="text-[rgba(0,0,0,0.45)] fs-12">
+            Revenue Contribution
+          </span>
+          <span className="text-[rgba(0,0,0,0.85)] fs-14">
             {currentPartner.revenueContribution}
           </span>
         </div>
 
         {/* Partnership Duration */}
         <div className="flex flex-col w-[14.72vw] gap-[0.14vw]">
-          <span className="text-gray-500 text-sm">Partnership Duration</span>
-          <span className="text-base font-medium">
+          <span className="text-[rgba(0,0,0,0.45)] fs-12">
+            Partnership Duration
+          </span>
+          <span className="text-[rgba(0,0,0,0.85)] fs-14">
             {currentPartner.partnershipDuration}
           </span>
         </div>
 
         {/* Performance Metrics */}
         <div className="flex flex-col w-[14.72vw] gap-[0.14vw]">
-          <span className="text-gray-500 text-sm">Performance Metrics</span>
-          <span className="text-base font-medium">
+          <span className="text-[rgba(0,0,0,0.45)] fs-12">
+            Performance Metrics
+          </span>
+          <span className="text-[rgba(0,0,0,0.85)] fs-14">
             {currentPartner.performanceMetrics}
           </span>
         </div>
