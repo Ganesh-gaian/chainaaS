@@ -8,7 +8,9 @@ function Contentencoding() {
     <div>
       <div className="grid grid-cols-3 gap-[1.4vw]">
         <Form.Item label="Video Codec" name="VideoCodec">
-          <Input />
+          <Input
+            style={{ width: "100%", borderRadius: "0px", fontSize: "0.9722vw" }}
+          />
         </Form.Item>
 
         <Form.Item

@@ -39,10 +39,16 @@ const ConfigurationMetricForm: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="UncertainFrequency" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="UFrequencyUnit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>
@@ -58,10 +64,16 @@ const ConfigurationMetricForm: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="CarrierFrequency" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="FrequencyUnit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>
@@ -73,10 +85,16 @@ const ConfigurationMetricForm: React.FC = () => {
         <Form.Item label="Power level" name="Power level" className="w-full">
           <div className="flex gap-[0.5vw]">
             <Form.Item name="PowerLevel" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="PowerUnit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="dB">dB</Option>
               </Select>
             </Form.Item>
@@ -91,13 +109,25 @@ const ConfigurationMetricForm: React.FC = () => {
             label="Spectrum License number"
             name="SpectrumLicenseNumber"
           >
-            <Input style={{ width: "100%", borderRadius: "0px" }} />
+            <Input
+              style={{
+                width: "100%",
+                borderRadius: "0px",
+                fontSize: "0.9722vw",
+              }}
+            />
           </Form.Item>
         </div>
         {/* Expiration date */}
         <div>
           <Form.Item label="Expiration date" name="Expirationdate">
-            <Input style={{ width: "100%", borderRadius: "0px" }} />
+            <Input
+              style={{
+                width: "100%",
+                borderRadius: "0px",
+                fontSize: "0.9722vw",
+              }}
+            />
           </Form.Item>
         </div>
       </div>

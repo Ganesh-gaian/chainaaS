@@ -6,7 +6,7 @@ const Modcodconfig = forwardRef((props, ref) => {
   const items = [
     {
       key: "1",
-      label: " Mod Cod metric",
+      label: <Labelheading heading={"Mod Cod metric"} />,
       children: <ModCodMetricForm />,
     },
   ];
@@ -64,3 +64,15 @@ const Modcodconfig = forwardRef((props, ref) => {
 });
 
 export default Modcodconfig;
+
+interface HeadingProps {
+  heading: String;
+}
+
+function Labelheading({ heading }: HeadingProps) {
+  return (
+    <div className="flex items-center">
+      <span className="fs-14 font-[400] mr-[0.4vw]">{heading}</span>
+    </div>
+  );
+}

@@ -27,7 +27,7 @@ export default function Towerinfo() {
             <div className="w-[0.5vw] h-[0.5vw]  rounded-[50%] bg-[#52C41A]">
               {""}
             </div>
-            <span className="text-[0.75rem] text-[#000000D9] font-[400]">
+            <span className="fs-12 text-[#000000D9] font-[400]">
               Broadcasting
             </span>
           </div>
@@ -35,14 +35,14 @@ export default function Towerinfo() {
 
         <div className="flex mr-[1vw]">
           <div className="flex justify-center items-center">
-            <span className="mr-[0.5vw]">Latitude:</span>
-            <span className="px-[0.8vw] border-[0.1vw] rounded-[2px] border-[#D9D9D9] bg-[#fff]">
+            <span className="fs-15 mr-[0.5vw]">Latitude:</span>
+            <span className="fs-15 px-[0.8vw] border-[0.1vw] rounded-[2px] border-[#D9D9D9] bg-[#fff]">
               34.12345
             </span>
           </div>
           <div className="flex justify-center items-center ml-[1vw]">
-            <span className="mr-[0.5vw]">Longitude:</span>
-            <span className="px-[0.8vw] border-[0.1vw] rounded-[2px] border-[#D9D9D9] bg-[#fff]">
+            <span className="fs-15 mr-[0.5vw]">Longitude:</span>
+            <span className="fs-15 px-[0.8vw] border-[0.1vw] rounded-[2px] border-[#D9D9D9] bg-[#fff]">
               118.25
             </span>
           </div>

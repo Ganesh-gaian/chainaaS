@@ -15,10 +15,16 @@ function ExciterMetric() {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="carrierFrequency" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="funit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>
@@ -43,10 +49,16 @@ function ExciterMetric() {
         <Form.Item label="Frequency" name="Frequency" className="w-full">
           <div className="flex gap-[0.5vw]">
             <Form.Item name="frequency" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="frequencyunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="Hz">Hz</Option>
               </Select>
             </Form.Item>
@@ -60,9 +72,9 @@ function ExciterMetric() {
           </Select>
         </Form.Item>
 
-        <Form.Item label="notinfigma" name="notinfigma">
+        <Form.Item label="Guard Interval" name="GuardInterval">
           <Select>
-            <Option value="notinfigma">notinfigma</Option>
+            <Option value="1/16">1/16</Option>
           </Select>
         </Form.Item>
 
@@ -73,10 +85,16 @@ function ExciterMetric() {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="frequencyOffset" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="funit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>
@@ -86,10 +104,16 @@ function ExciterMetric() {
         <Form.Item label="Power Level" name="Power Level" className="w-full">
           <div className="flex gap-[0.5vw]">
             <Form.Item name="powerLevel" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="PowerLevelunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="dBm">dBm</Option>
               </Select>
             </Form.Item>
@@ -110,10 +134,16 @@ function ExciterMetric() {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="signalDelay" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="delayunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="ms">ms</Option>
               </Select>
             </Form.Item>
@@ -127,10 +157,16 @@ function ExciterMetric() {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="symbolRate" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="symbolrate" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="Msps">Msps</Option>
               </Select>
             </Form.Item>
@@ -154,11 +190,15 @@ function ExciterMetric() {
         </Form.Item>
 
         <Form.Item label="IP Address" name="ipAddress">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input
+            style={{ width: "100%", borderRadius: "0px", fontSize: "0.9722vw" }}
+          />
         </Form.Item>
 
         <Form.Item label="Gateway and Subnet Mask" name="gateway">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input
+            style={{ width: "100%", borderRadius: "0px", fontSize: "0.9722vw" }}
+          />
         </Form.Item>
       </div>
       <div className="grid grid-cols-2 gap-[1.4vw] toggle-btns">
@@ -223,3 +263,4 @@ function ExciterMetric() {
 }
 
 export default ExciterMetric;
+

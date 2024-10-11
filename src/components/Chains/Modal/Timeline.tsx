@@ -3,6 +3,7 @@ import React from "react";
 import "./timeline.css";
 import Image from "next/image";
 import darrow from "../../../../public/svgs/utilis/arrowdown.svg";
+import Closeicon from "./Closeicon";
 
 interface TimelineProps {
   showtimeline: boolean;
@@ -79,11 +80,12 @@ const Log2: LogData[] = [
 function TimelineModal({ showtimeline, handleTimeline }: TimelineProps) {
   return (
     <Modal
-      title="Log History"
+      title={<p className="fs-20">Log History</p>}
       width={"25vw"}
       open={showtimeline}
       style={{ left: "33vw" }}
       footer={null}
+      closeIcon={<Closeicon/>}
       onCancel={() => handleTimeline(false)}
     >
       <div className="timeline-main flex justify-center items-start">
@@ -159,7 +161,7 @@ function Timelinedata({ data }: TimelineDataProps) {
           </div>
 
           <p className="fs-13">{data.log}</p>
-          <div id="custom-dot"></div>
+          {/* <div id="custom-dot"></div> */}
         </div>
       )}
     </>
