@@ -18,8 +18,8 @@ export default function Chainsman() {
       <div className="w-[100%] h-[8vh]">
         <Topnav />
       </div>
-      <div className="w-[98%] h-[calc(100%-8vh)] pl-[1.5vw] pt-[1vw] flex gap-[1.3rem]">
-        <section className="w-[25%] h-[100%] bg-[#FFF] rounded-[2px]">
+      <div className="w-[98%] h-[calc(100%-8vh)] pl-[1.5vw] pt-[1vw] flex gap-[1vw]">
+        <section className="w-[25%] h-[100%] bg-[#FFF] rounded-[0.2vw]">
           <Towerlist handleModal={handleModal} />
         </section>
         <section className="w-[75%] h-[100%]">

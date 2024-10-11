@@ -263,8 +263,63 @@ body {
   border-radius: 8px;
   background: #C1C1C1;
 }
+
 /* 
 html {
   scrollbar-width: thin;
   scrollbar-color: #C1C1C1 #f1f1f1;
 } */
+
+.ant-modal-close {
+  width: 2vw !important;
+  height: 2vw !important;
+  top: 1.1vw !important;
+  right: 1vw !important;
+}
+
+.ant-modal-content {
+  padding: 1.2vw 1.5vw !important;
+  border-radius: 0.2vw !important;
+}
+
+.ant-collapse-expand-icon svg {
+  width: 1vw !important;
+  height: 1vw !important;
+}
+
+label {
+  font-size: 0.9722vw !important;
+}
+
+.ant-select-arrow svg {
+  width: 0.8vw !important;
+  height: 0.8vw !important;
+}
+
+.ant-select-selection-item {
+  line-height: normal !important;
+  font-size: 0.9722vw !important;
+  padding: 0 0.5vw !important;
+}
+
+.ant-select-selector {
+  height: 4.5vh !important;
+  font-size: 0.9722vw !important;
+}
+
+.ant-form-item {
+  margin-bottom: 1.67vw !important;
+}
+
+.ant-form-item-control {
+  height: 4.5vh !important;
+}
+
+.ant-select-single {
+  height: 4.5vh !important;
+  font-size: 0.9722vw !important;
+}
+
+.ant-timeline-item-content {
+  margin-left: 2vw !important;
+}

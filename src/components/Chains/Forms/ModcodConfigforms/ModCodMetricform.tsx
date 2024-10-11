@@ -86,10 +86,10 @@ const ModCodMetricForm: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="BandwidthEfficiency" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input style={{ width: "75%", borderRadius: "0px",fontSize: "0.9722vw" }} />
             </Form.Item>
             <Form.Item name="bwunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%",fontSize: "0.9722vw" }}>
                 <Option value="bps/Hz">bps/Hz</Option>
               </Select>
             </Form.Item>

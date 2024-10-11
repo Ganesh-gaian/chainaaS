@@ -67,10 +67,16 @@ const Physicallayer: React.FC = () => {
         <Form.Item label="Bitrate" name="Bitrate" className="w-full">
           <div className="flex gap-[0.5vw]">
             <Form.Item name="bitrate" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="bitrateunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="mbps">mbps</Option>
               </Select>
             </Form.Item>
@@ -79,7 +85,9 @@ const Physicallayer: React.FC = () => {
 
         {/* PLP ID */}
         <Form.Item label="PLP ID" name="PLPID">
-          <Input style={{ width: "100%", borderRadius: "0px" }} />
+          <Input
+            style={{ width: "100%", borderRadius: "0px", fontSize: "0.9722vw" }}
+          />
         </Form.Item>
 
         {/* Service Mode */}
@@ -123,10 +131,16 @@ const Physicallayer: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="ChannelBandwidth" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="bwunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>
@@ -151,10 +165,16 @@ const Physicallayer: React.FC = () => {
         >
           <div className="flex gap-[0.5vw]">
             <Form.Item name="CenterFrequency" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="centerfqunit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select style={{ width: "25%", fontSize: "0.9722vw" }}>
                 <Option value="MHz">MHz</Option>
               </Select>
             </Form.Item>

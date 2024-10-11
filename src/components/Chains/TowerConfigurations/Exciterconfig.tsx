@@ -8,17 +8,17 @@ const Exciterconfig = forwardRef((props, ref) => {
   const items = [
     {
       key: "1",
-      label: "Tower information",
+      label: <Labelheading heading={"Tower information"} />,
       children: <Towerinfoform />,
     },
     {
       key: "2",
-      label: "Exciter metric",
+      label: <Labelheading heading={"Exciter metric"} />,
       children: <ExciterMetric />,
     },
     {
       key: "3",
-      label: "Content Encoding",
+      label: <Labelheading heading={"Content Encoding"} />,
       children: <Contentencoding />,
     },
   ];
@@ -75,6 +75,7 @@ const Exciterconfig = forwardRef((props, ref) => {
           VideoCodec: "ABC123456",
           Synchronizationsettings: "none",
           Codingrate: "7/8",
+          GuardInterval:"1/16"
         }}
         onFinish={(values) => {
           console.log(values);
@@ -82,10 +83,10 @@ const Exciterconfig = forwardRef((props, ref) => {
       >
         <Collapse
           items={items}
-          defaultActiveKey={["2"]}
+          defaultActiveKey={["1","2","3"]}
           onChange={onChange}
           expandIconPosition={"end"}
-          bordered={false}
+          ghost={true}
         />
       </Form>
     </div>
@@ -93,3 +94,15 @@ const Exciterconfig = forwardRef((props, ref) => {
 });
 
 export default Exciterconfig;
+
+interface HeadingProps {
+  heading: String;
+}
+
+function Labelheading({ heading }: HeadingProps) {
+  return (
+    <div className="flex items-center">
+      <span className="fs-14 font-[400] mr-[0.4vw]">{heading}</span>
+    </div>
+  );
+}

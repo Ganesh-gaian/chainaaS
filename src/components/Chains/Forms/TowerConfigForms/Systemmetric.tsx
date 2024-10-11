@@ -3,8 +3,6 @@ import { Input, Select, Form } from "antd";
 
 const { Option } = Select;
 
-
-
 function Systemmetric() {
   return (
     <div>
@@ -13,10 +11,18 @@ function Systemmetric() {
         <Form.Item label="Tower Height" name="towerHeight" className="w-full">
           <div className="flex gap-[0.5vw]">
             <Form.Item name="towerHeight" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="unit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select
+                style={{ width: "25%", height: "4.5vh", fontSize: "0.9722vw" }}
+              >
                 <Option value="ft">ft</Option>
                 <Option value="ms">ms</Option>
               </Select>
@@ -44,10 +50,18 @@ function Systemmetric() {
         <Form.Item label="Bitrate Management" className="w-full">
           <div className="flex gap-[0.5vw]">
             <Form.Item name="BitrateManagement" noStyle>
-              <Input style={{ width: "75%", borderRadius: "0px" }} />
+              <Input
+                style={{
+                  width: "75%",
+                  borderRadius: "0px",
+                  fontSize: "0.9722vw",
+                }}
+              />
             </Form.Item>
             <Form.Item name="bitrateUnit" noStyle>
-              <Select style={{ width: "25%" }}>
+              <Select
+                style={{ width: "25%", fontSize: "0.9722vw", height: "4.5vh" }}
+              >
                 <Option value="kbps">kbps</Option>
                 <Option value="mbps">mbps</Option>
               </Select>

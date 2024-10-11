@@ -7,12 +7,12 @@ const Spectrumconfig = forwardRef((props, ref) => {
   const items = [
     {
       key: "1",
-      label: "Signal metric",
+      label:<Labelheading heading={"Signal metric"} /> ,
       children: <SignalMetricForm />,
     },
     {
       key: "2",
-      label: "Configuration metric",
+      label:<Labelheading heading={"Configuration metric"} /> ,
       children: <ConfigurationMetricForm />,
     },
   ];
@@ -92,3 +92,15 @@ const Spectrumconfig = forwardRef((props, ref) => {
 });
 
 export default Spectrumconfig;
+
+interface HeadingProps {
+  heading: String;
+}
+
+function Labelheading({ heading }: HeadingProps) {
+  return (
+    <div className="flex items-center">
+      <span className="fs-14 font-[400] mr-[0.4vw]">{heading}</span>
+    </div>
+  );
+}
