@@ -40,9 +40,9 @@ const ChainsBarChart: FC = () => {
         {/* <MapWithPieChartsLasVegas/> */}
       </div>
       <h3 className="font-semibold text-[14px] my-[1vw]">Chains</h3>
-      <div className="w-full h-[40vh] overflow-y-auto">
+      <div className="w-full h-[40vh] overflow-y-auto scrollBar">
         {data.map((chain, index) => (
-          <div key={index} className="mb-5">
+          <div key={index} className="mb-5 w-[98%]">
             <div className="flex justify-between items-center mb-1 text-[12px]">
               <span>{chain.name}</span>
               <span>{chain.percentage}%</span>
