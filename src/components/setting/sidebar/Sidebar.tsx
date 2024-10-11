@@ -42,18 +42,20 @@ const Sidebar: React.FC = () => {
   // Function to render links dynamically
   const renderLinks = (map: { [key: string]: string }, basePath: string) =>
     Object.keys(map).map((subItem) => (
-      <Link
-        key={subItem}
-        href={`${basePath}/${map[subItem]}`}
-        className={`py-2 px-4 block cursor-pointer hover:bg-blue-100 ${
-          activeLink === `${basePath}/${map[subItem]}`
-            ? "text-blue-500 bg-blue-100 border-r-4 border-blue-500"
-            : "text-gray-700"
-        }`}
-        onClick={() => setActiveLink(`${basePath}/${map[subItem]}`)}
-      >
-        {subItem}
-      </Link>
+      <div className="w-[14.3vw] h-[2.78vw]">
+        <Link
+          key={subItem}
+          href={`${basePath}/${map[subItem]}`}
+          className={`flex items-center text-[0.9722vw] pl-[2.78vw] h-[2.78vw] cursor-pointer hover:bg-blue-100 ${
+            activeLink === `${basePath}/${map[subItem]}`
+              ? "text-blue-500 bg-blue-100 border-r-4 border-blue-500"
+              : "text-gray-700"
+          }`}
+          onClick={() => setActiveLink(`${basePath}/${map[subItem]}`)}
+        >
+          {subItem}
+        </Link>
+      </div>
     ));
 
   return (
@@ -77,7 +79,7 @@ const Sidebar: React.FC = () => {
                 }}
               />
               <span
-                className={`ml-[0.7vw] ${
+                className={`ml-[0.7vw] text-[0.9722vw] ${
                   activePanel === "1"
                     ? "text-[#1890FF]"
                     : "text-[rgba(0,0,0,0.85)]"
@@ -89,7 +91,7 @@ const Sidebar: React.FC = () => {
           }
           className="custom-panel"
         >
-          <div>{renderLinks(accountMap, "/settings/account")}</div>
+          <div className="w-[14.3vw]">{renderLinks(accountMap, "/settings/account")}</div>
         </Panel>
       </Collapse>
 
@@ -147,7 +149,7 @@ const Sidebar: React.FC = () => {
                 }}
               />
               <span
-                className={`ml-[0.7vw] ${
+                className={`ml-[0.7vw] text-[0.9722vw] ${
                   activePanel === "2"
                     ? "text-[#1890FF]"
                     : "text-[rgba(0,0,0,0.85)]"

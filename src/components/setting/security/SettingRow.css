@@ -1,0 +1,13 @@
+.custom-radio .ant-radio-inner {
+  width: 1.12vw !important;
+  height: 1.12vw !important;
+}
+
+/* Styles for 4K and 8K screens */
+@media (min-width: 3840px) {
+  .custom-radio .ant-radio-inner::after {
+    transform: scale(1.5) !important;
+    opacity: 1;
+    transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+  }
+}
