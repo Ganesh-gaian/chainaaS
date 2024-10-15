@@ -99,8 +99,8 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                   href={item.location}
                   className={
                     pathname === item.location
-                      ? "text-bold text-[#1890FF] text-[16px]"
-                      : "text-[16px]"
+                      ? "text-bold text-[#1890FF] fs-16"
+                      : " fs-16"
                   }
                 >
                   {item.name}
@@ -132,7 +132,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
               <SearchOutlined
                 className="cursor-pointer"
                 onClick={() => setSearchVisible(true)}
-                style={{ fontSize: "16px" }}
+                style={{ fontSize: "1.1111vw" }}
               />
             )}
           </div>

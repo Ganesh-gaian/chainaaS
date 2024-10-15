@@ -45,6 +45,7 @@ const PersonalInformation: React.FC<PersonalInformationProps> = ({ personalInfo,
                     <p className="profile_attribute">First Name</p>
                     {isEditingPersonalInfo ? (
                         <Input
+                            className="w-full h-[] profile_value"
                             value={personalInfo.firstName}
                             onChange={(e) => updatePersonalInfo({ ...personalInfo, firstName: e.target.value })}
                         />

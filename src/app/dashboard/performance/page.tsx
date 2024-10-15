@@ -33,7 +33,7 @@ export default function Performance() {
         <AppReachChart />
       </div>
       <div className="w-full mb-[6vw]">
-        <AreaReachChart />
+        <AreaReachChart />className="profile_value "
       </div>
 
     </div>

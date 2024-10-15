@@ -39,22 +39,22 @@ const CurrentPlan: React.FC = () => {
                     <p className="font-bold fs-30 text-[#FAFAFA]">{`$${planDetails.price}`}</p>
                     <p className="fs-12 text-[#DADCE0]">/month</p>
                 </div>
-                <div className="flex flex-col justify-center px-[2vw] gap-[0.4vw] *:flex *:gap-[0.4vw] [&_p]:fs-12 bg-[#FBF9FF] rounded-r-lg">
+                <div className="flex flex-col justify-center px-[2vw] gap-[0.4vw] *:flex *:gap-[0.4vw] bg-[#FBF9FF] rounded-r-lg">
                     <div >
-                        <Image src={check} alt="check" />
-                        <p>{`Upto ${planDetails.dataUsage}gb of data usage`}</p>
+                        <Image className="w-[1vw] aspect-square" src={check} alt="check" />
+                        <p className="fs-12">{`Upto ${planDetails.dataUsage}gb of data usage`}</p>
                     </div>
                     <div>
-                        <Image src={check} alt="check" />
-                        <p>{`${planDetails.apiCallsLimit} API calls per month`}</p>
+                        <Image className="w-[1vw] aspect-square" src={check} alt="check" />
+                        <p className="fs-12">{`${planDetails.apiCallsLimit} API calls per month`}</p>
                     </div>
                     <div>
-                        <Image src={check} alt="check" />
-                        <p>{`Upto ${planDetails.usersLimit} Users`}</p>
+                        <Image className="w-[1vw] aspect-square" src={check} alt="check" />
+                        <p className="fs-12">{`Upto ${planDetails.usersLimit} Users`}</p>
                     </div>
                     <div>
-                        <Image src={check} alt="check" />
-                        <p>{planDetails.ads ? "Ads always present" : "No Ads"}</p>
+                        <Image className="w-[1vw] aspect-square" src={check} alt="check" />
+                        <p className="fs-12">{planDetails.ads ? "Ads always present" : "No Ads"}</p>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@ const CurrentPlan: React.FC = () => {
                     <p className="fs-16 font-medium">{currentPlan.name} Plan</p>
                 </div>
 
-                <button className="border border-purple-600 text-purple-600 px-[8vw] py-[0.4vw] rounded-md hover:bg-purple-100">
+                <button className="fs-14 border border-purple-600 text-purple-600 px-[8vw] py-[0.4vw] rounded-md hover:bg-purple-100">
                     Upgrade Plan
                 </button>
             </div>

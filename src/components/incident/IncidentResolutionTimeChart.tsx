@@ -90,9 +90,9 @@ const IncidentResolutionTimeChart: React.FC = () => {
 
     return (
         <div className="p-[1vw] bg-white rounded-sm">
-            <h2 className="text-lg font-semibold mb-[0.4vw]">Incident Resolution Time per month</h2>
+            <h2 className="fs-16 font-semibold mb-[0.4vw]">Incident Resolution Time per month</h2>
             <div className="mb-[1vw]">
-                <p className="text-3xl font-medium">4 hour</p>
+                <p className="fs-20 font-medium">4 hour</p>
                 <p className="text-gray-500">Average Resolution Time</p>
             </div>
             <div id="resolutionTimeChart" className="w-full h-72"></div>

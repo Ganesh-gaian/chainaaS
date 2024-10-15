@@ -153,7 +153,7 @@ const PaymentLedger: React.FC = () => {
     return (
         <div className="p-[1vw] bg-white rounded-sm">
             <div className="flex justify-between items-center mb-[0.8vw]">
-                <h2 className="text-base font-medium">Payment Ledger</h2>
+                <h2 className="fs-16 font-medium">Payment Ledger</h2>
                 <Dropdown overlay={menu}>
                     <Button>
                         {selectedFilter} <DownOutlined />

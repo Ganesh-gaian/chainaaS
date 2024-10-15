@@ -113,7 +113,7 @@ const ArApTrendChart: React.FC = () => {
                             className="w-[1.2vw] h-[1.2vw] rounded-[20%]"
                             style={{ backgroundColor: legend.color }}
                         ></div>
-                        <span className="text-[#242F3E] text-[12px] font-bold">{legend.name}</span>
+                        <span className="text-[#242F3E] fs-12 font-bold">{legend.name}</span>
                     </div>
                 ))}
             </div>
