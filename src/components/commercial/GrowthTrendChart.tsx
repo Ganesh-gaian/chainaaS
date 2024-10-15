@@ -93,9 +93,9 @@ const GrowthTrendChart: React.FC = () => {
 
     // Custom legends below the chart
     const legends = [
-        { name: "izak", color: "#ff5722" }, 
-        { name: "Hear, Here", color: "#888" },    
-        { name: "Amplyfund", color: "#9c27b0" }, 
+        { name: "izak", color: "#ff5722" },
+        { name: "Hear, Here", color: "#888" },
+        { name: "Amplyfund", color: "#9c27b0" },
     ];
 
     return (
@@ -114,7 +114,7 @@ const GrowthTrendChart: React.FC = () => {
                             className="w-[1.2vw] h-[1.2vw] rounded-[20%]"
                             style={{ backgroundColor: legend.color }}
                         ></div>
-                        <span className="text-[#242F3E] text-[12px] font-bold">{legend.name}</span>
+                        <span className="text-[#242F3E] fs-12 font-bold">{legend.name}</span>
                     </div>
                 ))}
             </div>

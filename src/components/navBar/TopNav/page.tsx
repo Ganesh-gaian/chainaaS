@@ -40,7 +40,7 @@ export default function TopNav() {
           return (
             <div
               key={index}
-              className="flex gap-[0.4vw] *:flex *:justify-center items-center"
+              className="flex gap-[0.4vw] *:flex *:justify-center *:items-center"
             >
               <div>
                 <Image
@@ -49,9 +49,9 @@ export default function TopNav() {
                   alt="lineSeparator"
                 />
               </div>
-              <div className="text-[12px]">{item.name}</div>
+              <div className="fs-12">{item.name}</div>
               <div
-                className="w-[1.4vw] text-[12px]"
+                className="w-[1.4vw] fs-12"
                 style={{
                   backgroundImage: `url(${background})`,
                   backgroundPosition: "center",

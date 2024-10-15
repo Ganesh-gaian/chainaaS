@@ -62,9 +62,9 @@ const CommercialCards: React.FC = () => {
             {/* Earnings Section */}
             <div className="w-[60%] flex flex-col gap-[1vw] bg-white p-[1vw] rounded-sm">
                 <div className="flex justify-between">
-                    <p className="font-semibold text-base">Earnings</p>
+                    <p className="font-semibold fs-16">Earnings</p>
                     <Dropdown overlay={menu}>
-                        <a className="p-[0.6vw] rounded-sm text-sm border shadow-sm" onClick={(e) => e.preventDefault()}>
+                        <a className="p-[0.6vw] rounded-sm fs-14 border shadow-sm" onClick={(e) => e.preventDefault()}>
                             Application <DownOutlined />
                         </a>
                     </Dropdown>
@@ -72,19 +72,19 @@ const CommercialCards: React.FC = () => {
 
                 <div className="grid grid-cols-3 gap-[1.4vw] *:flex *:flex-col *:justify-center *:items-center *:gap-[0.1vw] *:border *:p-[1vw] *:rounded-[0.4vw]">
                     <div className="">
-                        <p className="text-2xl font-bold">${lastMonthEarnings.toLocaleString()}</p>
-                        <p className="text-sm font-bold text-[#8F97A2]">Last Month</p>
-                        <p className="text-sm font-semibold text-[#92C521]">▲ {growthPercentage}%</p>
+                        <p className="fs-24 font-bold">${lastMonthEarnings.toLocaleString()}</p>
+                        <p className="fs-14 font-bold text-[#8F97A2]">Last Month</p>
+                        <p className="fs-14 font-semibold text-[#92C521]">▲ {growthPercentage}%</p>
                     </div>
                     <div className="">
-                        <p className="text-xl font-semibold">${quarterlyEarnings.toLocaleString()}</p>
-                        <p className="text-sm font-bold text-[#8F97A2]">Quarterly</p>
-                        <p className="text-sm font-semibold text-[#92C521]">▲ {growthPercentage}%</p>
+                        <p className="fs-24 font-semibold">${quarterlyEarnings.toLocaleString()}</p>
+                        <p className="fs-14 font-bold text-[#8F97A2]">Quarterly</p>
+                        <p className="fs-14 font-semibold text-[#92C521]">▲ {growthPercentage}%</p>
                     </div>
                     <div className="">
-                        <p className="text-xl font-semibold">${yearlyEarnings.toLocaleString()}</p>
-                        <p className="text-sm font-bold text-[#8F97A2]">Yearly</p>
-                        <p className="text-sm font-semibold text-[#92C521]">▲ {growthPercentage}%</p>
+                        <p className="fs-24 font-semibold">${yearlyEarnings.toLocaleString()}</p>
+                        <p className="fs-14 font-bold text-[#8F97A2]">Yearly</p>
+                        <p className="fs-14 font-semibold text-[#92C521]">▲ {growthPercentage}%</p>
                     </div>
                 </div>
             </div>
@@ -96,12 +96,12 @@ const CommercialCards: React.FC = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-[1.4vw] mt-[1vw] *:flex *:flex-col *:justify-center *:items-center *:gap-[0.1vw] *:border *:px-[1vw] *:py-[1.8vw] *:rounded-[0.4vw]">
                     <div className="">
-                        <p className="text-2xl font-bold">${wallet.balance.toLocaleString()}</p>
-                        <p className="text-sm font-bold text-[#8F97A2]">Available Balance</p>
+                        <p className="fs-24 font-bold">${wallet.balance.toLocaleString()}</p>
+                        <p className="fs-14 font-bold text-[#8F97A2]">Available Balance</p>
                     </div>
                     <div className="">
-                        <p className="text-2xl font-bold">{wallet.points}</p>
-                        <p className="text-sm font-bold text-[#8F97A2]">Mobit Points</p>
+                        <p className="fs-24 font-bold">{wallet.points}</p>
+                        <p className="fs-14 font-bold text-[#8F97A2]">Mobit Points</p>
                     </div>
                 </div>
             </div>

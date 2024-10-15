@@ -134,7 +134,7 @@ const WalletPage: React.FC = () => {
               <p className="fs-14 text-[#697483]">Cards</p>
             </div>
             <div className="">
-              <Image src={paypalSVG} alt="paypalSVG" />
+              <Image className="w-[2vw]" src={paypalSVG} alt="paypalSVG" />
               <p className="fs-14 text-[#697483]">Paypal</p>
             </div>
 
