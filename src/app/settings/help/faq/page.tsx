@@ -1,5 +1,5 @@
 import FAQ from "@/components/setting/help/FAQ";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import React from "react";
 
 const Faq: React.FC = () => {

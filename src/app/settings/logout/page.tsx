@@ -1,5 +1,5 @@
 import AccountSettings from "@/components/setting/logout/AccountSettings";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import React from "react";
 
 const Logout: React.FC = () => {

@@ -11,3 +11,11 @@
   font-size: 1.12vw !important;
   border-radius: 0.14vw !important;
 }
+
+.responsive-onBoarding-img  {
+  width: 17.9vw;
+  height:39.5vw;
+  max-width: 100vw;
+  object-fit: contain;
+}
+

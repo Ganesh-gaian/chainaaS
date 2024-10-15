@@ -12,7 +12,7 @@ import upi from "../../../../../public/svgs/wallet/upi.png"
 import paypalSVG from "../../../../../public/svgs/wallet/paypal.svg"
 import cards from "../../../../../public/svgs/wallet/cards.svg"
 import Image from "next/image";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 interface PaymentMethod {
   id: number;
   type: string;

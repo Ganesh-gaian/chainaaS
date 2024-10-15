@@ -1,4 +1,4 @@
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import TimeDateFormatSelector from "@/components/setting/time/TimeDateFormatSelector";
 import React from "react";
 

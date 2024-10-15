@@ -1,5 +1,5 @@
 import LanguageRegionSelector from "@/components/setting/language/LanguageRegionSelector";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import React from "react";
 
 const LanguageAndRegion: React.FC = () => {

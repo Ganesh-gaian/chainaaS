@@ -1,4 +1,4 @@
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import BrandColorPicker from "@/components/setting/theme/BrandColorPicker";
 import ThemeSelector from "@/components/setting/theme/ThemeSelector";
 import React from "react";

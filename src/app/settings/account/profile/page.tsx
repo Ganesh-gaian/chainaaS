@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import PersonalInformation from "@/components/setting/account/personalInformation";
 import AddressInformation from "@/components/setting/account/AddressInformation";
 import CurrentPlan from "@/components/setting/account/CurrentPlan";

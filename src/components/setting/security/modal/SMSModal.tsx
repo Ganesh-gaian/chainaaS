@@ -27,7 +27,7 @@ const SMSModal: React.FC<SMSModalProps> = ({
       footer={null}
       closeIcon={null}
       width={"39.72vw"}
-    //   height={"20.74vw"}
+      height={"20.74vw"}
       className="SMSCustomModal"
     >
         <ContactDetails onClose={handleCancel} />
