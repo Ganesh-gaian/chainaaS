@@ -1,5 +1,5 @@
 import PrivacyPolicy from "@/components/setting/help/PrivacyPolicy";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import React from "react";
 
 const Privacy: React.FC = () => {

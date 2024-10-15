@@ -1,4 +1,4 @@
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import SecurityComponent from "@/components/setting/security/SecurityComponent";
 import React from "react";
 

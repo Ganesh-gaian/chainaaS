@@ -76,7 +76,7 @@ const OnBoardingModal: React.FC<MyModalProps> = ({
                   : "/images/anlytics.png"
               }
               alt={`Step ${currentStep}`}
-              className=""
+              className="responsive-onBoarding-img"
             />
           </div>
         </div>

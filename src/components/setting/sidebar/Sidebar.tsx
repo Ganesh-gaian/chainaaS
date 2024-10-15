@@ -59,12 +59,12 @@ const Sidebar: React.FC = () => {
     ));
 
   return (
-    <div className="w-full flex flex-col gap-2">
+    <div className="w-full flex flex-col gap-[0.56vw]">
       {/* Account Accordion */}
       <Collapse
         bordered={false}
         expandIconPosition="end"
-        className="w-full custom-collapse" // Custom background
+        className="w-full custom-sidebar-collapse" // Custom background
         activeKey={activePanel === "1" ? ["1"] : []}
         onChange={() => handlePanelChange("1")}
       >
@@ -73,11 +73,13 @@ const Sidebar: React.FC = () => {
           header={
             <div className="flex items-center">
               {/* Change icon color based on active panel */}
-              <AccordionIcons.UserOutlined
-                style={{
-                  color: activePanel === "1" ? "#1890FF" : "rgba(0,0,0,0.85)",
-                }}
-              />
+              <span className="text-[0.972vw]">
+                <AccordionIcons.UserOutlined
+                  style={{
+                    color: activePanel === "1" ? "#1890FF" : "rgba(0,0,0,0.85)",
+                  }}
+                />
+              </span>
               <span
                 className={`ml-[0.7vw] text-[0.9722vw] ${
                   activePanel === "1"
@@ -89,9 +91,11 @@ const Sidebar: React.FC = () => {
               </span>
             </div>
           }
-          className="custom-panel"
+          className="custom-sidebar-panel"
         >
-          <div className="w-[14.3vw]">{renderLinks(accountMap, "/settings/account")}</div>
+          <div className="w-[14.3vw]">
+            {renderLinks(accountMap, "/settings/account")}
+          </div>
         </Panel>
       </Collapse>
 
@@ -101,7 +105,7 @@ const Sidebar: React.FC = () => {
         return (
           <div
             key={location}
-            className={`flex h-[2.78vw] px-[1vw] items-center gap-3 hover:bg-blue-100 ${
+            className={`flex h-[2.78vw] px-[1.12vw] items-center gap-[0.694vw] hover:bg-blue-100 ${
               isActive ? "bg-blue-100 border-r-4 border-blue-500" : ""
             }`}
           >
@@ -134,7 +138,7 @@ const Sidebar: React.FC = () => {
       <Collapse
         bordered={false}
         expandIconPosition="end"
-        className="w-full custom-collapse"
+        className="w-full custom-sidebar-collapse"
         activeKey={activePanel === "2" ? ["2"] : []}
         onChange={() => handlePanelChange("2")}
       >
@@ -143,11 +147,13 @@ const Sidebar: React.FC = () => {
           header={
             <div className="flex items-center">
               {/* Change icon color based on active panel */}
-              <AccordionIcons.CustomerServiceOutlined
-                style={{
-                  color: activePanel === "2" ? "#1890FF" : "rgba(0,0,0,0.85)",
-                }}
-              />
+              <span className="text-[0.972vw]">
+                <AccordionIcons.CustomerServiceOutlined
+                  style={{
+                    color: activePanel === "2" ? "#1890FF" : "rgba(0,0,0,0.85)",
+                  }}
+                />
+              </span>
               <span
                 className={`ml-[0.7vw] text-[0.9722vw] ${
                   activePanel === "2"
@@ -159,7 +165,7 @@ const Sidebar: React.FC = () => {
               </span>
             </div>
           }
-          className="custom-panel"
+          className="custom-sidebar-panel"
         >
           <div>{renderLinks(helpMap, "/settings/help")}</div>
         </Panel>
@@ -167,20 +173,23 @@ const Sidebar: React.FC = () => {
 
       {/* Logout */}
       <div
-        className={`flex cursor-pointer h-[2.78vw] px-[1.12vw] items-center gap-3 hover:bg-blue-100 ${
+        className={`flex cursor-pointer h-[2.78vw] px-[1.12vw] items-center gap-[0.694vw] hover:bg-blue-100 ${
           activeLink === "/settings/logout"
             ? "bg-blue-100 border-r-4 border-blue-500"
             : ""
         }`}
       >
-        <LogoutOutlined
-          style={{
-            color:
-              activeLink === "/settings/logout"
-                ? "#1890FF"
-                : "rgba(0,0,0,0.85)",
-          }}
-        />
+        <span className="text-[0.972vw]">
+          <LogoutOutlined
+            style={{
+              color:
+                activeLink === "/settings/logout"
+                  ? "#1890FF"
+                  : "rgba(0,0,0,0.85)",
+            }}
+          />
+        </span>
+
         <Link
           href="/settings/logout"
           className={`block ${

@@ -1,5 +1,5 @@
 import React from "react";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import ManagePeople from "@/components/setting/account/ManagePeople";
 
 const Roles: React.FC = () => {

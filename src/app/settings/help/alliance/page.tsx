@@ -1,5 +1,5 @@
 import AlliancePartnerCard from "@/components/setting/help/AlliancePartnerCard";
-import SettingHeader from "@/components/setting/other/SettingHeader";
+import SettingHeader from "@/components/setting/reuseableComponent/SettingHeader";
 import React from "react";
 
 const Alliance: React.FC = () => {
