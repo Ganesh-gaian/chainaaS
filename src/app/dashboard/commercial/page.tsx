@@ -6,7 +6,10 @@ import TowerEarningsChart from "@/components/commercial/TowerEarningsChart";
 
 export default function Commercial() {
   return (
-    <div className='w-full h-full  p-[1.0vw] flex flex-col gap-[1vw] bg-[#F5F6F7] overflow-y-auto scrollBar'>
+    <div
+      id="commercial_insights"
+      className="w-full h-full  p-[1.0vw] flex flex-col gap-[1vw] bg-[#F5F6F7] overflow-y-auto scrollBar"
+    >
       <div>
         <CommercialCards />
       </div>
@@ -21,5 +24,5 @@ export default function Commercial() {
         <PaymentLedger />
       </div>
     </div>
-  )
+  );
 }

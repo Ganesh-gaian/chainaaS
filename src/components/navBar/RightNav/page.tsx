@@ -37,7 +37,7 @@ export default function RightNav() {
         <Image src={t3} alt="" />
       </div>
       {/* Bottom CTA */}
-      <div className="w-full flex flex-col justify-center items-center gap-[1.6vw] last:mb-[2vw] *:w-[2vw] *:cursor-pointer">
+      <div id="right-bottom-icons" className="w-full flex flex-col justify-center items-center gap-[1.6vw] last:mb-[2vw] *:w-[2vw] *:cursor-pointer">
         <Image src={B1} alt="" 
           onClick={() => {
             setShowOnBoardingModal(true);
@@ -47,8 +47,7 @@ export default function RightNav() {
         <Image src={B3} alt="" />
         <Image
           onClick={() => {
-            console.log("logo");
-            handleTimeline(true);
+            handleTimeline(!showtimeline);
           }}
           src={B4}
           alt=""

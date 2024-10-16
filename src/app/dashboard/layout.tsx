@@ -35,18 +35,22 @@ const menuItems: MenuProps["items"] = [
 const subNavItems = [
   {
     name: "Performance",
+    id: "nav_performance",
     location: "/dashboard/performance",
   },
   {
     name: "Incident",
+    id: "nav_incident",
     location: "/dashboard/incident",
   },
   {
     name: "Projects",
+    id: "nav_projects",
     location: "/dashboard/project",
   },
   {
     name: "Commercial",
+    id: "nav_commercial",
     location: "/dashboard/commercial",
   },
 ];
@@ -97,6 +101,7 @@ export default function Dashboard({ children }: { children: React.ReactNode }) {
                 {/* color condition on active */}
                 <Link
                   href={item.location}
+                  id={item.id}
                   className={
                     pathname === item.location
                       ? "text-bold text-[#1890FF] fs-16"

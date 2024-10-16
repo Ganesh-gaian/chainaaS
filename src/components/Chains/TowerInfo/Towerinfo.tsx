@@ -1,5 +1,3 @@
-import Image from "next/image";
-import mapimage from "../../../../public/images/map-image.png";
 import MapWithPieChartsLasVegas from "../../leaf/Mapview";
 import Towerinfotab from "../TowerInfotabs/Towerinfotab";
 import { useCallback, useState } from "react";
@@ -19,7 +17,7 @@ export default function Towerinfo() {
   }, []);
 
   return (
-    <div className="w-[100%] h-[84.5vh] flex flex-col gap-[1vw] overflow-y-auto no-scrollbar overflow-x-hidden relative">
+    <div id="chains-info-section" className="w-[100%] h-[84.5vh] flex flex-col gap-[1vw] overflow-y-auto no-scrollbar relative">
       <div className="flex justify-between">
         <div>
           <div className="fs-14 text-[#000000D9] font-[500]">Tower : T001I</div>

@@ -8,13 +8,11 @@ import Customsvg from "./Customsvg";
 import { useCallback, useEffect, useState } from "react";
 
 interface TowerItem {
-  towerName: string;
+  name: string;
   latitude: number;
   longitude: number;
-  connectivity: string;
-  performance: string;
-  capacity: string;
-  status: string;
+  chain_id: string;
+
 }
 
 interface ChainItemProps {
@@ -34,20 +32,20 @@ const ChainItem: React.FC<ChainItemProps> = ({
 }) => (
   <div
     onClick={() => {
-      handleSelectedTower(item.towerName);
+      handleSelectedTower(item.name);
     }}
     className={`group flex justify-between items-center border-[0.1vw] rounded-[0.2vw] bg-[#FAFAFA] p-[0.2vw] px-[0.6vw] cursor-pointer hover:border-[#2196F3] hover:outline-[0.2vw] ${
-      selectedtower == item.towerName ? "border-[#2196F3]" : "border-[#D9D9D9]"
+      selectedtower == item.name ? "border-[#2196F3]" : "border-[#D9D9D9]"
     }`}
   >
     <p
       className={`fs-14 ${
-        selectedtower == item.towerName ? "text-[#1890FF]" : "text-[#000000D9]"
+        selectedtower == item.name ? "text-[#1890FF]" : "text-[#000000D9]"
       }  font-[400] pl-[0.5vw] group-hover:text-[#1890FF]`}
     >
-      {item.towerName}
+      {item.name}
     </p>
-    <Customsvg selected={selectedtower == item.towerName} />
+    <Customsvg selected={selectedtower == item.name} />
   </div>
 );
 
@@ -81,10 +79,11 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
       try {
         //const response = await fetch("/DB/db.json");
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_JSON_SERVER}/towers`
+          `${process.env.NEXT_PUBLIC_JSON_SERVER}/chains`
         );
         const data = await response.json();
         setTowers(data);
+        setSelectedtower(data[0]?.name);
       } catch (error) {
         console.error("Failed to fetch tower data", error);
       }
@@ -98,6 +97,7 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
       <header className="w-[100%] flex justify-between items-center p-[0.6vw] border-b-[0.1389vw] border-b-[#0000000F]">
         <span className="fs-14 text-[#000000D9] font-[500]">Chains</span>
         <div
+          id="add-chain-icon"
           className="w-[1.5vw] flex justify-center items-center border-[0.1389vw] border-b-[#0000000F] rounded-[0.2vw] aspect-[1] cursor-pointer"
           onClick={() => handleModal(true)}
         >
@@ -105,7 +105,10 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
         </div>
       </header>
       <SearchBar />
-      <main className="w-[100%] h-[68vh] p-[1vw] flex flex-col gap-[1vw] overflow-y-auto no-scrollbar">
+      <main
+        id="towers-list"
+        className="w-[100%] h-[68vh] p-[1vw] flex flex-col gap-[1vw] overflow-y-auto no-scrollbar"
+      >
         {towers?.map((item, index) => (
           <ChainItem
             key={index}

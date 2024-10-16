@@ -247,6 +247,10 @@ body {
   font-size: 0.9722vw;
 }
 
+.ant-modal-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+
 /* Webkit-based browsers (Chrome, Safari, Edge) */
 .scrollBar::-webkit-scrollbar {
   width: 0.5vw;

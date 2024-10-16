@@ -7,7 +7,7 @@ import WorkflowFailureChart from '@/components/incident/WorkflowFailureChart'
 
 export default function Incident() {
   return (
-    <div className='w-full h-full  p-[1.0vw] flex flex-col gap-[1vw] bg-[#F5F6F7] overflow-y-auto scrollBar'>
+    <div id="incident_insights" className='w-full h-full  p-[1.0vw] flex flex-col gap-[1vw] bg-[#F5F6F7] overflow-y-auto scrollBar'>
       <div className='grid grid-cols-2 gap-[1vw]'>
         <WorkflowFailureChart />
         <FailureFrequencyChart />
