@@ -19,7 +19,7 @@ const AccountSettings: React.FC = () => {
             border="0.1vw solid #d9d9d9"
             color="#697483"
           />
-        </div>
+        </div>  
         <p className="w-full h-[2.64vw] text-[#697483]">
           Sign out of your session safely.
         </p>

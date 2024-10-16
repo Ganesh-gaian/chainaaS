@@ -45,6 +45,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
         justifyContent: "center",
         alignItems: "center",
       }}
+      className="hover:border-[#5c42fb00]"
     >
       {text}
     </Button>
