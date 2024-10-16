@@ -12,6 +12,7 @@
     "@amcharts/amcharts4": "^4.10.39",
     "@ant-design/nextjs-registry": "^1.0.1",
     "@reduxjs/toolkit": "^2.2.8",
+    "animejs": "^3.2.2",
     "antd": "^5.20.6",
     "chart.js": "^4.4.4",
     "echarts": "^5.5.1",

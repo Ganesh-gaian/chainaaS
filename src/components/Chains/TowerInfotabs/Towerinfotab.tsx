@@ -226,6 +226,7 @@ const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
         {showedit && (
           <div className="bg-[#FFF] absolute right-[1vw] top-[3vw] shadow-[0_3px_6px_-4px_rgba(0,0,0,0.12),_0_6px_16px_0_rgba(0,0,0,0.08),_0_9px_28px_8px_rgba(0,0,0,0.05)] cursor-pointer">
             <div
+              id="broadcast-edit"
               onClick={() => {
                 handleEdit();
                 handleEditCard(true);
@@ -260,6 +261,7 @@ const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
           onClick={() => {
             handleEdit();
           }}
+          id="broadcast-edit-icon"
           className="flex justify-between items-center rotate-90 cursor-pointer"
         >
           <Image className="w-[1vw] aspect-square" src={editlogo} alt="Edit" />
@@ -297,7 +299,7 @@ const Broadcastinfo: React.FC<detailsProps> = ({ handleEditCard }) => {
         </div>
       </div>
 
-      <div className="grid grid-cols-[40%_30%_30%] px-[1.2vw] py-[1.5vw] gap-x-[2vw] gap-y-[1.5vw]">
+      <div className="grid grid-cols-[40%_26.5%_26.5%] px-[1.2vw] py-[1.5vw] gap-x-[2vw] gap-y-[1.5vw]">
         {Object.entries({ ...museoData.statistics }).map(([key, value], i) => {
           return (
             <div key={i}>
@@ -338,7 +340,7 @@ interface HeadingProps {
 
 function Labelheading({ heading, selected }: HeadingProps) {
   let mias = ["Museo", "Izak", "Spectraguard", "Hear Here", "AmplyFund"];
-  let towers = ["Tower 1", "Tower 2"];
+  let towers = ["Tower 1", "Tower 2",];
   const onChange = (key: string | string[]) => {
     console.log(key[0]);
   };
@@ -347,6 +349,7 @@ function Labelheading({ heading, selected }: HeadingProps) {
       key: heading === "Broadcast Info" ? "1" : "2",
       label: (
         <span
+          id={heading === "Broadcast Info" ? "broadcast-info" : "tower-info"}
           className={`text-left fs-14  font-[400] hover:text-[#1890FF] ${
             selected == heading ? "text-[#1890FF]" : "text-[#000000D9]"
           }`}

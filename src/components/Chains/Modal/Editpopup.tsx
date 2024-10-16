@@ -158,6 +158,7 @@ function Dropdown({ type, handleEditCard, handleFormVisible }: DropdownProps) {
       </div>
 
       <div
+        id="show-tower-details"
         onClick={() => {
           handleEditCard(false);
           handleFormVisible(true);

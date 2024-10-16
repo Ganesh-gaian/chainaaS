@@ -43,6 +43,38 @@ const ConfigModal: React.FC<ConfigModalProps> = ({
     }
   };
 
+  // const handleSubmit = () => {
+  //   switch (selectedtab) {
+  //     case "1":
+  //       if (towerFormRef.current) {
+  //         towerFormRef.current.getFormValues();
+  //       }
+  //       break;
+  //     case "2":
+  //       if (exciterFormRef.current) {
+  //         exciterFormRef.current.getFormValues();
+  //       }
+  //       break;
+  //     case "3":
+  //       if (pylayerFormRef.current) {
+  //         pylayerFormRef.current.getFormValues();
+  //       }
+  //       break;
+  //     case "4":
+  //       if (spectrumFormRef.current) {
+  //         spectrumFormRef.current.getFormValues();
+  //       }
+  //       break;
+  //     case "5":
+  //       if (modcodFormRef.current) {
+  //         modcodFormRef.current.getFormValues();
+  //       }
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
+
   const tabItems = [
     {
       key: "1",
@@ -66,7 +98,7 @@ const ConfigModal: React.FC<ConfigModalProps> = ({
     },
     {
       key: "5",
-      label: <Labelheading heading={"Mod Cod"} />,
+      label: <Labelheading heading={"ModCod"} />,
       children: <Modcodconfig ref={modcodFormRef} />,
     },
   ];
@@ -88,6 +120,7 @@ const ConfigModal: React.FC<ConfigModalProps> = ({
       onCancel={() => handleFormVisible(false)}
       footer={[
         <Button
+          id="modal-close-icon"
           key="cancel"
           onClick={() => handleFormVisible(false)}
           style={button_styles}
@@ -121,7 +154,7 @@ interface HeadingProps {
 
 function Labelheading({ heading }: HeadingProps) {
   return (
-    <div className="flex items-center">
+    <div id={`form-tab-${heading}`} className="flex items-center">
       <span className="fs-14 font-[400] mr-[0.4vw]">{heading}</span>
     </div>
   );

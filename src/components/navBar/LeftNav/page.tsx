@@ -23,28 +23,33 @@ let nav_items = [
     page: "Home",
     location: "/dashboard/performance",
     nav_icon: Home,
+    id:"c_home"
   },
   {
     page: "Dashboard",
     location: "/dashboard", // Base path for Dashboard
     nav_icon: Dashboard,
     defaultSubPath: "/dashboard/performance", // Default sub-path for Dashboard
+    id:"c_dashboard"
   },
   {
     page: "My Chains",
     location: "/chains", // Base path for chains
     nav_icon: Chains,
+    id:"c_chains"
   },
   {
     page: "My Products",
     location: "/product", // Base path for products
     nav_icon: Products,
+    id:"c_product"
   },
   {
     page: "Settings",
     location: "/settings", // Base path for Settings
     nav_icon: Settings,
     defaultSubPath: "/settings/account/profile", // Default sub-path for Settings
+    id:"c_settings"
   },
 ];
 
@@ -72,6 +77,7 @@ const LeftNav = () => {
 
             return (
               <div
+                id={item.id}
                 key={index}
                 className="w-full flex gap-[0.6vw] items-center cursor-pointer"
                 onClick={() => handleNavClick(item)} // Call handleNavClick on nav item click

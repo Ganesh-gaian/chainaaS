@@ -26,7 +26,12 @@ const Addchains: React.FC<AddchainsProps> = ({ showmodal, handleModal }) => {
     "Amplyfund",
   ];
 
-  const button_styles = {fontSize:"0.9722vw",padding:"1vw",borderRadius:"0.2vw",marginLeft:"0.5vw"}
+  const button_styles = {
+    fontSize: "0.9722vw",
+    padding: "1vw",
+    borderRadius: "0.2vw",
+    marginLeft: "0.5vw",
+  };
 
   return (
     <Modal
@@ -34,9 +39,14 @@ const Addchains: React.FC<AddchainsProps> = ({ showmodal, handleModal }) => {
       width={"40vw"}
       open={showmodal}
       onCancel={() => handleModal(false)}
-      closeIcon={<Closeicon/>}
+      closeIcon={<Closeicon />}
       footer={[
-        <Button key="cancel" onClick={() => handleModal(false)} style={button_styles}>
+        <Button
+          id="close-add-chains"
+          key="cancel"
+          onClick={() => handleModal(false)}
+          style={button_styles}
+        >
           Cancel
         </Button>,
         <Button key="submit" type="primary" style={button_styles}>
@@ -55,8 +65,11 @@ const Addchains: React.FC<AddchainsProps> = ({ showmodal, handleModal }) => {
                 key={index}
                 className="flex items-center my-[0.5vw] fs-14 text-[#000000D9] font-[400]"
               >
-                <input type="checkbox" className="w-[1vw] h-[2vw] mr-[0.5vw]" />
-                <label>{data}</label>
+                <input
+                  type="checkbox"
+                  className="w-[1vw] h-[2vw] mr-[0.5vw] cursor-pointer"
+                />
+                <label className="cursor-pointer">{data}</label>
               </div>
             );
           })}
@@ -71,8 +84,11 @@ const Addchains: React.FC<AddchainsProps> = ({ showmodal, handleModal }) => {
                 key={index}
                 className="flex items-center my-[0.5vw] fs-14 text-[#000000D9] font-[400]"
               >
-                <input type="checkbox" className="w-[1vw] h-[2vw] mr-[0.5vw]" />
-                <label>{data}</label>
+                <input
+                  type="checkbox"
+                  className="w-[1vw] h-[2vw] mr-[0.5vw] cursor-pointer"
+                />
+                <label className="cursor-pointer">{data}</label>
               </div>
             );
           })}

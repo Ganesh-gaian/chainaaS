@@ -9,7 +9,7 @@ import UpgradePlan from "@/components/upgradePlan/page";
 
 export default function Performance() {
   return (
-    <div className="w-full h-full  p-[1.0vw] flex flex-col gap-[1vw] bg-[#F5F6F7] overflow-y-auto scrollBar">
+    <div id="performance_insights" className="w-full h-full  p-[1.0vw] flex flex-col gap-[1vw] bg-[#F5F6F7] overflow-y-auto scrollBar">
       <div className="grid grid-cols-3 gap-[1vw]">
         <div className="grid col-start-1 col-end-3">
           <div className="grid grid-rows-2 gap-[1vw]">

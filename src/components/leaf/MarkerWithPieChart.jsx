@@ -42,11 +42,13 @@ const MarkerWithPieChart = ({
     chartInstance.current.data = state.appUsage.labels.map((label, index) => ({
       category: label,
       value: state.appUsage.datasets[0].data[index],
+      color: state.appUsage.datasets[0].backgroundColor[index],
     }));
 
     let series = chartInstance.current.series.push(new am4charts.PieSeries3D());
     series.dataFields.value = "value";
     series.dataFields.category = "category";
+    series.slices.template.propertyFields.fill = "color";
 
     series.slices.template.events.on("hit", () => {
       toggleMetaData();
@@ -104,17 +106,17 @@ const MarkerWithPieChart = ({
       )}
       <Popup
         position={position}
-        className="max-w-lg"
+        className="w-[43vw] h-[40vh] max-w-lg"
         closeButton={false}
         autoClose={false}
         closeOnClick={false}
       >
         <div
-          className={`w-[40vw] h-[40vh] relative flex items-start p-4 overflow-y-auto box-border ${
+          className={`w-[100%] h-[100%] relative flex items-start box-border p-4  ${
             showMetaData ? "bg-white" : ""
           }`}
         >
-          <div className="w-[20vw]">
+          <div className={`${showMetaData ? "w-[50%]" : "w-[100%]"} h-[100%]`}>
             {showMetaData && (
               <div className="">
                 <ul className="w-[16vw] grid grid-cols-2 whitespace-nowrap list-disc">
@@ -132,51 +134,12 @@ const MarkerWithPieChart = ({
             )}
             <div
               ref={chartRef}
-              style={{ width: "160px", height: "160px", marginTop: "2vw" }}
+              style={{ width: "100%", height: "100%" }}
               key={`chart-${position.join("-")}`} // Key ensures component re-renders
             ></div>
           </div>
           {showMetaData && (
-            <div className="flex ml-4 max-w-[20vw]">
-              {/* <div className="bg-white shadow-lg p-4 rounded-lg">
-                <h3 className="text-lg font-semibold mb-2">
-                  {state.name} Metadata
-                </h3>
-                <div className="flex">
-                  <div>
-                    <p className="text-sm">
-                      <strong>Status:</strong> {state.details.status}
-                    </p>
-
-                    <p className="text-sm">
-                      <strong>Tenant Partner:</strong> {state.details.tenant}
-                    </p>
-                    <p className="text-sm">
-                      <strong>Start Date:</strong> {state.details.startDate}
-                    </p>
-                    <p className="text-sm">
-                      <strong>Antenna Type:</strong> {state.details.antennaType}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-sm">
-                      <strong>Power:</strong> {state.details.power}
-                    </p>
-                    <p className="text-sm">
-                      <strong>Coverage Area:</strong>{" "}
-                      {state.details.coverageArea}
-                    </p>
-                    <div className="text-sm">
-                      <strong>Revenue:</strong>
-                      <ul className="list-disc list-inside ml-4">
-                        <li>Day: {state.details.revenue.day}</li>
-                        <li>Monthly: {state.details.revenue.monthly}</li>
-                        <li>Yearly: {state.details.revenue.yearly}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+            <div className="w-[50%] h-full flex ml-4 max-w-[20vw] overflow-y-auto no-scrollbar">
               {/* commented the tower details */}
               <div className=" ">
                 <div>
@@ -273,42 +236,3 @@ const MarkerWithPieChart = ({
 };
 
 export default MarkerWithPieChart;
-
-{
-  /* <div className=" bg-white shadow-lg p-2 rounded-lg">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-lg font-semibold">
-                    {state.name} Metadata
-                  </h3>
-                </div>
-                <p>
-                  <strong>Status:</strong> {state.details.status}
-                </p>
-                <p>
-                  <strong>Tenant partner:</strong> {state.details.tenant}
-                </p>
-                <p>
-                  <strong>Start Date:</strong> {state.details.startDate}
-                </p>
-                <p>
-                  <strong>Antenna Type:</strong> {state.details.antennaType}
-                </p>
-                <p>
-                  <strong>Power:</strong> {state.details.power}
-                </p>
-                <p>
-                  <strong>Coverage Area:</strong> {state.details.coverageArea}
-                </p>
-                <p>
-                  <strong>Revenue:</strong>
-                </p>
-                <ul className="list-disc list-inside">
-                  <li>Day: {state.details.revenue.day}</li>
-                  <li>Monthly: {state.details.revenue.monthly}</li>
-                  <li>Yearly: {state.details.revenue.yearly}</li>
-                </ul>
-              </div> */
-}
-{
-  /*  */
-}
