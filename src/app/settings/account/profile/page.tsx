@@ -8,6 +8,7 @@ import { Button, Input, Typography } from "antd";
 import { EditOutlined, SaveOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import avatarIcon from "../../../../../public/images/avatar.png";
+import CustomButton from "@/components/setting/reuseableComponent/CustomButton";
 
 const { Title } = Typography;
 
@@ -136,7 +137,17 @@ const ProfilePage: React.FC = () => {
             If you have forgotten your current password, you can easily reset it here.
           </p>
         </div>
-        <Button className="profile_value">Reset Password</Button>
+        {/* <Button className="profile_value">Reset Password</Button> */}
+        <CustomButton
+          text="Reset Password"
+          type="default"
+          width="9.274vw"
+          height="2.22vw"
+          fontSize="0.9722vw"
+          borderRadius="0.14vw"
+          border="0.1vw solid #d9d9d9"
+          color="#697483"
+        />
       </div>
 
       {/* Current Plan Component */}
