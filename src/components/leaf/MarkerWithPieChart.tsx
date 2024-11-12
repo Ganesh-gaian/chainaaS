@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  useState,
-  useRef,
-  useLayoutEffect,
-  useEffect,
-  useMemo,
-} from "react";
+import React, { useState, useRef, useEffect, memo } from "react";
 import Image from "next/image";
 import { Popup, Polygon } from "react-leaflet";
 import * as am4core from "@amcharts/amcharts4/core";
@@ -57,7 +51,6 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
   const chartRef = useRef<HTMLDivElement | null>(null);
   const chartInstance = useRef<am4charts.PieChart3D | null>(null);
   const [showMetaData, setShowMetaData] = useState(false);
-  const [isChartReady, setIsChartReady] = useState(false);
   const toggleMetaData = () => {
     setShowMetaData((prev) => !prev);
   };
@@ -103,33 +96,6 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
     });
   };
 
-  useLayoutEffect(() => {
-    // Ensure chart is only initialized when the map has fully loaded
-    if (isChartReady && chartRef.current) {
-      initializeChart();
-    }
-  }, [isChartReady, state.appUsage, position]);
-
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsChartReady(true); // Delay the chart initialization until map is ready
-    }, 100);
-
-    return () => {
-      clearTimeout(timeoutId);
-      if (chartInstance.current) {
-        chartInstance.current.dispose();
-        chartInstance.current = null;
-      }
-    };
-  }, [position]);
-
-  useEffect(() => {
-    if (showMetaData && mapRef.current) {
-      mapRef.current.setView(position, 13, { animate: true });
-    }
-  }, [showMetaData, position, mapRef]);
-
   const labelColorMap = state.appUsage.labels.map((label, index) => ({
     label: label,
     color: state.appUsage.datasets[0].backgroundColor[index],
@@ -137,13 +103,18 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
 
   const selectedchain = useSelector((state: any) => state.chains.selectedChain);
 
-  useMemo(() => {
-    if (Object.keys(selectedchain).length > 0 && Map) {
-      if (isChartReady && chartRef.current) {
-        console.log([selectedchain.latitude, selectedchain.longitude]);
+  useEffect(() => {
+    if (Object.keys(selectedchain).length > 0) {
+      if (mapRef.current && chartRef.current) {
         initializeChart();
       }
     }
+    return () => {
+      if (chartInstance.current) {
+        chartInstance.current.dispose();
+        chartInstance.current = null;
+      }
+    };
   }, [selectedchain]);
 
   return (
@@ -286,4 +257,4 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
   );
 };
 
-export default MarkerWithPieChart;
+export default memo(MarkerWithPieChart);

@@ -28,7 +28,7 @@ const ChainsBarChart: FC<chainsProp> = ({ chains }) => {
       </div>
       <h3 className="font-semibold fs-14 my-[1vw]">Chains</h3>
       <div className="w-full h-[50vh] overflow-y-auto scrollBar">
-        {chains.map((chain: any, index: any) => (
+        {chains?.map((chain: any, index: any) => (
           <div key={index} className="mb-[1vw] w-[98%]">
             <div className="flex justify-between items-center mb-[0.4vw] fs-12">
               <span>{chain?.name}</span>

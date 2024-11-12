@@ -61,15 +61,15 @@ export default function Incident() {
       className="w-full h-full p-[1vw] flex flex-col gap-[1vw] bg-[#F5F6F7] overflow-y-auto scrollBar"
     >
       <div className="grid grid-cols-2 gap-[1vw]">
-        <WorkflowFailureChart WorkflowFailureData={data?.FailureData?.categories?.filter((item: any) => item.type === "Workflow") || []} />
-        <FailureFrequencyChart FailureFrequency={data?.FailureData?.categories?.filter((item: any) => item.type === "Application") || []} />
+        <WorkflowFailureChart WorkflowFailureData={data?.FailureData?.categories?.filter((item: any) => item.type === "Workflow")} />
+        <FailureFrequencyChart FailureFrequency={data?.FailureData?.categories?.filter((item: any) => item.type === "Application")} />
       </div>
       <div className="grid grid-cols-2 gap-[1vw]">
-        <CloudFailureChart CloudFailureData={data?.FailureData?.categories?.filter((item: any) => item.type === "Cloud") || []} />
-        <ConnectivityFailureChart ConnectivityFailureData={data?.FailureData?.categories?.filter((item: any) => item.type === "Connectivity") || []} />
+        <CloudFailureChart CloudFailureData={data?.FailureData?.categories?.filter((item: any) => item.type === "Cloud")} />
+        <ConnectivityFailureChart ConnectivityFailureData={data?.FailureData?.categories?.filter((item: any) => item.type === "Connectivity") } />
       </div>
       <div className="w-full">
-        <IncidentResolutionTimeChart ResolutionTimeData={data?.ResolutionTimeData || []} />
+        <IncidentResolutionTimeChart ResolutionTimeData={data?.ResolutionTimeData} />
       </div>
       <div className="w-full mb-[2vw]">
         <IncidentLog incidents={incidentData} />

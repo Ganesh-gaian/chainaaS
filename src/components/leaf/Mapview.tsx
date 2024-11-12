@@ -205,9 +205,9 @@ const Mapview: React.FC<MapProps> = ({ height, type, zoom, center }) => {
   useEffect(() => {
     const fetchTowerData = async () => {
       try {
-        const response = await fetch("/DB/db.json");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_JSON_SERVER}/chainaas_chains`);
         const data = await response.json();
-        setChains(data["chains"]);
+        setChains(data);
       } catch (error) {
         console.error("Failed to fetch tower data", error);
       }

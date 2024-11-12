@@ -11,18 +11,19 @@ interface WorkflowFailureData {
 }
 
 interface WorkflowFailureDataProps {
-  WorkflowFailureData: any
+  WorkflowFailureData: any;
 }
 
-const WorkflowFailureChart: React.FC<WorkflowFailureDataProps> = ({ WorkflowFailureData }) => {
-
+const WorkflowFailureChart: React.FC<WorkflowFailureDataProps> = ({
+  WorkflowFailureData,
+}) => {
   const axisFontSize = vwToPx(0.6944);
 
   if (!WorkflowFailureData) {
-    return
+    return;
   }
 
-  const chartData = WorkflowFailureData[0].breakdown
+  const chartData = WorkflowFailureData[0].breakdown;
   const chartRef = useRef<HTMLDivElement>(null);
 
   useResolution();
