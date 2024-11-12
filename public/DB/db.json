@@ -1,0 +1,2635 @@
+{
+  "chainaas_towers": [
+    {
+      "towerName": "LA-45",
+      "uniqueID": "LA45-002",
+      "owner": "CBS",
+      "tenancyStartDate": "2021-04-10",
+      "signalStrength": "-70 dBm",
+      "signalQuality": "Very Good",
+      "location": {
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      "antennaType": "Omnidirectional",
+      "elevation": "250 meters",
+      "power": "35 kW",
+      "callSign": "KLA-45",
+      "coverageArea": "35 miles",
+      "broadcastFrequency": "VHF Band",
+      "city": "Los Angeles",
+      "dma": "Los Angeles",
+      "population": "10 million",
+      "frequency": "VHF",
+      "chain_id": 1729247375359
+    },
+    {
+      "towerName": "CHI-12",
+      "uniqueID": "CHI12-003",
+      "owner": "NBC",
+      "tenancyStartDate": "2020-09-01",
+      "signalStrength": "-60 dBm",
+      "signalQuality": "Excellent",
+      "location": {
+        "latitude": 41.8781,
+        "longitude": -87.6298
+      },
+      "antennaType": "Directional",
+      "elevation": "220 meters",
+      "power": "28 kW",
+      "callSign": "WCHI-12",
+      "coverageArea": "32 miles",
+      "broadcastFrequency": "UHF Band",
+      "city": "Chicago",
+      "dma": "Chicago",
+      "population": "9.5 million",
+      "frequency": "UHF",
+      "chain_id": 1729247375360
+    },
+    {
+      "towerName": "HOU-78",
+      "uniqueID": "HOU78-004",
+      "owner": "ABC",
+      "tenancyStartDate": "2022-03-20",
+      "signalStrength": "-75 dBm",
+      "signalQuality": "Good",
+      "location": {
+        "latitude": 29.7604,
+        "longitude": -95.3698
+      },
+      "antennaType": "Omnidirectional",
+      "elevation": "230 meters",
+      "power": "32 kW",
+      "callSign": "KHOU-78",
+      "coverageArea": "28 miles",
+      "broadcastFrequency": "VHF Band",
+      "city": "Houston",
+      "dma": "Houston",
+      "population": "6.3 million",
+      "frequency": "VHF",
+      "chain_id": 1729247375361
+    },
+    {
+      "towerName": "PHX-67",
+      "uniqueID": "PHX67-005",
+      "owner": "Fox",
+      "tenancyStartDate": "2019-11-12",
+      "signalStrength": "-68 dBm",
+      "signalQuality": "Very Good",
+      "location": {
+        "latitude": 33.4484,
+        "longitude": -112.074
+      },
+      "antennaType": "Directional",
+      "elevation": "240 meters",
+      "power": "25 kW",
+      "callSign": "KPHX-67",
+      "coverageArea": "30 miles",
+      "broadcastFrequency": "UHF Band",
+      "city": "Phoenix",
+      "dma": "Phoenix",
+      "population": "5.1 million",
+      "frequency": "UHF",
+      "chain_id": 1729247375362
+    },
+    {
+      "towerName": "ATL-39",
+      "uniqueID": "ATL39-006",
+      "owner": "CBS",
+      "tenancyStartDate": "2021-06-30",
+      "signalStrength": "-72 dBm",
+      "signalQuality": "Good",
+      "location": {
+        "latitude": 33.749,
+        "longitude": -84.388
+      },
+      "antennaType": "Omnidirectional",
+      "elevation": "210 meters",
+      "power": "33 kW",
+      "callSign": "WATL-39",
+      "coverageArea": "33 miles",
+      "broadcastFrequency": "UHF Band",
+      "city": "Atlanta",
+      "dma": "Atlanta",
+      "population": "6.1 million",
+      "frequency": "UHF",
+      "chain_id": 1729247375363
+    },
+    {
+      "towerName": "SEA-50",
+      "uniqueID": "SEA50-007",
+      "owner": "NBC",
+      "tenancyStartDate": "2023-01-22",
+      "signalStrength": "-62 dBm",
+      "signalQuality": "Excellent",
+      "location": {
+        "latitude": 47.6062,
+        "longitude": -122.3321
+      },
+      "antennaType": "Directional",
+      "elevation": "280 meters",
+      "power": "27 kW",
+      "callSign": "KSEA-50",
+      "coverageArea": "36 miles",
+      "broadcastFrequency": "VHF Band",
+      "city": "Seattle",
+      "dma": "Seattle",
+      "population": "4.1 million",
+      "frequency": "VHF",
+      "chain_id": 1729247375364
+    },
+    {
+      "towerName": "DEN-92",
+      "uniqueID": "DEN92-008",
+      "owner": "ABC",
+      "tenancyStartDate": "2021-10-18",
+      "signalStrength": "-65 dBm",
+      "signalQuality": "Very Good",
+      "location": {
+        "latitude": 39.7392,
+        "longitude": -104.9903
+      },
+      "antennaType": "Omnidirectional",
+      "elevation": "270 meters",
+      "power": "26 kW",
+      "callSign": "KDEN-92",
+      "coverageArea": "34 miles",
+      "broadcastFrequency": "UHF Band",
+      "city": "Denver",
+      "dma": "Denver",
+      "population": "3.1 million",
+      "frequency": "UHF",
+      "chain_id": 1729247375365
+    },
+    {
+      "towerName": "MIA-88",
+      "uniqueID": "MIA88-009",
+      "owner": "Fox",
+      "tenancyStartDate": "2020-07-05",
+      "signalStrength": "-77 dBm",
+      "signalQuality": "Good",
+      "location": {
+        "latitude": 25.7617,
+        "longitude": -80.1918
+      },
+      "antennaType": "Directional",
+      "elevation": "220 meters",
+      "power": "29 kW",
+      "callSign": "KMIA-88",
+      "coverageArea": "30 miles",
+      "broadcastFrequency": "VHF Band",
+      "city": "Miami",
+      "dma": "Miami-Ft. Lauderdale",
+      "population": "6.2 million",
+      "frequency": "VHF",
+      "chain_id": 1729247375366
+    },
+    {
+      "towerName": "SF-55",
+      "uniqueID": "SF55-010",
+      "owner": "CBS",
+      "tenancyStartDate": "2018-12-17",
+      "signalStrength": "-64 dBm",
+      "signalQuality": "Excellent",
+      "location": {
+        "latitude": 37.7749,
+        "longitude": -122.4194
+      },
+      "antennaType": "Omnidirectional",
+      "elevation": "260 meters",
+      "power": "31 kW",
+      "callSign": "KSF-55",
+      "coverageArea": "32 miles",
+      "broadcastFrequency": "UHF Band",
+      "city": "San Francisco",
+      "dma": "San Francisco-Oakland",
+      "population": "7.7 million",
+      "frequency": "UHF",
+      "chain_id": 1729247375367
+    },
+    {
+      "towerName": "BOS-66",
+      "uniqueID": "BOS66-011",
+      "owner": "NBC",
+      "tenancyStartDate": "2023-08-08",
+      "signalStrength": "-61 dBm",
+      "signalQuality": "Excellent",
+      "location": {
+        "latitude": 42.3601,
+        "longitude": -71.0589
+      },
+      "antennaType": "Directional",
+      "elevation": "240 meters",
+      "power": "34 kW",
+      "callSign": "KBOS-66",
+      "coverageArea": "30 miles",
+      "broadcastFrequency": "VHF Band",
+      "city": "Boston",
+      "dma": "Boston",
+      "population": "4.8 million",
+      "frequency": "VHF",
+      "chain_id": 1729247375368
+    },
+    {
+      "towerName": "NYC-99",
+      "uniqueID": "NYC99-012",
+      "owner": "ABC",
+      "tenancyStartDate": "2022-11-01",
+      "signalStrength": "-65 dBm",
+      "signalQuality": "Very Good",
+      "location": {
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      "antennaType": "Omnidirectional",
+      "elevation": "300 meters",
+      "power": "30 kW",
+      "callSign": "WNYC-99",
+      "coverageArea": "38 miles",
+      "broadcastFrequency": "UHF Band",
+      "city": "New York",
+      "dma": "New York",
+      "population": "12 million",
+      "frequency": "UHF",
+      "chain_id": 1729247375369
+    },
+    {
+      "towerName": "LAX-77",
+      "uniqueID": "LAX77-013",
+      "owner": "NBC",
+      "tenancyStartDate": "2021-02-14",
+      "signalStrength": "-62 dBm",
+      "signalQuality": "Excellent",
+      "location": {
+        "latitude": 33.9416,
+        "longitude": -118.4085
+      },
+      "antennaType": "Directional",
+      "elevation": "260 meters",
+      "power": "28 kW",
+      "callSign": "KLAX-77",
+      "coverageArea": "35 miles",
+      "broadcastFrequency": "VHF Band",
+      "city": "Los Angeles",
+      "dma": "Los Angeles",
+      "population": "10.2 million",
+      "frequency": "VHF",
+      "chain_id": 1729247375370
+    },
+    {
+      "towerName": "ATL-21",
+      "uniqueID": "ATL21-014",
+      "owner": "CBS",
+      "tenancyStartDate": "2020-05-08",
+      "signalStrength": "-68 dBm",
+      "signalQuality": "Very Good",
+      "location": {
+        "latitude": 33.749,
+        "longitude": -84.388
+      },
+      "antennaType": "Omnidirectional",
+      "elevation": "225 meters",
+      "power": "27 kW",
+      "callSign": "WATL-21",
+      "coverageArea": "32 miles",
+      "broadcastFrequency": "UHF Band",
+      "city": "Atlanta",
+      "dma": "Atlanta",
+      "population": "6 million",
+      "frequency": "UHF",
+      "chain_id": 1729247375371
+    },
+    {
+      "towerName": "SFO-89",
+      "uniqueID": "SFO89-015",
+      "owner": "Fox",
+      "tenancyStartDate": "2023-03-01",
+      "signalStrength": "-63 dBm",
+      "signalQuality": "Excellent",
+      "location": {
+        "latitude": 37.7749,
+        "longitude": -122.4194
+      },
+      "antennaType": "Directional",
+      "elevation": "290 meters",
+      "power": "33 kW",
+      "callSign": "KSFO-89",
+      "coverageArea": "37 miles",
+      "broadcastFrequency": "VHF Band",
+      "city": "San Francisco",
+      "dma": "San Francisco-Oakland",
+      "population": "7.9 million",
+      "frequency": "VHF",
+      "chain_id": 1729247375372
+    }
+  ],
+  "chainaas_users": [
+    {
+      "emailId": "mobius@mobiusdtaas.ai",
+      "userName": "mobius",
+      "firstName": "mobius",
+      "lastName": "mobius",
+      "name": "Mobius",
+      "password": "Gaian@123",
+      "userType": "TENANT",
+      "parentTenantId": "123456",
+      "countryCode": "500032",
+      "description": "Tenant For Shubham Pal",
+      "version": "v1.0",
+      "url": "LogoUrl",
+      "organisationId": "664af8d0c002126e0518a9d1",
+      "geoLocation": null,
+      "dmas": [],
+      "selectedTags": [],
+      "telephoneNum": "9296563631",
+      "interestedProducts": [],
+      "address": {
+        "addressLine1": "gachibowil telengana",
+        "city": "hyderabad",
+        "state": "Telangana",
+        "country": "India",
+        "postCode": "500032",
+        "longitude": -60.534668,
+        "latitude": -2.942355
+      },
+      "defaultCurrency": "INR",
+      "currenciesSupported": [
+        "ANG",
+        "BIF",
+        "BMD",
+        "BND",
+        "BRL",
+        "BSD",
+        "HNL",
+        "HKD",
+        "GYD",
+        "HRK",
+        "HTG",
+        "HUF",
+        "NPR",
+        "AZN"
+      ],
+      "logo": "https://testmobiusfileshare.blob.core.windows.net/test/_64e1fd3d1443eb00018cc231/bottle/limka/soda/db6bf449-a434-43cf-99f8-b4fedb4349a2_$$_V1_Mobius%2009-02-2023%20v-01%204%20(1).png.png",
+      "platformDetails": {
+        "666a858bc60c325949ea90e2": ["AP"]
+      },
+      "planType": "Premium Plan"
+    }
+  ],
+  "chainaas_Towers_Config": [
+    {
+      "towerHeight": 100,
+      "towerHeightUnit": "ft",
+      "buildingIntervention": "Nearby building",
+      "redundancySetup": "Automatic",
+      "bitrateManagement": 100,
+      "bitrateUnit": "mbps",
+      "regulatoryCompliance": "FCC Part 73 (U.S.)",
+      "signalPropagationSoftware": ["Radiomobile", "ATDI ICS Telecom"],
+      "debounceValue": 200,
+      "debounceUnit": "ms",
+      "antennaType": "Yagi",
+      "interferenceManagement": 200,
+      "antennaHeight": 190,
+      "effectiveRadiatedPower": "30 kW",
+      "polarization": "Not specified",
+      "antennaGain": 15,
+      "gainUnit": "dB",
+      "azimuth": "0° (Omni-directional)",
+      "elevationBeamTilt": "0.5°",
+      "feedLineLoss": 1.5,
+      "feedLineLossUnit": "dB",
+      "antennaBeamwidth": "360° (Omni-directional)",
+      "feedLineType": "Rigid Coaxial Cable",
+      "modulation": "64QAM",
+      "codingRate": "7/8",
+      "transmissionLineLength": 400,
+      "transmissionLineLengthUnit": "meters",
+      "coolingSystem": "Forced-Air Cooling",
+      "antennaSystemImpedance": 50,
+      "antennaSystemImpedanceUnit": "ohm",
+      "supportStructure": "Guyed Tower",
+      "powerSupply": "3-phase AC, 400V",
+      "transmitterToAntennaIsolation": 80,
+      "isolationUnit": "dB",
+      "backupPower": "Diesel Generator + UPS",
+      "windLoadCapacity": "120 mph (193 km/h)",
+      "radome": "Fiberglass Radome",
+      "groundingAndLightningProtection": "Ground Radial System + Lightning Rod"
+    }
+  ],
+  "chainaas_Exciter": [
+    {
+      "numberOfTowers": "3/4",
+      "towerLocations": "3/4",
+      "modulation": "OFDM",
+      "carrierFrequency": 587,
+      "carrierfrequencyUnit": "MHz",
+      "outputPowerLevel": "5 kW",
+      "modulationType": "64QAM",
+      "frequency": 100,
+      "frequencyUnit": "Hz",
+      "powerLevelUnit": "dBm",
+      "delayUnit": "ms",
+      "symbolRateUnit": "Msps",
+      "fftSize": "16K",
+      "frequencyOffset": 6,
+      "powerLevel": 0.5,
+      "atscModeSelection": "ATSC 3.0",
+      "signalDelay": 50,
+      "symbolRate": 6.5,
+      "tsOrIpInput": "TS (Transport Stream)",
+      "fecSettings": "LDPC 3/4",
+      "ipAddress": "192.168.1.100",
+      "gateway": "192.168.1.1 / 255.255.255.0",
+      "rfOutputEnable": true,
+      "gpsSyncEnable": true,
+      "onePpsSignal": true,
+      "timeBaseErrorCorrection": true,
+      "singleFrequencyNetworkMode": true,
+      "preDistortion": true,
+      "channelFiltering": true,
+      "notInFigma": "notinfigma",
+      "videoCodec": "ABC123456",
+      "synchronizationSettings": "none",
+      "codingRate": "7/8",
+      "guardInterval": "1/16"
+    }
+  ],
+  "chainaas_PLP": [
+    {
+      "modulationType": "64-QAM",
+      "codeRate": "3/4",
+      "guardInterval": "1/16",
+      "fftSize": "16K",
+      "pilotPattern": "PP3",
+      "timeInterleavingLength": "8 symbols",
+      "bitrate": 10,
+      "bitrateUnit": "mbps",
+      "plpId": "0x01",
+      "serviceMode": "Fixed HD (TV)",
+      "plpInputMode": "TS (Transport Stream)",
+      "layeringScheme": "Base Layer",
+      "channelBandwidth": 6,
+      "bandwidthUnit": "MHz",
+      "centerFrequency": 587,
+      "centerFrequencyUnit": "MHz",
+      "fecType": "LDPC (Low-Density Parity-Check)",
+      "nullPacketDeletion": true,
+      "plpScrambling": true
+    }
+  ],
+  "chainaas_Spectrum": [
+    {
+      "centerFrequency": 587,
+      "centerFrequencyUnit": "MHz",
+      "channelBandwidth": 6,
+      "bandwidthUnit": "MHz",
+      "occupiedBandwidth": "5.38",
+      "occupiedBandwidthUnit": "MHz",
+      "guardBand": "0.31 MHz (155 kHz on each side)",
+      "frequencyOffset": "+100 Hz",
+      "spectrumMask": "Non-Critical Mask",
+      "transmissionMode": "SFN (Single Frequency Network)",
+      "networkType": "Terrestrial (Broadcast)",
+      "adjacentChannelProtection": "60 dB",
+      "channelProtectionUnit": "dB",
+      "guardInterval": "1/16",
+      "fftSize": "16K",
+      "modulation": "64-QAM",
+      "pilotPattern": "PP3",
+      "transmitterPowerOutput": "20 kW",
+      "effectiveRadiatedPower": "30 kW",
+      "antennaGain": "10 dB",
+      "polarization": "Horizontal",
+      "emissionDesignation": "SMaRT/9R",
+      "sfnDelay": "50 ms",
+      "sfnSynchronizationMethod": "GPS-Based Synchronization",
+      "spectralEfficiency": "1.85 bps/Hz",
+      "peakToAveragePowerRatio": true,
+      "nullPacketInsertion": true,
+      "uncertainFrequency": "06",
+      "uncertainFrequencyUnit": "MHz",
+      "modulationType": "OFDM",
+      "codeRate": "5/6",
+      "errorCorrection": "3/4",
+      "carrierFrequency": 500,
+      "frequencyUnit": "MHz",
+      "powerLevel": 50,
+      "powerUnit": "dBm",
+      "spectrumLicenseNumber": "ABC123456",
+      "expirationDate": "2025-12-31"
+    }
+  ],
+  "chainaas_ModCod": [
+    {
+      "modulationType": "64-QAM",
+      "codeRate": "3/4",
+      "fecType": "LDPC (Low-Density Parity Check)",
+      "guardInterval": "1/16",
+      "fftSize": "16K",
+      "modulationEfficiency": "6 bits/symbol",
+      "pilotPattern": "PP3",
+      "bitrate": "15 Mbps",
+      "bandwidthEfficiency": "2.5",
+      "bandwidthUnit": "bps/Hz",
+      "plpType": "Base Layer",
+      "serviceType": "Fixed HD (Television)",
+      "noiseTolerance": "20 dB",
+      "constellationDiagram": "64-QAM",
+      "spectralEfficiency": "2.5 bps/Hz",
+      "timeInterleavingDepth": "8 symbols"
+    }
+  ],
+  "chainaas_chains": [
+    {
+      "chain_id": 1729247375359,
+      "name": "NYC-23",
+      "latitude": 40.7128,
+      "longitude": -74.006,
+      "region": "Manhattan",
+      "performance": "62",
+      "MIAS": [
+        {
+          "uniqueID": "a1b2c3d4-5678-9abc-def1-234567890abc",
+          "name": "Museo",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "a123e456-7f89-0123-4567-89abcdef1234",
+          "name": "Izak",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "b234f567-8e90-1234-5678-90abcdef2345",
+          "name": "Spectraguard",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "October 12, 2023",
+          "version": "v 2.1.4",
+          "description": "Advanced security platform for ensuring protection of cultural and creative assets.",
+          "activeUsers": 3200541,
+          "deploymentDate": "March 15, 2016",
+          "revenue": {
+            "Daily": "$600",
+            "Monthly": "$15,500",
+            "Weekly": "$4,000",
+            "Quarterly": "$48,000",
+            "Yearly": "$180,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "LA-45",
+          "uniqueID": "LA45-002",
+          "owner": "CBS",
+          "tenancyStartDate": "2021-04-10",
+          "signalStrength": "-70 dBm",
+          "signalQuality": "Very Good",
+          "location": {
+            "latitude": 34.0522,
+            "longitude": -118.2437
+          },
+          "antennaType": "Omnidirectional",
+          "elevation": "250 meters",
+          "power": "35 kW",
+          "callSign": "KLA-45",
+          "coverageArea": "35 miles",
+          "broadcastFrequency": "VHF Band",
+          "city": "Los Angeles",
+          "dma": "Los Angeles",
+          "population": "10 million",
+          "frequency": "VHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375360,
+      "name": "Tower : T001I",
+      "latitude": 34.0522,
+      "longitude": -118.2437,
+      "region": "Queens",
+      "performance": "29",
+      "MIAS": [
+        {
+          "uniqueID": "c345g678-9f01-2345-6789-01abcdef3456",
+          "name": "Hear Here",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "January 22, 2023",
+          "version": "v 1.5.3",
+          "description": "Audio platform designed for sharing cultural stories and podcasts from around the world.",
+          "activeUsers": 5100987,
+          "deploymentDate": "July 10, 2018",
+          "revenue": {
+            "Daily": "$550",
+            "Monthly": "$12,500",
+            "Weekly": "$3,600",
+            "Quarterly": "$40,000",
+            "Yearly": "$150,000"
+          }
+        },
+        {
+          "uniqueID": "d456h789-0123-4567-8901-23abcdef4567",
+          "name": "AmplyFund",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "May 15, 2023",
+          "version": "v 2.0.0",
+          "description": "Crowdfunding platform to support creative projects and artistic initiatives globally.",
+          "activeUsers": 2650784,
+          "deploymentDate": "October 30, 2017",
+          "revenue": {
+            "Daily": "$350",
+            "Monthly": "$9,500",
+            "Weekly": "$2,200",
+            "Quarterly": "$27,000",
+            "Yearly": "$110,000"
+          }
+        },
+        {
+          "uniqueID": "e567i890-1234-5678-9012-34abcdef5678",
+          "name": "Around",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "April 04, 2023",
+          "version": "v 3.1.1",
+          "description": "A platform that connects artists and audiences through virtual and live events.",
+          "activeUsers": 4350872,
+          "deploymentDate": "August 22, 2019",
+          "revenue": {
+            "Daily": "$400",
+            "Monthly": "$10,000",
+            "Weekly": "$2,500",
+            "Quarterly": "$30,000",
+            "Yearly": "$125,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "CHI-12",
+          "uniqueID": "CHI12-003",
+          "owner": "NBC",
+          "tenancyStartDate": "2020-09-01",
+          "signalStrength": "-60 dBm",
+          "signalQuality": "Excellent",
+          "location": {
+            "latitude": 41.8781,
+            "longitude": -87.6298
+          },
+          "antennaType": "Directional",
+          "elevation": "220 meters",
+          "power": "28 kW",
+          "callSign": "WCHI-12",
+          "coverageArea": "32 miles",
+          "broadcastFrequency": "UHF Band",
+          "city": "Chicago",
+          "dma": "Chicago",
+          "population": "9.5 million",
+          "frequency": "UHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375361,
+      "name": "LAX-A1",
+      "latitude": 33.9416,
+      "longitude": -118.4085,
+      "region": "Brooklyn",
+      "performance": "57",
+      "MIAS": [
+        {
+          "uniqueID": "f678j901-2345-6789-0123-45abcdef6789",
+          "name": "MO",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "November 01, 2022",
+          "version": "v 1.3.6",
+          "description": "Modern platform for the exhibition of digital art and immersive experiences.",
+          "activeUsers": 3750678,
+          "deploymentDate": "February 18, 2017",
+          "revenue": {
+            "Daily": "$475",
+            "Monthly": "$11,500",
+            "Weekly": "$3,000",
+            "Quarterly": "$35,000",
+            "Yearly": "$140,000"
+          }
+        },
+        {
+          "uniqueID": "g789k012-3456-7890-1234-56abcdef7890",
+          "name": "Revee",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "July 11, 2023",
+          "version": "v 1.8.5",
+          "description": "Creative management platform for artists to track their work, exhibitions, and collaborations.",
+          "activeUsers": 4200987,
+          "deploymentDate": "May 07, 2020",
+          "revenue": {
+            "Daily": "$500",
+            "Monthly": "$12,000",
+            "Weekly": "$3,400",
+            "Quarterly": "$36,000",
+            "Yearly": "$145,000"
+          }
+        },
+        {
+          "uniqueID": "a1b2c3d4-5678-9abc-def1-234567890abc",
+          "name": "Museo",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "HOU-78",
+          "uniqueID": "HOU78-004",
+          "owner": "ABC",
+          "tenancyStartDate": "2022-03-20",
+          "signalStrength": "-75 dBm",
+          "signalQuality": "Good",
+          "location": {
+            "latitude": 29.7604,
+            "longitude": -95.3698
+          },
+          "antennaType": "Omnidirectional",
+          "elevation": "230 meters",
+          "power": "32 kW",
+          "callSign": "KHOU-78",
+          "coverageArea": "28 miles",
+          "broadcastFrequency": "VHF Band",
+          "city": "Houston",
+          "dma": "Houston",
+          "population": "6.3 million",
+          "frequency": "VHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375362,
+      "name": "SFO-MAIN",
+      "latitude": 37.7749,
+      "longitude": -122.4194,
+      "region": "Long Island",
+      "performance": "28",
+      "MIAS": [
+        {
+          "uniqueID": "a123e456-7f89-0123-4567-89abcdef1234",
+          "name": "Izak",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "b234f567-8e90-1234-5678-90abcdef2345",
+          "name": "Spectraguard",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "October 12, 2023",
+          "version": "v 2.1.4",
+          "description": "Advanced security platform for ensuring protection of cultural and creative assets.",
+          "activeUsers": 3200541,
+          "deploymentDate": "March 15, 2016",
+          "revenue": {
+            "Daily": "$600",
+            "Monthly": "$15,500",
+            "Weekly": "$4,000",
+            "Quarterly": "$48,000",
+            "Yearly": "$180,000"
+          }
+        },
+        {
+          "uniqueID": "c345g678-9f01-2345-6789-01abcdef3456",
+          "name": "Hear Here",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "January 22, 2023",
+          "version": "v 1.5.3",
+          "description": "Audio platform designed for sharing cultural stories and podcasts from around the world.",
+          "activeUsers": 5100987,
+          "deploymentDate": "July 10, 2018",
+          "revenue": {
+            "Daily": "$550",
+            "Monthly": "$12,500",
+            "Weekly": "$3,600",
+            "Quarterly": "$40,000",
+            "Yearly": "$150,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "PHX-67",
+          "uniqueID": "PHX67-005",
+          "owner": "Fox",
+          "tenancyStartDate": "2019-11-12",
+          "signalStrength": "-68 dBm",
+          "signalQuality": "Very Good",
+          "location": {
+            "latitude": 33.4484,
+            "longitude": -112.074
+          },
+          "antennaType": "Directional",
+          "elevation": "240 meters",
+          "power": "25 kW",
+          "callSign": "KPHX-67",
+          "coverageArea": "30 miles",
+          "broadcastFrequency": "UHF Band",
+          "city": "Phoenix",
+          "dma": "Phoenix",
+          "population": "5.1 million",
+          "frequency": "UHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375363,
+      "name": "CHI-MAIN",
+      "latitude": 41.8781,
+      "longitude": -87.6298,
+      "region": "Park Avenue",
+      "performance": "45",
+      "MIAS": [
+        {
+          "uniqueID": "d456h789-0123-4567-8901-23abcdef4567",
+          "name": "AmplyFund",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "May 15, 2023",
+          "version": "v 2.0.0",
+          "description": "Crowdfunding platform to support creative projects and artistic initiatives globally.",
+          "activeUsers": 2650784,
+          "deploymentDate": "October 30, 2017",
+          "revenue": {
+            "Daily": "$350",
+            "Monthly": "$9,500",
+            "Weekly": "$2,200",
+            "Quarterly": "$27,000",
+            "Yearly": "$110,000"
+          }
+        },
+        {
+          "uniqueID": "e567i890-1234-5678-9012-34abcdef5678",
+          "name": "Around",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "April 04, 2023",
+          "version": "v 3.1.1",
+          "description": "A platform that connects artists and audiences through virtual and live events.",
+          "activeUsers": 4350872,
+          "deploymentDate": "August 22, 2019",
+          "revenue": {
+            "Daily": "$400",
+            "Monthly": "$10,000",
+            "Weekly": "$2,500",
+            "Quarterly": "$30,000",
+            "Yearly": "$125,000"
+          }
+        },
+        {
+          "uniqueID": "f678j901-2345-6789-0123-45abcdef6789",
+          "name": "MO",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "November 01, 2022",
+          "version": "v 1.3.6",
+          "description": "Modern platform for the exhibition of digital art and immersive experiences.",
+          "activeUsers": 3750678,
+          "deploymentDate": "February 18, 2017",
+          "revenue": {
+            "Daily": "$475",
+            "Monthly": "$11,500",
+            "Weekly": "$3,000",
+            "Quarterly": "$35,000",
+            "Yearly": "$140,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "ATL-39",
+          "uniqueID": "ATL39-006",
+          "owner": "CBS",
+          "tenancyStartDate": "2021-06-30",
+          "signalStrength": "-72 dBm",
+          "signalQuality": "Good",
+          "location": {
+            "latitude": 33.749,
+            "longitude": -84.388
+          },
+          "antennaType": "Omnidirectional",
+          "elevation": "210 meters",
+          "power": "33 kW",
+          "callSign": "WATL-39",
+          "coverageArea": "33 miles",
+          "broadcastFrequency": "UHF Band",
+          "city": "Atlanta",
+          "dma": "Atlanta",
+          "population": "6.1 million",
+          "frequency": "UHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375364,
+      "name": "ATL-5G",
+      "latitude": 33.749,
+      "longitude": -84.388,
+      "region": "Brooklyn",
+      "performance": "65",
+      "MIAS": [
+        {
+          "uniqueID": "g789k012-3456-7890-1234-56abcdef7890",
+          "name": "Revee",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "July 11, 2023",
+          "version": "v 1.8.5",
+          "description": "Creative management platform for artists to track their work, exhibitions, and collaborations.",
+          "activeUsers": 4200987,
+          "deploymentDate": "May 07, 2020",
+          "revenue": {
+            "Daily": "$500",
+            "Monthly": "$12,000",
+            "Weekly": "$3,400",
+            "Quarterly": "$36,000",
+            "Yearly": "$145,000"
+          }
+        },
+        {
+          "uniqueID": "a1b2c3d4-5678-9abc-def1-234567890abc",
+          "name": "Museo",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "a123e456-7f89-0123-4567-89abcdef1234",
+          "name": "Izak",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "SEA-50",
+          "uniqueID": "SEA50-007",
+          "owner": "NBC",
+          "tenancyStartDate": "2023-01-22",
+          "signalStrength": "-62 dBm",
+          "signalQuality": "Excellent",
+          "location": {
+            "latitude": 47.6062,
+            "longitude": -122.3321
+          },
+          "antennaType": "Directional",
+          "elevation": "280 meters",
+          "power": "27 kW",
+          "callSign": "KSEA-50",
+          "coverageArea": "36 miles",
+          "broadcastFrequency": "VHF Band",
+          "city": "Seattle",
+          "dma": "Seattle",
+          "population": "4.1 million",
+          "frequency": "VHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375365,
+      "name": "SEA-ROOF",
+      "latitude": 47.6062,
+      "longitude": -122.3321,
+      "region": "Queens",
+      "performance": "32",
+      "MIAS": [
+        {
+          "uniqueID": "b234f567-8e90-1234-5678-90abcdef2345",
+          "name": "Spectraguard",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "October 12, 2023",
+          "version": "v 2.1.4",
+          "description": "Advanced security platform for ensuring protection of cultural and creative assets.",
+          "activeUsers": 3200541,
+          "deploymentDate": "March 15, 2016",
+          "revenue": {
+            "Daily": "$600",
+            "Monthly": "$15,500",
+            "Weekly": "$4,000",
+            "Quarterly": "$48,000",
+            "Yearly": "$180,000"
+          }
+        },
+        {
+          "uniqueID": "c345g678-9f01-2345-6789-01abcdef3456",
+          "name": "Hear Here",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "January 22, 2023",
+          "version": "v 1.5.3",
+          "description": "Audio platform designed for sharing cultural stories and podcasts from around the world.",
+          "activeUsers": 5100987,
+          "deploymentDate": "July 10, 2018",
+          "revenue": {
+            "Daily": "$550",
+            "Monthly": "$12,500",
+            "Weekly": "$3,600",
+            "Quarterly": "$40,000",
+            "Yearly": "$150,000"
+          }
+        },
+        {
+          "uniqueID": "d456h789-0123-4567-8901-23abcdef4567",
+          "name": "AmplyFund",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "May 15, 2023",
+          "version": "v 2.0.0",
+          "description": "Crowdfunding platform to support creative projects and artistic initiatives globally.",
+          "activeUsers": 2650784,
+          "deploymentDate": "October 30, 2017",
+          "revenue": {
+            "Daily": "$350",
+            "Monthly": "$9,500",
+            "Weekly": "$2,200",
+            "Quarterly": "$27,000",
+            "Yearly": "$110,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "DEN-92",
+          "uniqueID": "DEN92-008",
+          "owner": "ABC",
+          "tenancyStartDate": "2021-10-18",
+          "signalStrength": "-65 dBm",
+          "signalQuality": "Very Good",
+          "location": {
+            "latitude": 39.7392,
+            "longitude": -104.9903
+          },
+          "antennaType": "Omnidirectional",
+          "elevation": "270 meters",
+          "power": "26 kW",
+          "callSign": "KDEN-92",
+          "coverageArea": "34 miles",
+          "broadcastFrequency": "UHF Band",
+          "city": "Denver",
+          "dma": "Denver",
+          "population": "3.1 million",
+          "frequency": "UHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375366,
+      "name": "MIA-BEACH",
+      "latitude": 25.7617,
+      "longitude": -80.1918,
+      "region": "Long Island",
+      "performance": "71",
+      "MIAS": [
+        {
+          "uniqueID": "e567i890-1234-5678-9012-34abcdef5678",
+          "name": "Around",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "April 04, 2023",
+          "version": "v 3.1.1",
+          "description": "A platform that connects artists and audiences through virtual and live events.",
+          "activeUsers": 4350872,
+          "deploymentDate": "August 22, 2019",
+          "revenue": {
+            "Daily": "$400",
+            "Monthly": "$10,000",
+            "Weekly": "$2,500",
+            "Quarterly": "$30,000",
+            "Yearly": "$125,000"
+          }
+        },
+        {
+          "uniqueID": "f678j901-2345-6789-0123-45abcdef6789",
+          "name": "MO",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "November 01, 2022",
+          "version": "v 1.3.6",
+          "description": "Modern platform for the exhibition of digital art and immersive experiences.",
+          "activeUsers": 3750678,
+          "deploymentDate": "February 18, 2017",
+          "revenue": {
+            "Daily": "$475",
+            "Monthly": "$11,500",
+            "Weekly": "$3,000",
+            "Quarterly": "$35,000",
+            "Yearly": "$140,000"
+          }
+        },
+        {
+          "uniqueID": "g789k012-3456-7890-1234-56abcdef7890",
+          "name": "Revee",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "July 11, 2023",
+          "version": "v 1.8.5",
+          "description": "Creative management platform for artists to track their work, exhibitions, and collaborations.",
+          "activeUsers": 4200987,
+          "deploymentDate": "May 07, 2020",
+          "revenue": {
+            "Daily": "$500",
+            "Monthly": "$12,000",
+            "Weekly": "$3,400",
+            "Quarterly": "$36,000",
+            "Yearly": "$145,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "MIA-88",
+          "uniqueID": "MIA88-009",
+          "owner": "Fox",
+          "tenancyStartDate": "2020-07-05",
+          "signalStrength": "-77 dBm",
+          "signalQuality": "Good",
+          "location": {
+            "latitude": 25.7617,
+            "longitude": -80.1918
+          },
+          "antennaType": "Directional",
+          "elevation": "220 meters",
+          "power": "29 kW",
+          "callSign": "KMIA-88",
+          "coverageArea": "30 miles",
+          "broadcastFrequency": "VHF Band",
+          "city": "Miami",
+          "dma": "Miami-Ft. Lauderdale",
+          "population": "6.2 million",
+          "frequency": "VHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375367,
+      "name": "DEN-HIGH",
+      "latitude": 39.7392,
+      "longitude": -104.9903,
+      "region": "Park Avenue",
+      "performance": "33",
+      "MIAS": [
+        {
+          "uniqueID": "a1b2c3d4-5678-9abc-def1-234567890abc",
+          "name": "Museo",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "a123e456-7f89-0123-4567-89abcdef1234",
+          "name": "Izak",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "b234f567-8e90-1234-5678-90abcdef2345",
+          "name": "Spectraguard",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "October 12, 2023",
+          "version": "v 2.1.4",
+          "description": "Advanced security platform for ensuring protection of cultural and creative assets.",
+          "activeUsers": 3200541,
+          "deploymentDate": "March 15, 2016",
+          "revenue": {
+            "Daily": "$600",
+            "Monthly": "$15,500",
+            "Weekly": "$4,000",
+            "Quarterly": "$48,000",
+            "Yearly": "$180,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "SF-55",
+          "uniqueID": "SF55-010",
+          "owner": "CBS",
+          "tenancyStartDate": "2018-12-17",
+          "signalStrength": "-64 dBm",
+          "signalQuality": "Excellent",
+          "location": {
+            "latitude": 37.7749,
+            "longitude": -122.4194
+          },
+          "antennaType": "Omnidirectional",
+          "elevation": "260 meters",
+          "power": "31 kW",
+          "callSign": "KSF-55",
+          "coverageArea": "32 miles",
+          "broadcastFrequency": "UHF Band",
+          "city": "San Francisco",
+          "dma": "San Francisco-Oakland",
+          "population": "7.7 million",
+          "frequency": "UHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375368,
+      "name": "HOU-22A",
+      "latitude": 29.7604,
+      "longitude": -95.3698,
+      "region": "Queens",
+      "performance": "56",
+      "MIAS": [
+        {
+          "uniqueID": "c345g678-9f01-2345-6789-01abcdef3456",
+          "name": "Hear Here",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "January 22, 2023",
+          "version": "v 1.5.3",
+          "description": "Audio platform designed for sharing cultural stories and podcasts from around the world.",
+          "activeUsers": 5100987,
+          "deploymentDate": "July 10, 2018",
+          "revenue": {
+            "Daily": "$550",
+            "Monthly": "$12,500",
+            "Weekly": "$3,600",
+            "Quarterly": "$40,000",
+            "Yearly": "$150,000"
+          }
+        },
+        {
+          "uniqueID": "d456h789-0123-4567-8901-23abcdef4567",
+          "name": "AmplyFund",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "May 15, 2023",
+          "version": "v 2.0.0",
+          "description": "Crowdfunding platform to support creative projects and artistic initiatives globally.",
+          "activeUsers": 2650784,
+          "deploymentDate": "October 30, 2017",
+          "revenue": {
+            "Daily": "$350",
+            "Monthly": "$9,500",
+            "Weekly": "$2,200",
+            "Quarterly": "$27,000",
+            "Yearly": "$110,000"
+          }
+        },
+        {
+          "uniqueID": "e567i890-1234-5678-9012-34abcdef5678",
+          "name": "Around",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "April 04, 2023",
+          "version": "v 3.1.1",
+          "description": "A platform that connects artists and audiences through virtual and live events.",
+          "activeUsers": 4350872,
+          "deploymentDate": "August 22, 2019",
+          "revenue": {
+            "Daily": "$400",
+            "Monthly": "$10,000",
+            "Weekly": "$2,500",
+            "Quarterly": "$30,000",
+            "Yearly": "$125,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "BOS-66",
+          "uniqueID": "BOS66-011",
+          "owner": "NBC",
+          "tenancyStartDate": "2023-08-08",
+          "signalStrength": "-61 dBm",
+          "signalQuality": "Excellent",
+          "location": {
+            "latitude": 42.3601,
+            "longitude": -71.0589
+          },
+          "antennaType": "Directional",
+          "elevation": "240 meters",
+          "power": "34 kW",
+          "callSign": "KBOS-66",
+          "coverageArea": "30 miles",
+          "broadcastFrequency": "VHF Band",
+          "city": "Boston",
+          "dma": "Boston",
+          "population": "4.8 million",
+          "frequency": "VHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375369,
+      "name": "PHX-8",
+      "latitude": 33.4484,
+      "longitude": -112.074,
+      "region": "Brooklyn",
+      "performance": "12",
+      "MIAS": [
+        {
+          "uniqueID": "f678j901-2345-6789-0123-45abcdef6789",
+          "name": "MO",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "November 01, 2022",
+          "version": "v 1.3.6",
+          "description": "Modern platform for the exhibition of digital art and immersive experiences.",
+          "activeUsers": 3750678,
+          "deploymentDate": "February 18, 2017",
+          "revenue": {
+            "Daily": "$475",
+            "Monthly": "$11,500",
+            "Weekly": "$3,000",
+            "Quarterly": "$35,000",
+            "Yearly": "$140,000"
+          }
+        },
+        {
+          "uniqueID": "g789k012-3456-7890-1234-56abcdef7890",
+          "name": "Revee",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "July 11, 2023",
+          "version": "v 1.8.5",
+          "description": "Creative management platform for artists to track their work, exhibitions, and collaborations.",
+          "activeUsers": 4200987,
+          "deploymentDate": "May 07, 2020",
+          "revenue": {
+            "Daily": "$500",
+            "Monthly": "$12,000",
+            "Weekly": "$3,400",
+            "Quarterly": "$36,000",
+            "Yearly": "$145,000"
+          }
+        },
+        {
+          "uniqueID": "a1b2c3d4-5678-9abc-def1-234567890abc",
+          "name": "Museo",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "NYC-99",
+          "uniqueID": "NYC99-012",
+          "owner": "ABC",
+          "tenancyStartDate": "2022-11-01",
+          "signalStrength": "-65 dBm",
+          "signalQuality": "Very Good",
+          "location": {
+            "latitude": 40.7128,
+            "longitude": -74.006
+          },
+          "antennaType": "Omnidirectional",
+          "elevation": "300 meters",
+          "power": "30 kW",
+          "callSign": "WNYC-99",
+          "coverageArea": "38 miles",
+          "broadcastFrequency": "UHF Band",
+          "city": "New York",
+          "dma": "New York",
+          "population": "12 million",
+          "frequency": "UHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375370,
+      "name": "BOS-LOG",
+      "latitude": 42.3601,
+      "longitude": -71.0589,
+      "region": "Manhattan",
+      "performance": "46",
+      "MIAS": [
+        {
+          "uniqueID": "a123e456-7f89-0123-4567-89abcdef1234",
+          "name": "Izak",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "b234f567-8e90-1234-5678-90abcdef2345",
+          "name": "Spectraguard",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "October 12, 2023",
+          "version": "v 2.1.4",
+          "description": "Advanced security platform for ensuring protection of cultural and creative assets.",
+          "activeUsers": 3200541,
+          "deploymentDate": "March 15, 2016",
+          "revenue": {
+            "Daily": "$600",
+            "Monthly": "$15,500",
+            "Weekly": "$4,000",
+            "Quarterly": "$48,000",
+            "Yearly": "$180,000"
+          }
+        },
+        {
+          "uniqueID": "c345g678-9f01-2345-6789-01abcdef3456",
+          "name": "Hear Here",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "January 22, 2023",
+          "version": "v 1.5.3",
+          "description": "Audio platform designed for sharing cultural stories and podcasts from around the world.",
+          "activeUsers": 5100987,
+          "deploymentDate": "July 10, 2018",
+          "revenue": {
+            "Daily": "$550",
+            "Monthly": "$12,500",
+            "Weekly": "$3,600",
+            "Quarterly": "$40,000",
+            "Yearly": "$150,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "LAX-77",
+          "uniqueID": "LAX77-013",
+          "owner": "NBC",
+          "tenancyStartDate": "2021-02-14",
+          "signalStrength": "-62 dBm",
+          "signalQuality": "Excellent",
+          "location": {
+            "latitude": 33.9416,
+            "longitude": -118.4085
+          },
+          "antennaType": "Directional",
+          "elevation": "260 meters",
+          "power": "28 kW",
+          "callSign": "KLAX-77",
+          "coverageArea": "35 miles",
+          "broadcastFrequency": "VHF Band",
+          "city": "Los Angeles",
+          "dma": "Los Angeles",
+          "population": "10.2 million",
+          "frequency": "VHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375371,
+      "name": "MSP-DELTA",
+      "latitude": 44.9778,
+      "longitude": -93.265,
+      "region": "Long Island",
+      "performance": "28",
+      "MIAS": [
+        {
+          "uniqueID": "d456h789-0123-4567-8901-23abcdef4567",
+          "name": "AmplyFund",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "May 15, 2023",
+          "version": "v 2.0.0",
+          "description": "Crowdfunding platform to support creative projects and artistic initiatives globally.",
+          "activeUsers": 2650784,
+          "deploymentDate": "October 30, 2017",
+          "revenue": {
+            "Daily": "$350",
+            "Monthly": "$9,500",
+            "Weekly": "$2,200",
+            "Quarterly": "$27,000",
+            "Yearly": "$110,000"
+          }
+        },
+        {
+          "uniqueID": "e567i890-1234-5678-9012-34abcdef5678",
+          "name": "Around",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "April 04, 2023",
+          "version": "v 3.1.1",
+          "description": "A platform that connects artists and audiences through virtual and live events.",
+          "activeUsers": 4350872,
+          "deploymentDate": "August 22, 2019",
+          "revenue": {
+            "Daily": "$400",
+            "Monthly": "$10,000",
+            "Weekly": "$2,500",
+            "Quarterly": "$30,000",
+            "Yearly": "$125,000"
+          }
+        },
+        {
+          "uniqueID": "f678j901-2345-6789-0123-45abcdef6789",
+          "name": "MO",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "November 01, 2022",
+          "version": "v 1.3.6",
+          "description": "Modern platform for the exhibition of digital art and immersive experiences.",
+          "activeUsers": 3750678,
+          "deploymentDate": "February 18, 2017",
+          "revenue": {
+            "Daily": "$475",
+            "Monthly": "$11,500",
+            "Weekly": "$3,000",
+            "Quarterly": "$35,000",
+            "Yearly": "$140,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "ATL-21",
+          "uniqueID": "ATL21-014",
+          "owner": "CBS",
+          "tenancyStartDate": "2020-05-08",
+          "signalStrength": "-68 dBm",
+          "signalQuality": "Very Good",
+          "location": {
+            "latitude": 33.749,
+            "longitude": -84.388
+          },
+          "antennaType": "Omnidirectional",
+          "elevation": "225 meters",
+          "power": "27 kW",
+          "callSign": "WATL-21",
+          "coverageArea": "32 miles",
+          "broadcastFrequency": "UHF Band",
+          "city": "Atlanta",
+          "dma": "Atlanta",
+          "population": "6 million",
+          "frequency": "UHF"
+        }
+      ]
+    },
+    {
+      "chain_id": 1729247375372,
+      "name": "MEM-INTL",
+      "latitude": 35.1495,
+      "longitude": -90.049,
+      "region": "Park Avenue",
+      "performance": "45",
+      "MIAS": [
+        {
+          "uniqueID": "g789k012-3456-7890-1234-56abcdef7890",
+          "name": "Revee",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "July 11, 2023",
+          "version": "v 1.8.5",
+          "description": "Creative management platform for artists to track their work, exhibitions, and collaborations.",
+          "activeUsers": 4200987,
+          "deploymentDate": "May 07, 2020",
+          "revenue": {
+            "Daily": "$500",
+            "Monthly": "$12,000",
+            "Weekly": "$3,400",
+            "Quarterly": "$36,000",
+            "Yearly": "$145,000"
+          }
+        },
+        {
+          "uniqueID": "a1b2c3d4-5678-9abc-def1-234567890abc",
+          "name": "Museo",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        },
+        {
+          "uniqueID": "a123e456-7f89-0123-4567-89abcdef1234",
+          "name": "Izak",
+          "status": "Active",
+          "tenantPartner": "CBS",
+          "tenancyStartDate": "September 02, 2024",
+          "version": "v 1.2.2",
+          "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+          "activeUsers": 4610548,
+          "deploymentDate": "November 28, 2015",
+          "revenue": {
+            "Daily": "$450",
+            "Monthly": "$11,000",
+            "Weekly": "$2,800",
+            "Quarterly": "$32,000",
+            "Yearly": "$128,000"
+          }
+        }
+      ],
+      "Towers": [
+        {
+          "towerName": "SFO-89",
+          "uniqueID": "SFO89-015",
+          "owner": "Fox",
+          "tenancyStartDate": "2023-03-01",
+          "signalStrength": "-63 dBm",
+          "signalQuality": "Excellent",
+          "location": {
+            "latitude": 37.7749,
+            "longitude": -122.4194
+          },
+          "antennaType": "Directional",
+          "elevation": "290 meters",
+          "power": "33 kW",
+          "callSign": "KSFO-89",
+          "coverageArea": "37 miles",
+          "broadcastFrequency": "VHF Band",
+          "city": "San Francisco",
+          "dma": "San Francisco-Oakland",
+          "population": "7.9 million",
+          "frequency": "VHF"
+        }
+      ]
+    }
+  ],
+  "chainaas_MIAs": [
+    {
+      "uniqueID": "a1b2c3d4-5678-9abc-def1-234567890abc",
+      "name": "Museo",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "September 02, 2024",
+      "version": "v 1.2.2",
+      "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+      "activeUsers": 4610548,
+      "deploymentDate": "November 28, 2015",
+      "revenue": {
+        "Daily": "$450",
+        "Monthly": "$11,000",
+        "Weekly": "$2,800",
+        "Quarterly": "$32,000",
+        "Yearly": "$128,000"
+      }
+    },
+    {
+      "uniqueID": "a123e456-7f89-0123-4567-89abcdef1234",
+      "name": "Izak",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "September 02, 2024",
+      "version": "v 1.2.2",
+      "description": "Unique space for artists, cultural enthusiasts, and the general public to connect and share in the rich tapestry of local heritage and creativity.",
+      "activeUsers": 4610548,
+      "deploymentDate": "November 28, 2015",
+      "revenue": {
+        "Daily": "$450",
+        "Monthly": "$11,000",
+        "Weekly": "$2,800",
+        "Quarterly": "$32,000",
+        "Yearly": "$128,000"
+      }
+    },
+    {
+      "uniqueID": "b234f567-8e90-1234-5678-90abcdef2345",
+      "name": "Spectraguard",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "October 12, 2023",
+      "version": "v 2.1.4",
+      "description": "Advanced security platform for ensuring protection of cultural and creative assets.",
+      "activeUsers": 3200541,
+      "deploymentDate": "March 15, 2016",
+      "revenue": {
+        "Daily": "$600",
+        "Monthly": "$15,500",
+        "Weekly": "$4,000",
+        "Quarterly": "$48,000",
+        "Yearly": "$180,000"
+      }
+    },
+    {
+      "uniqueID": "c345g678-9f01-2345-6789-01abcdef3456",
+      "name": "Hear Here",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "January 22, 2023",
+      "version": "v 1.5.3",
+      "description": "Audio platform designed for sharing cultural stories and podcasts from around the world.",
+      "activeUsers": 5100987,
+      "deploymentDate": "July 10, 2018",
+      "revenue": {
+        "Daily": "$550",
+        "Monthly": "$12,500",
+        "Weekly": "$3,600",
+        "Quarterly": "$40,000",
+        "Yearly": "$150,000"
+      }
+    },
+    {
+      "uniqueID": "d456h789-0123-4567-8901-23abcdef4567",
+      "name": "AmplyFund",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "May 15, 2023",
+      "version": "v 2.0.0",
+      "description": "Crowdfunding platform to support creative projects and artistic initiatives globally.",
+      "activeUsers": 2650784,
+      "deploymentDate": "October 30, 2017",
+      "revenue": {
+        "Daily": "$350",
+        "Monthly": "$9,500",
+        "Weekly": "$2,200",
+        "Quarterly": "$27,000",
+        "Yearly": "$110,000"
+      }
+    },
+    {
+      "uniqueID": "e567i890-1234-5678-9012-34abcdef5678",
+      "name": "Around",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "April 04, 2023",
+      "version": "v 3.1.1",
+      "description": "A platform that connects artists and audiences through virtual and live events.",
+      "activeUsers": 4350872,
+      "deploymentDate": "August 22, 2019",
+      "revenue": {
+        "Daily": "$400",
+        "Monthly": "$10,000",
+        "Weekly": "$2,500",
+        "Quarterly": "$30,000",
+        "Yearly": "$125,000"
+      }
+    },
+    {
+      "uniqueID": "f678j901-2345-6789-0123-45abcdef6789",
+      "name": "MO",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "November 01, 2022",
+      "version": "v 1.3.6",
+      "description": "Modern platform for the exhibition of digital art and immersive experiences.",
+      "activeUsers": 3750678,
+      "deploymentDate": "February 18, 2017",
+      "revenue": {
+        "Daily": "$475",
+        "Monthly": "$11,500",
+        "Weekly": "$3,000",
+        "Quarterly": "$35,000",
+        "Yearly": "$140,000"
+      }
+    },
+    {
+      "uniqueID": "g789k012-3456-7890-1234-56abcdef7890",
+      "name": "Revee",
+      "status": "Active",
+      "tenantPartner": "CBS",
+      "tenancyStartDate": "July 11, 2023",
+      "version": "v 1.8.5",
+      "description": "Creative management platform for artists to track their work, exhibitions, and collaborations.",
+      "activeUsers": 4200987,
+      "deploymentDate": "May 07, 2020",
+      "revenue": {
+        "Daily": "$500",
+        "Monthly": "$12,000",
+        "Weekly": "$3,400",
+        "Quarterly": "$36,000",
+        "Yearly": "$145,000"
+      }
+    }
+  ],
+  "chainaas_faqs": [
+    {
+      "key": "1",
+      "question": "What is ChainaaS?",
+      "answer": "ChainaaS stands for Chain as a Service, a platform designed to help broadcasters, spectrum operators, and tower operators efficiently deploy and manage apps or services over a broadcast network infrastructure, typically leveraging TV towers and broadcast spectrum."
+    },
+    {
+      "key": "2",
+      "question": "How do I deploy an app to a new tower?",
+      "answer": "To deploy an app, go to the 'App Management' section, click 'Deploy New App,' select the tower, and allocate bandwidth. Confirm your settings to complete the process."
+    },
+    {
+      "key": "3",
+      "question": "How do I upgrade my subscription plan?",
+      "answer": "To upgrade your subscription, navigate to the 'Account Settings' tab, click on 'Subscription Plan,' and select the plan you wish to upgrade to. Confirm payment details to finalize the upgrade."
+    }
+  ],
+  "chainaas_alliance_partners": [
+    {
+      "id": 1,
+      "name": "ARK Multicasting",
+      "logo": "/images/Alliance.png",
+      "partnershipDate": "Jan 10, 2024",
+      "revenueContribution": "$50,000/month",
+      "partnershipDuration": "8 months",
+      "performanceMetrics": "98% app uptime"
+    },
+    {
+      "id": 2,
+      "name": "Broadcast Network",
+      "logo": "/images/Alliance.png",
+      "partnershipDate": "Feb 15, 2023",
+      "revenueContribution": "$40,000/month",
+      "partnershipDuration": "6 months",
+      "performanceMetrics": "99% app uptime"
+    },
+    {
+      "id": 3,
+      "name": "Spectrum Corp",
+      "logo": "/images/Alliance.png",
+      "partnershipDate": "Mar 20, 2023",
+      "revenueContribution": "$60,000/month",
+      "partnershipDuration": "10 months",
+      "performanceMetrics": "97% app uptime"
+    }
+  ],
+  "chainaas_projectDetails": [
+    {
+      "key": "1",
+      "name": "Izak",
+      "description": "Provides real-time analytics for IoT devices",
+      "version": "v1.2.3",
+      "broadcastTower": "LAX-A1, ATL-5G",
+      "healthIndicator": "Operational",
+      "deploymentDate": "November 28, 2015",
+      "region": "Saint Barthélemy",
+      "connectionStatus": "Active"
+    },
+    {
+      "key": "2",
+      "name": "Amplyfund",
+      "description": "High-performance asset monitoring system",
+      "version": "v1.4.0",
+      "broadcastTower": "JFK-3A, LAX-5G",
+      "healthIndicator": "Stable",
+      "deploymentDate": "January 20, 2016",
+      "region": "Portugal",
+      "connectionStatus": "Active"
+    },
+    {
+      "key": "3",
+      "name": "Aegis",
+      "description": "Advanced security and threat detection system",
+      "version": "v1.3.1",
+      "broadcastTower": "SFO-BAY, DEN-HIGH",
+      "healthIndicator": "Caution",
+      "deploymentDate": "June 15, 2013",
+      "region": "Greenland",
+      "connectionStatus": "Inactive"
+    },
+    {
+      "key": "4",
+      "name": "C-Links",
+      "description": "Optimized for network link management and diagnostics",
+      "version": "v2.0.5",
+      "broadcastTower": "ATL-5G, ORD-8H",
+      "healthIndicator": "Operational",
+      "deploymentDate": "April 25, 2018",
+      "region": "Panama",
+      "connectionStatus": "Active"
+    },
+    {
+      "key": "5",
+      "name": "Spectra Guard",
+      "description": "Comprehensive data protection and surveillance solution",
+      "version": "v2.3.1",
+      "broadcastTower": "ORD-8H, LAX-A1",
+      "healthIndicator": "Critical",
+      "deploymentDate": "September 9, 2017",
+      "region": "Nepal",
+      "connectionStatus": "Inactive"
+    },
+    {
+      "key": "6",
+      "name": "ImpressIO",
+      "description": "Designed for enterprise-level communication solutions",
+      "version": "v1.2.2",
+      "broadcastTower": "DEN-HIGH, ATL-5G",
+      "healthIndicator": "Caution",
+      "deploymentDate": "February 11, 2014",
+      "region": "Sao Tome and Principe",
+      "connectionStatus": "Inactive"
+    },
+    {
+      "key": "7",
+      "name": "Izak",
+      "description": "Powerful remote monitoring for smart cities",
+      "version": "v1.5.0",
+      "broadcastTower": "LHR-UK, ATL-5G",
+      "healthIndicator": "Stable",
+      "deploymentDate": "July 3, 2020",
+      "region": "Greece",
+      "connectionStatus": "Active"
+    },
+    {
+      "key": "8",
+      "name": "Spectra Guard",
+      "description": "Real-time data backup and recovery platform",
+      "version": "v2.3.5",
+      "broadcastTower": "LAX-A1, JFK-3A",
+      "healthIndicator": "Operational",
+      "deploymentDate": "October 11, 2018",
+      "region": "Iceland",
+      "connectionStatus": "Active"
+    },
+    {
+      "key": "9",
+      "name": "Amplyfund",
+      "description": "Optimized funding management tool for NGOs",
+      "version": "v1.6.0",
+      "broadcastTower": "ORD-8H, SFO-BAY",
+      "healthIndicator": "Caution",
+      "deploymentDate": "March 30, 2019",
+      "region": "Argentina",
+      "connectionStatus": "Inactive"
+    },
+    {
+      "key": "10",
+      "name": "C-Links",
+      "description": "High-speed internet gateway for rural areas",
+      "version": "v2.1.0",
+      "broadcastTower": "DEN-HIGH, ATL-5G",
+      "healthIndicator": "Critical",
+      "deploymentDate": "February 22, 2021",
+      "region": "South Africa",
+      "connectionStatus": "Active"
+    }
+  ],
+  "chainaas_availablePlans": [
+    {
+      "name": "Basic Plan",
+      "cost": "$50/month",
+      "features": {
+        "data_usage": "Up to 2GB",
+        "api_calls": "250 per month",
+        "users": "1 User",
+        "ads": "Ads present",
+        "customer_support": "Limited (email only)",
+        "reporting": "Essential reporting and analytics",
+        "tools_access": "Access to basic features only"
+      }
+    },
+    {
+      "name": "Standard Plan",
+      "cost": "$100/month",
+      "features": {
+        "data_usage": "Up to 5GB",
+        "api_calls": "500 per month",
+        "users": "Up to 2 Users",
+        "ads": "Ads present but limited",
+        "customer_support": "Standard (email and chat)",
+        "reporting": "Advanced reporting and analytics",
+        "tools_access": "Access to most features",
+        "integrations": "Integration with a few third-party tools"
+      }
+    },
+    {
+      "name": "Premium Plan",
+      "cost": "$210/month",
+      "features": {
+        "data_usage": "Up to 10GB",
+        "api_calls": "1000 per month",
+        "users": "Up to 4 Users",
+        "ads": "Ads always present"
+      }
+    },
+    {
+      "name": "Premium Plus Plan",
+      "cost": "$300/month",
+      "features": {
+        "data_usage": "Up to 15GB",
+        "api_calls": "2000 per month",
+        "users": "Up to 6 Users",
+        "ads": "Ad-free experience",
+        "customer_support": "Priority (email, chat, and phone)",
+        "reporting": "Enhanced reporting with customizable analytics",
+        "tools_access": "Access to all features, including advanced tools",
+        "integrations": "Integration with multiple third-party tools",
+        "consultations": "Monthly consultations for setup and optimization"
+      }
+    },
+    {
+      "name": "Enterprise Pro Plan",
+      "cost": "$500/month",
+      "features": {
+        "data_usage": "Up to 30GB",
+        "api_calls": "5000 per month",
+        "users": "Up to 10 Users",
+        "ads": "Ad-free experience",
+        "customer_support": "Dedicated account manager and priority support",
+        "reporting": "Full access to advanced analytics and custom reports",
+        "tools_access": "Full integration with third-party tools and custom integrations",
+        "api_rate_limit": "Increased for large-scale use",
+        "security": "Multi-factor authentication",
+        "business_review": "Quarterly business review with custom reports"
+      }
+    },
+    {
+      "name": "Ultimate Plan",
+      "cost": "Custom Pricing (Quote-based)",
+      "features": {
+        "data_usage": "Unlimited",
+        "api_calls": "Unlimited",
+        "users": "Custom (unlimited available)",
+        "ads": "Ad-free",
+        "customer_support": "24/7 dedicated customer support and success manager",
+        "reporting": "Full suite of advanced analytics, AI-powered insights, and custom reports",
+        "tools_access": "Custom integrations with enterprise-level solutions",
+        "api_rate_limit": "Highest available for high-demand usage",
+        "security": "Enhanced security including single sign-on (SSO) and compliance options",
+        "consultations": "Regular strategic consultations for optimization and scaling",
+        "beta_access": "Access to beta features and early releases"
+      }
+    }
+  ],
+  "chainaas_incidentsData": [
+    {
+      "key": "1",
+      "incidentId": "INC12345",
+      "timestamp": "2024-09-15, 14:30:00",
+      "severity": "Critical",
+      "appAffected": "Izak",
+      "description": "Server outage during deployment",
+      "status": "Open",
+      "team": "DevOps Team",
+      "tags": "Infrastructure",
+      "note": "View",
+      "actionTaken": "Restarted server, investigated logs"
+    },
+    {
+      "key": "2",
+      "incidentId": "INC12346",
+      "timestamp": "2024-09-16, 10:15:00",
+      "severity": "Critical",
+      "appAffected": "Museo",
+      "description": "Data processing slowdown",
+      "status": "Open",
+      "team": "Data Team",
+      "tags": "Performance",
+      "note": "View",
+      "actionTaken": "Checked database queries, optimized"
+    },
+    {
+      "key": "3",
+      "incidentId": "INC12347",
+      "timestamp": "2024-09-17, 09:00:00",
+      "severity": "Critical",
+      "appAffected": "Amplyfund",
+      "description": "UI glitch on login screen",
+      "status": "Open",
+      "team": "Frontend Team",
+      "tags": "UI/UX",
+      "note": "View",
+      "actionTaken": "Cleared browser cache, CSS fix"
+    },
+    {
+      "key": "4",
+      "incidentId": "INC12348",
+      "timestamp": "2024-09-18, 16:45:00",
+      "severity": "Minor",
+      "appAffected": "Hear, Here",
+      "description": "Database connection error",
+      "status": "Open",
+      "team": "Backend Team",
+      "tags": "Connectivity",
+      "note": "View",
+      "actionTaken": "Checked logs, restarted service"
+    },
+    {
+      "key": "5",
+      "incidentId": "INC12349",
+      "timestamp": "2024-09-19, 09:20:00",
+      "severity": "Minor",
+      "appAffected": "Hear, Here",
+      "description": "Security, Vulnerability",
+      "status": "Open",
+      "team": "Security Team",
+      "tags": "Security",
+      "note": "View",
+      "actionTaken": "Isolated affected module, applied patch"
+    }
+  ],
+  "chainaas_incidentlog": {
+    "ResolutionTimeData": {
+      "months": ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      "resolutionTimes": [4, 8.6, 5.6, 7.6, 4.3, 11, 0.6, 5.6, 4.5]
+    },
+    "FailureData": {
+      "categories": [
+        {
+          "type": "Connectivity",
+          "locations": ["Location A", "Location B", "Location C", "Location D"],
+          "failures": [8, 15, 12, 14],
+          "colors": ["#FFD700", "#87CEFA", "#8FBC8F", "#6A9EB7"]
+        },
+        {
+          "type": "Cloud",
+          "breakdown": [
+            {
+              "name": "Computing",
+              "value": 40,
+              "color": "#86B8F3"
+            },
+            {
+              "name": "Networking",
+              "value": 30,
+              "color": "#F4A582"
+            },
+            {
+              "name": "Storage",
+              "value": 30,
+              "color": "#F4C45C"
+            }
+          ]
+        },
+        {
+          "type": "Application",
+          "months": ["Apr", "May", "Jun", "Jul", "Aug", "Sep"],
+          "failures": [4, 8, 6, 9, 3, 7]
+        },
+        {
+          "type": "Workflow",
+          "breakdown": [
+            {
+              "name": "Transmission",
+              "value": 3,
+              "color": "#F8C269"
+            },
+            {
+              "name": "Scheduling",
+              "value": 8,
+              "color": "#94D0FF"
+            },
+            {
+              "name": "Encoding",
+              "value": 5,
+              "color": "#A6AF88"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "chainaas_performanceData": {
+    "areaReachData": {
+      "xAxisData": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec"
+      ],
+      "seriesData": [
+        {
+          "name": "Izak",
+          "data": [100, 120, 140, 110, 150, 180, 130, 160, 140, 180, 190, 200]
+        },
+        {
+          "name": "Amplyfund",
+          "data": [150, 130, 110, 150, 120, 140, 180, 170, 130, 160, 180, 220]
+        },
+        {
+          "name": "Museo",
+          "data": [90, 110, 130, 120, 140, 130, 110, 150, 130, 170, 150, 190]
+        }
+      ]
+    },
+    "appReachData": {
+      "xAxisData": [
+        "Izak",
+        "Museo",
+        "Amplyfund",
+        "Hear, Here",
+        "C-link",
+        "Revee"
+      ],
+      "seriesData": [120, 90, 180, 140, 110, 130]
+    },
+    "populationReachData": {
+      "xAxisData": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sept",
+        "Oct"
+      ],
+      "seriesData": [150, 180, 200, 230, 250, 270, 290, 310, 330, 350, 370, 400]
+    },
+    "citiesReachData": {
+      "cities": [
+        "Orlando",
+        "Las Vegas",
+        "New York City",
+        "Los Angeles",
+        "Chicago",
+        "Miami",
+        "San Francisco",
+        "Washington",
+        "San Diego",
+        "New Orleans",
+        "Seattle",
+        "Boston"
+      ],
+      "rawData": [
+        {
+          "name": "iZak",
+          "data": [85, 90, 80, 70, 75, 60, 65, 78, 72, 83, 88, 91]
+        },
+        {
+          "name": "Amplyfund",
+          "data": [70, 75, 60, 50, 55, 45, 50, 68, 58, 73, 77, 80]
+        },
+        {
+          "name": "Hear, Here",
+          "data": [50, 65, 55, 60, 65, 70, 72, 68, 65, 60, 55, 58]
+        },
+        {
+          "name": "C-Link",
+          "data": [30, 40, 35, 30, 40, 50, 45, 35, 40, 38, 42, 50]
+        },
+        {
+          "name": "Museo",
+          "data": [40, 45, 42, 35, 30, 38, 50, 48, 52, 55, 57, 60]
+        },
+        {
+          "name": "Spectra-Guard",
+          "data": [20, 25, 35, 40, 45, 55, 60, 50, 55, 48, 40, 35]
+        }
+      ]
+    },
+    "chartData": [
+      {
+        "value": 15,
+        "name": "iZak",
+        "itemStyle": {
+          "color": "#9A9AFF"
+        }
+      },
+      {
+        "value": 20,
+        "name": "Amplyfund",
+        "itemStyle": {
+          "color": "#94D0FF"
+        }
+      },
+      {
+        "value": 15,
+        "name": "Hear, Here",
+        "itemStyle": {
+          "color": "#F1AE9D"
+        }
+      },
+      {
+        "value": 10,
+        "name": "C-Links",
+        "itemStyle": {
+          "color": "#E3E1DE"
+        }
+      },
+      {
+        "value": 25,
+        "name": "Museo",
+        "itemStyle": {
+          "color": "#FBC96C"
+        }
+      },
+      {
+        "value": 10,
+        "name": "Spectra-Guard",
+        "itemStyle": {
+          "color": "#A6AF88"
+        }
+      },
+      {
+        "value": 5,
+        "name": "Revee",
+        "itemStyle": {
+          "color": "#CBC3EE"
+        }
+      }
+    ]
+  },
+  "chainaas_projects": {
+    "AllianceGrowth": [
+      { "month": "Jan", "alliancesFormed": 5 },
+      { "month": "Feb", "alliancesFormed": 7 },
+      { "month": "Mar", "alliancesFormed": 6 },
+      { "month": "Apr", "alliancesFormed": 8 },
+      { "month": "May", "alliancesFormed": 5 },
+      { "month": "Jun", "alliancesFormed": 10 },
+      { "month": "Jul", "alliancesFormed": 12 },
+      { "month": "Aug", "alliancesFormed": 3 },
+      { "month": "Sep", "alliancesFormed": 7 },
+      { "month": "Oct", "alliancesFormed": 5 }
+    ],
+    "deployment_freq": [
+      { "month": "Jan", "deployments": 30 },
+      { "month": "Feb", "deployments": 60 },
+      { "month": "Mar", "deployments": 75 },
+      { "month": "Apr", "deployments": 80 },
+      { "month": "May", "deployments": 95 },
+      { "month": "Jun", "deployments": 100 },
+      { "month": "Jul", "deployments": 110 },
+      { "month": "Aug", "deployments": 105 },
+      { "month": "Sep", "deployments": 85 }
+    ],
+    "RequestforProposals": [
+      {
+        "value": 60,
+        "name": "Accepted",
+        "itemStyle": { "color": "#93c5fd" }
+      },
+      {
+        "value": 30,
+        "name": "Pending",
+        "itemStyle": { "color": "#fcd34d" }
+      },
+      {
+        "value": 10,
+        "name": "Declined",
+        "itemStyle": { "color": "#fda4af" }
+      }
+    ],
+    "user_engagements": [
+      {
+        "name": "Izak",
+        "bandwidthUsage": 14,
+        "engagementRate": 100,
+        "color": "#CBC3EE"
+      },
+      {
+        "name": "Amplyfund",
+        "bandwidthUsage": 20,
+        "engagementRate": 150,
+        "color": "#A6AF88"
+      },
+      {
+        "name": "Hear, Here",
+        "bandwidthUsage": 30,
+        "engagementRate": 250,
+        "color": "#94D0FF"
+      },
+      {
+        "name": "C-Link",
+        "bandwidthUsage": 40,
+        "engagementRate": 200,
+        "color": "#F1AE9D"
+      },
+      {
+        "name": "Museo",
+        "bandwidthUsage": 50,
+        "engagementRate": 300,
+        "color": "#FBC96C"
+      },
+      {
+        "name": "Spectra-Guard",
+        "bandwidthUsage": 60,
+        "engagementRate": 400,
+        "color": "#E3E1DE"
+      }
+    ],
+    "Live_apps_uptime": [
+      {
+        "name": "Izak",
+        "uptime": [40, 60, 80, 70, 90, 50, 60, 40, 70, 80, 60, 90],
+        "color": "#EB856B"
+      },
+      {
+        "name": "Amplyfund",
+        "uptime": [20, 30, 40, 80, 60, 70, 90, 50, 60, 40, 90, 100],
+        "color": "#13A791"
+      },
+      {
+        "name": "Museo",
+        "uptime": [10, 20, 30, 50, 60, 50, 60, 50, 50, 60, 70, 80],
+        "color": "#7EC2FF"
+      }
+    ]
+  },
+  "chainaas_commercial": {
+    "GrowthTrends": [
+      {
+        "name": "Izak",
+        "uptime": [40, 100, 400, 900],
+        "color": "#9A9AFF"
+      },
+      {
+        "name": "Hear, Here",
+        "uptime": [40, 50, 300, 700],
+        "color": "#EB856B"
+      },
+      {
+        "name": "Amplyfund",
+        "uptime": [40, 120, 220, 330],
+        "color": "#98A2B3"
+      }
+    ],
+    "ArApData": [
+      {
+        "name": "Pending",
+        "color": "#EB856B",
+        "data": [300, 500, 400, 600, 400]
+      },
+      {
+        "name": "Total Billed",
+        "color": "#7EC2FF",
+        "data": [100, 400, 300, 200, 500]
+      },
+      {
+        "name": "Received payment",
+        "color": "#13A791",
+        "data": [200, 100, 500, 300, 700]
+      }
+    ],
+    "TowerEarnings": [
+      {
+        "city": "Orlando",
+        "earning": 5000,
+        "color": "#FFD700"
+      },
+      {
+        "city": "Las Vegas",
+        "earning": 15000,
+        "color": "#87CEFA"
+      },
+      {
+        "city": "New York City",
+        "earning": 12000,
+        "color": "#556B2F"
+      },
+      {
+        "city": "Los Angeles",
+        "earning": 4000,
+        "color": "#9370DB"
+      },
+      {
+        "city": "Chicago",
+        "earning": 18000,
+        "color": "#4169E1"
+      },
+      {
+        "city": "Miami",
+        "earning": 10000,
+        "color": "#32CD32"
+      },
+      {
+        "city": "San Francisco",
+        "earning": 8000,
+        "color": "#A9A9A9"
+      },
+      {
+        "city": "Washington",
+        "earning": 9000,
+        "color": "#8A2BE2"
+      },
+      {
+        "city": "San Diego",
+        "earning": 6000,
+        "color": "#00CED1"
+      },
+      {
+        "city": "New Orleans",
+        "earning": 7000,
+        "color": "#FF69B4"
+      }
+    ]
+  }
+}

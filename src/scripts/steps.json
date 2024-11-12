@@ -1,0 +1,441 @@
+[
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#c_dashboard"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#performance_insights",
+    "distance": 2000,
+    "duration": 4000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#performance_insights",
+    "distance": 0,
+    "duration": 3000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#nav_incident"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#incident_insights",
+    "distance": 2000,
+    "duration": 4000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#incident_insights",
+    "distance": 0,
+    "duration": 3000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#nav_projects"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#project_insights",
+    "distance": 2000,
+    "duration": 4000
+  },
+
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#project_insights",
+    "distance": 0,
+    "duration": 3000
+  },
+
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#nav_commercial"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#commercial_insights",
+    "distance": 2000,
+    "duration": 4000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#commercial_insights",
+    "distance": 0,
+    "duration": 3000
+  },
+
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#c_chains"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#towers-list",
+    "distance": 800,
+    "duration": 2000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#towers-list",
+    "distance": 0,
+    "duration": 1000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#chains-info-section",
+    "distance": 1000,
+    "duration": 2000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#tower-info"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#broadcast-info"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+
+  {
+    "action": "simulateVerticalScroll",
+    "selector": "#chains-info-section",
+    "distance": 70,
+    "duration": 1000
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#broadcast-edit-icon"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#broadcast-edit"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#show-tower-details"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#form-tab-Tower"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#form-tab-Exciter"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#form-tab-PLP"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#form-tab-Spectrum"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#form-tab-ModCod"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#modal-close-icon"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#right-bottom-icons > img:nth-child(4)"
+  },
+  {
+    "action": "wait",
+    "delay": 2500
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#right-bottom-icons > img:nth-child(4)"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#add-chain-icon"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#close-add-chains"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#c_product"
+  },
+
+  {
+    "action": "wait",
+    "delay": 3000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#c_settings"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+
+  {
+    "action": "simulateClick",
+    "selector": "#right-bottom-icons > img:nth-child(1)"
+  },
+  {
+    "action": "wait",
+    "delay": 3000
+  },
+
+  {
+    "action": "simulateClick",
+    "selector": "#get-started-btn"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+
+  {
+    "action": "simulateClick",
+    "selector": "#get-started-btn"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+
+  {
+    "action": "simulateClick",
+    "selector": "#get-started-btn"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+
+  {
+    "action": "simulateClick",
+    "selector": "#account_roles"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#account_wallet"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+
+  {
+    "action": "simulateClick",
+    "selector": "#settings_security"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#settings_theme"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#settings_lang"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#settings_time"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#help-support-settings"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#help_faq"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#help_privacy"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#help_support"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#help_alliance"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  },
+  {
+    "action": "simulateClick",
+    "selector": "#settings-logout"
+  },
+  {
+    "action": "wait",
+    "delay": 2000
+  }
+]

@@ -1,6 +1,32 @@
 .leaflet-popup-content-wrapper,
 .leaflet-popup-tip {
-    background: #33333300 !important;
-    color: #333;
-    box-shadow: none;
+  background: #33333300 !important;
+  color: #333;
+  box-shadow: none;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-content {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+.leaflet-popup {
+  bottom: -7vw !important;
+}
+
+.leaflet-div-icon {
+  background: none !important;
+  border: none !important;
+  width: 5vw !important;
+  height: 5vw !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.leaflet-bottom {
+  display: none !important;
 }

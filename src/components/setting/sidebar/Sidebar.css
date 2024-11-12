@@ -1,0 +1,16 @@
+.custom-sidebar-collapse .ant-collapse-header {
+  height: 2.78vw !important;
+  width: 14.6vw !important;
+  padding: 0.694vw 1.12vw !important;
+}
+
+.custom-sidebar-panel {
+  background-color: #fff !important;
+  padding-bottom: 0vw !important;
+}
+
+.custom-sidebar-collapse .ant-collapse-content-box {
+  width: 14.6vw !important;
+  background-color: #fff !important;
+  padding: 0vw 0vw !important;
+}
