@@ -82,6 +82,7 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
   const [towers, setTowers] = useState<TowerItem[]>([]);
   const [selectedtower, setSelectedtower] = useState<String>("");
   const [towersearch, setTowersearch] = useState<string>("");
+  const [loading, setLoading] = useState(true);
   const handleSearchTower = useCallback((value: string) => {
     setTowersearch(value);
   }, []);
@@ -107,10 +108,13 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
         );
         const data = await response.json();
         setTowers(data);
+        setLoading(false);
         setSelectedtower(data[0]?.name);
         dispatch(handleChain(data[0]));
       } catch (error) {
         console.error("Failed to fetch tower data", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -134,14 +138,22 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
         id="towers-list"
         className="w-[100%] h-[68vh] p-[1vw] flex flex-col gap-[1vw] overflow-y-auto no-scrollbar"
       >
-        {filtered_towers?.map((item, index) => (
-          <ChainItem
-            key={index}
-            item={item}
-            handleSelectedTower={handleSelectedTower}
-            selectedtower={selectedtower}
-          />
-        ))}
+        {!loading &&
+          filtered_towers?.map((item, index) => (
+            <ChainItem
+              key={index}
+              item={item}
+              handleSelectedTower={handleSelectedTower}
+              selectedtower={selectedtower}
+            />
+          ))}
+
+        {loading &&
+          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((_,i) => {
+            return (
+              <div key={i} className="rounded-[0.2vw] min-h-[4vh] skeleton-animate"></div>
+            );
+          })}
       </main>
       <footer className="w-[100%] h-[3vw] p-[1vw] border-t-[0.1vw] border-b-[#0000000F]">
         <Image className="w-[1.2vw] aspect-square" src={backlogo} alt="Back" />

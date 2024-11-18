@@ -343,3 +343,17 @@ label {
 .ant-table-tbody .ant-table-row .ant-table-cell {
   border-bottom: 0.0694vw solid #f0f0f0 !important ;
 }
+
+.skeleton-animate {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  from {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  to {
+    background-color: hsl(200, 20%, 95%);
+  }
+}

@@ -1,36 +1,33 @@
 "use client";
-import React from "react";
-import { Dropdown, Menu } from "antd";
+import React, { useState } from "react";
+import { Dropdown, MenuProps } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
-// Monthly earnings data for each month
-const monthlyEarnings = [
-  { month: "January", earnings: 5000 },
-  { month: "February", earnings: 6000 },
-  { month: "March", earnings: 7852 },
-  { month: "April", earnings: 6589 },
-  { month: "May", earnings: 9000 },
-  { month: "June", earnings: 10000 },
-  { month: "July", earnings: 11000 },
-  { month: "August", earnings: 12000 },
-  { month: "September", earnings: 13000 },
-  { month: "October", earnings: 14256 },
-  { month: "November", earnings: 11605 },
-  { month: "December", earnings: 12548 },
-];
+interface Revenue {
+  Daily: string;
+  Monthly: string;
+  Quarterly: string;
+  Weekly: string;
+  Yearly: string;
+}
 
-// Calculate earnings for the last month, last quarter, and last year
-const getLastMonthEarnings = () =>
-  monthlyEarnings[monthlyEarnings.length - 1].earnings;
-const getQuarterlyEarnings = () => {
-  const lastThreeMonths = monthlyEarnings.slice(-3);
-  return lastThreeMonths.reduce((acc, month) => acc + month.earnings, 0);
-};
-const getYearlyEarnings = () => {
-  return monthlyEarnings.reduce((acc, month) => acc + month.earnings, 0);
-};
+interface miaInfo {
+  uniqueID: string;
+  name: string;
+  status: string;
+  tenantPartner: string;
+  tenancyStartDate: string;
+  version: string;
+  description: string;
+  activeUsers: number;
+  deploymentDate: string;
+  revenue: Revenue;
+}
 
-// Growth percentage (example calculation)
+interface CommercialCardsProps {
+  Mias: miaInfo[];
+}
+
 const growthPercentage = 70.5;
 
 interface WalletData {
@@ -38,47 +35,45 @@ interface WalletData {
   points: number;
 }
 
-const CommercialCards: React.FC = () => {
-  // Earnings calculations
-  const lastMonthEarnings = getLastMonthEarnings();
-  const quarterlyEarnings = getQuarterlyEarnings();
-  const yearlyEarnings = getYearlyEarnings();
+const CommercialCards: React.FC<CommercialCardsProps> = ({ Mias }) => {
+  const [selectedMia, setSelectedMia] = useState<miaInfo>(Mias[0]);
 
   const wallet: WalletData = {
     balance: 5000,
     points: 368,
   };
 
-  // Dropdown menu for the Application dropdown
-  const menu = (
-    <Menu>
-      <Menu.Item key="1">Application</Menu.Item>
-      <Menu.Item key="2">Application</Menu.Item>
-      <Menu.Item key="3">Application</Menu.Item>
-    </Menu>
-  );
+  const items: MenuProps["items"] = Mias.map((data, i) => {
+    return {
+      key: i,
+      label: <p>{data.name}</p>,
+    };
+  });
+
+  const onClick: MenuProps["onClick"] = ({ key }) => {
+    setSelectedMia(Mias[parseInt(key)]);
+  };
 
   return (
     <div className="w-full flex gap-[1vw]">
-      {/* Earnings Section */}
       <div className="w-[60%] flex flex-col gap-[1vw] bg-white p-[1vw] rounded-sm">
         <div className="flex justify-between">
           <p className="font-semibold fs-16">Earnings</p>
-          <Dropdown overlay={menu}>
+          <Dropdown menu={{ items, onClick }} autoFocus={true}>
             <a
               className="p-[0.6vw] rounded-sm fs-14 border shadow-sm"
-              onClick={(e) => e.preventDefault()}
+              onClick={(e) => {
+                e.preventDefault();
+              }}
             >
-              Application <DownOutlined />
+              {selectedMia?.name || "Applications"} <DownOutlined />
             </a>
           </Dropdown>
         </div>
 
         <div className="grid grid-cols-3 gap-[1.4vw] *:flex *:flex-col *:justify-center *:items-center *:gap-[0.1vw] *:border *:p-[1vw] *:rounded-[0.4vw]">
           <div className="">
-            <p className="fs-24 font-bold">
-              ${lastMonthEarnings.toLocaleString()}
-            </p>
+            <p className="fs-24 font-bold">${selectedMia?.revenue?.Monthly}</p>
             <p className="fs-14 font-bold text-[#8F97A2]">Last Month</p>
             <p className="fs-14 font-semibold text-[#92C521]">
               ▲ {growthPercentage}%
@@ -86,7 +81,7 @@ const CommercialCards: React.FC = () => {
           </div>
           <div className="">
             <p className="fs-24 font-semibold">
-              ${quarterlyEarnings.toLocaleString()}
+              ${selectedMia?.revenue?.Quarterly}
             </p>
             <p className="fs-14 font-bold text-[#8F97A2]">Quarterly</p>
             <p className="fs-14 font-semibold text-[#92C521]">
@@ -95,7 +90,7 @@ const CommercialCards: React.FC = () => {
           </div>
           <div className="">
             <p className="fs-24 font-semibold">
-              ${yearlyEarnings.toLocaleString()}
+              ${selectedMia?.revenue?.Yearly}
             </p>
             <p className="fs-14 font-bold text-[#8F97A2]">Yearly</p>
             <p className="fs-14 font-semibold text-[#92C521]">

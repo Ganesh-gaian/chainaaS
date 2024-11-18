@@ -65,6 +65,10 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
       am4charts.PieChart3D
     );
 
+    if (chartInstance.current.logo) {
+      chartInstance.current.logo.disabled = true;
+    }
+
     chartInstance.current.radius = am4core.percent(85);
 
     chartInstance.current.data = state.appUsage.labels.map((label, index) => ({
@@ -131,7 +135,7 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
       )}
       <Popup
         position={[selectedchain.latitude, selectedchain.longitude]}
-        className="w-[43vw] h-[40vh] max-w-lg"
+        className="w-[43vw] h-[40vh]"
         closeButton={false}
         autoClose={false}
         closeOnClick={false}
@@ -160,8 +164,8 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
             <div
               ref={chartRef}
               style={{ width: "100%", height: "100%" }}
-              key={`chart-${position.join("-")}`} // Key ensures component re-renders
-            ></div>
+              key={`chart-${position.join("-")}`}
+            />
           </div>
           {showMetaData && (
             <div className="w-[50%] h-full flex ml-4 max-w-[20vw] overflow-y-auto no-scrollbar">

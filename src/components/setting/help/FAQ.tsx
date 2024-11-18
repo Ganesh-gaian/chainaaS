@@ -51,12 +51,12 @@ const FAQ: React.FC = () => {
     const fetchTowerData = async () => {
       try {
 
-        const response = await fetch("/DB/db.json");
-        // const response = await fetch(
-        //   `${process.env.NEXT_PUBLIC_JSON_SERVER}/faqs`
-        // );
+        // const response = await fetch("/DB/db.json");
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_JSON_SERVER}/chainaas_faqs`
+        );
         const data = await response.json();
-        setFAQs(data["faqs"]);
+        setFAQs(data);
       } catch (error) {
         console.error("Failed to fetch faqs data", error);
       }

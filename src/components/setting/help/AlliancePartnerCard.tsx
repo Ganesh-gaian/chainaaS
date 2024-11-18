@@ -75,7 +75,7 @@ const AlliancePartner: React.FC = () => {
       <div className="flex w-full px-[1.67vw] py-[0.56vw] items-center">
         <img
           src={currentPartner?.logo}
-          alt={`${currentPartner?.name} Logo`}
+          alt={`Alliance Logo`}
           className="h-[3vw] w-auto mr-4"
         />
         <span className="fs-16 font-medium text-[rgba(0,0,0,0.85)]">
