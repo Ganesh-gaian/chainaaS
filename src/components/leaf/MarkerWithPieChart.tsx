@@ -69,7 +69,7 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
       chartInstance.current.logo.disabled = true;
     }
 
-    chartInstance.current.radius = am4core.percent(85);
+    chartInstance.current.radius = am4core.percent(90);
 
     chartInstance.current.data = state.appUsage.labels.map((label, index) => ({
       category: label,
@@ -135,7 +135,7 @@ const MarkerWithPieChart: React.FC<MarkerWithPieChartProps> = ({
       )}
       <Popup
         position={[selectedchain.latitude, selectedchain.longitude]}
-        className="w-[43vw] h-[40vh]"
+        className="w-[30vw] h-[40vh]"
         closeButton={false}
         autoClose={false}
         closeOnClick={false}

@@ -123,7 +123,7 @@ const LiveAppsUptimeChart: React.FC<LiveAppsUptimeProps> = ({
       textStyle: {
         fontSize: vwToPx(0.6944),
         color: "#445164",
-        padding: [0, 0, 0, vwToPx(0.1)]
+        padding: [0, 0, 0, vwToPx(0.1)],
       },
       itemWidth: vwToPx(1.1),
       itemHeight: vwToPx(1),

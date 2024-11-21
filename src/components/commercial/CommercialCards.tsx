@@ -73,7 +73,7 @@ const CommercialCards: React.FC<CommercialCardsProps> = ({ Mias }) => {
 
         <div className="grid grid-cols-3 gap-[1.4vw] *:flex *:flex-col *:justify-center *:items-center *:gap-[0.1vw] *:border *:p-[1vw] *:rounded-[0.4vw]">
           <div className="">
-            <p className="fs-24 font-bold">${selectedMia?.revenue?.Monthly}</p>
+            <p className="fs-24 font-bold">{selectedMia?.revenue?.Monthly}</p>
             <p className="fs-14 font-bold text-[#8F97A2]">Last Month</p>
             <p className="fs-14 font-semibold text-[#92C521]">
               ▲ {growthPercentage}%
@@ -81,7 +81,7 @@ const CommercialCards: React.FC<CommercialCardsProps> = ({ Mias }) => {
           </div>
           <div className="">
             <p className="fs-24 font-semibold">
-              ${selectedMia?.revenue?.Quarterly}
+              {selectedMia?.revenue?.Quarterly}
             </p>
             <p className="fs-14 font-bold text-[#8F97A2]">Quarterly</p>
             <p className="fs-14 font-semibold text-[#92C521]">
@@ -90,7 +90,7 @@ const CommercialCards: React.FC<CommercialCardsProps> = ({ Mias }) => {
           </div>
           <div className="">
             <p className="fs-24 font-semibold">
-              ${selectedMia?.revenue?.Yearly}
+              {selectedMia?.revenue?.Yearly}
             </p>
             <p className="fs-14 font-bold text-[#8F97A2]">Yearly</p>
             <p className="fs-14 font-semibold text-[#92C521]">

@@ -308,6 +308,7 @@ label {
   line-height: normal !important;
   font-size: 0.9722vw !important;
   padding: 0 0.5vw !important;
+  margin-right: 0.5vw !important;
 }
 
 .ant-select-selector {

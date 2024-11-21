@@ -9,6 +9,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store/store";
 import { handleChain } from "@/store/slice/chainSlice";
+import { debounce } from "@/utils/debounce";
 
 interface TowerItem {
   name: string;
@@ -68,7 +69,9 @@ const SearchBar: React.FC<Towersearch> = ({ handleSearchTower }) => {
           className="w-full fs-14 px-[1vw] py-[0.3vw] outline-none rounded-[0.2vw]"
           placeholder="Search by chain or tower"
           type="text"
-          onChange={(e) => handleSearchTower(e.target.value)}
+          onChange={(e) =>
+            debounce(() => handleSearchTower(e.target.value), 400)()
+          }
         />
       </div>
       <div className="w-[15%] h-[100%] flex justify-center items-center border-l-[0.1389vw] border-b-[#0000000F] cursor-pointer">
@@ -149,9 +152,12 @@ const Towerlist: React.FC<TowerlistProps> = ({ handleModal }) => {
           ))}
 
         {loading &&
-          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((_,i) => {
+          [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((_, i) => {
             return (
-              <div key={i} className="rounded-[0.2vw] min-h-[4vh] skeleton-animate"></div>
+              <div
+                key={i}
+                className="rounded-[0.2vw] min-h-[4vh] skeleton-animate"
+              ></div>
             );
           })}
       </main>

@@ -1,52 +1,77 @@
-import DoughnutChart from "./DoughnutChart";
+import useResolution from "@/utils/useResolution";
+import ChartGenerator from "@/components/Charts/ChartGenerator";
+import { vwToPx } from "@/utils/vwToPx";
 interface ChartData {
-    value: number;
-    name: string;
-    itemStyle: {
-        color: string;
-    };
+  value: number;
+  name: string;
+  itemStyle: {
+    color: string;
+  };
 }
 
 const DoughnutChartWithLegends: React.FC = () => {
-    // Data is now defined inside this component
-    const data: ChartData[] = [
-        { value: 15, name: "iZak", itemStyle: { color: "#9A9AFF" } },
-        { value: 20, name: "Amplyfund", itemStyle: { color: "#94D0FF" } },
-        { value: 15, name: "Hear, Here", itemStyle: { color: "#F1AE9D" } },
-        { value: 10, name: "C-Links", itemStyle: { color: "#E3E1DE" } },
-        { value: 25, name: "Museo", itemStyle: { color: "#FBC96C" } },
-        { value: 10, name: "Spectra-Gaurd", itemStyle: { color: "#A6AF88" } },
-        { value: 5, name: "Revee", itemStyle: { color: "#CBC3EE" } },
-    ];
+  const data: ChartData[] = [
+    { value: 15, name: "iZak", itemStyle: { color: "#9A9AFF" } },
+    { value: 20, name: "Amplyfund", itemStyle: { color: "#94D0FF" } },
+    { value: 15, name: "Hear, Here", itemStyle: { color: "#F1AE9D" } },
+    { value: 10, name: "C-Links", itemStyle: { color: "#E3E1DE" } },
+    { value: 25, name: "Museo", itemStyle: { color: "#FBC96C" } },
+    { value: 10, name: "Spectra-Gaurd", itemStyle: { color: "#A6AF88" } },
+    { value: 5, name: "Revee", itemStyle: { color: "#CBC3EE" } },
+  ];
 
-    return (
-        <div className="bg-white p-[1vw] rounded-sm">
-            <p className="font-medium mb-[0.8vw] fs-16">
-                App distribution cross chain
-            </p>
-            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
-                {/* Donut chart component */}
-                <DoughnutChart data={data} />
+  const options: echarts.EChartsOption = {
+    tooltip: {
+      trigger: "item",
+    },
+    series: [
+      {
+        name: "App Distribution",
+        type: "pie",
+        radius: ["50%", "70%"], //inner and outer radius(inner "hole" and radius of pie chart)
+        center: ["35%", "50%"], //horizontal and vertical position of chart
+        avoidLabelOverlap: false,
+        itemStyle: {
+          borderRadius: vwToPx(0.2778), //border radius for each slice
+          borderColor: "#fff",
+          borderWidth: vwToPx(0.1389),
+        },
+        label: {
+          show: false,
+        },
+        labelLine: {
+          show: false,
+        },
+        data: data,
+      },
+    ],
+    legend: {
+      orient: "vertical",
+      right: "0",
+      top: "center",
+      itemWidth: vwToPx(1.1),
+      itemHeight: vwToPx(1.1),
+      itemGap: vwToPx(1.3),
+      textStyle: {
+        fontSize: vwToPx(0.8333),
+        color: "#242F3E",
+        padding: [0, 0, 0, vwToPx(0.1)],
+      },
+    },
+  };
 
-                {/* Legends next to the chart */}
-                <div className="flex flex-col gap-[1vw] ">
-                    {data.map((d, index) => (
-                        <div
-                            className="w-fit flex items-center gap-[0.4vw] px-[0.4vw] py-[0.2vw] bg-[#F5F6F7] rounded-md"
-                            key={index}
-                        >
-                            <div
-                                className="w-[1.1vw] aspect-square rounded-[0.4vw]"
-                                style={{ backgroundColor: d.itemStyle.color }}
-                            ></div>
-                            <span className="font-bold text-[#242F3E] fs-12">{d.value}%</span>
-                            <span className="text-[#242F3E] fs-12">{d.name}</span>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
+  useResolution();
+
+  return (
+    <div className="bg-white p-[1vw] rounded-sm">
+      <p className="font-medium mb-[0.8vw] ml-[0.5vw] fs-16">
+        App distribution cross chain
+      </p>
+      <div className="h-[40vh]">
+        <ChartGenerator options={options} />
+      </div>
+    </div>
+  );
 };
 
 export default DoughnutChartWithLegends;

@@ -46,7 +46,7 @@ const AllianceGrowthChart: React.FC<AllianceGrowthProps> = ({
       },
       axisLabel: {
         fontSize: axisFontSize,
-        color: "#98A2B3#445164",
+        color: "#98A2B3",
         padding: [vwToPx(0.5), 0, 0, 0],
       },
     },

@@ -4,7 +4,11 @@ import Image from "next/image";
 import company from "../../../public/images/company.png";
 import ProjectTable from "@/components/product/ProjectTable";
 import { Dropdown, Input, Button, Space, MenuProps } from "antd";
-import { SearchOutlined, FilterOutlined, CaretDownOutlined } from "@ant-design/icons";
+import {
+  SearchOutlined,
+  FilterOutlined,
+  CaretDownOutlined,
+} from "@ant-design/icons";
 
 // Define the structure of project details for TypeScript
 interface Project {
@@ -24,12 +28,13 @@ export default function Products() {
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_JSON_SERVER}/chainaas_projectDetails`);
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_JSON_SERVER}/chainaas_projectDetails`
+        );
         const data = await response.json();
 
         setProjectDetails(data);
         setFilteredData(data);
-
       } catch (error) {
         console.error("Failed to fetch project data", error);
       }
@@ -155,7 +160,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="w-full h-full bg-[#F5F6F7] overflow-auto scrollBar">
+      <div className="w-full h-[85%] bg-[#F5F6F7] overflow-auto scrollBar">
         <ProjectTable data={filteredData} />
       </div>
     </div>

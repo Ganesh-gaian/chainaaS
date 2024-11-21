@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useMemo } from "react";
+import "./paymentledger.css"
 import { Table, Pagination, Dropdown, Menu, Button } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
@@ -181,15 +182,16 @@ const PaymentLedger: React.FC = () => {
         </Dropdown>
       </div>
       <Table columns={columns} dataSource={filteredData} pagination={false} />
-      <div className="mt-[0.8vw] flex justify-end">
+      <div className="custom-pagination mt-[0.8vw]">
         <Pagination
           current={currentPage}
-          pageSize={pageSize}
-          total={filteredData.length} // Update total based on filtered data
+          align="end"
+          pageSize={filteredData.length}
+          total={filteredData.length * 10}
           onChange={onPageChange}
           showSizeChanger
-          pageSizeOptions={["5", "10", "20"]}
           showQuickJumper
+          pageSizeOptions={["5", "10", "20"]}
         />
       </div>
     </div>

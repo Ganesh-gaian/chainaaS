@@ -38,7 +38,7 @@ const TowerEarningsChart: React.FC<TowerEarningsChartProps> = ({
     },
     xAxis: {
       type: "category",
-      name: "Months",
+      name: "Towers",
       nameTextStyle: {
         color: "#595959",
         fontSize: vwToPx(0.8333),
